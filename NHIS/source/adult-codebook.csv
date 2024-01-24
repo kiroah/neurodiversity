@@ -1,0 +1,963 @@
+,Variable,Question #,Variable Name,Source Variables,Description,Type,Location,Length,22,21,20,19
+0,1,,RECTYPE,,Record type,Num,1 - 2,2,x,x,x,x
+1,2,,SRVY_YR,,Year of the National Health Interview Survey,Num,3 - 6,4,x,x,x,x
+2,3,,HHX,,Randomly assigned household number unique to a household,Char,7 - 13,7,x,x,x,x
+3,4,,WTFA_A,,Weight - Final Annual,Num,14 - 23,10,x,x,x,x
+4,1,Recode,URBRRL,,2013 NCHS Urban-Rural Classification Scheme for Counties,Num,24,1,x,x,x,x
+5,2,,REGION,,Household region,Num,25,1,x,x,x,x
+6,3,,PSTRAT,,Pseudo-stratum for public-use file variance estimation,Num,26 - 28,3,x,x,x,x
+7,4,,PPSU,,Pseudo-PSU for public-use file variance estimation,Num,29 - 31,3,x,x,x,x
+8,1,GEN.0650.00.1,HHRESPSA_FLG,,"Sample Adult is the household respondent or the proxywho lives in the household",Num,32,1,x,x,x,x
+9,1,,INTV_QRT,,Interview quarter,Num,33,1,x,x,x,x
+10,2,,INTV_MON,,Interview month,Num,34 - 35,2,x,x,x,
+11,3,GEN.0540.00.1,HHSTAT_A,,Indicates person is the Sample Adult,Num,36,1,x,x,x,x
+12,4,Recode,ASTATNEW,,Recoded ASTAT,Num,37,1,x,x,x,x
+13,5,VFY.0020.00.1,AVAIL_A,,Sample Adult Available,Num,38,1,x,x,x,x
+14,6,VFY.0030.00.1,PROXY_A,,Proxy Available,Num,39,1,x,x,x,x
+15,7,VFY.0040.00.1,PROXYREL_A,,Proxy's Relationship to Sample Adult,Num,40,1,x,x,x,x
+16,1,,SEX_A,,Sex of Sample Adult,Num,41,1,x,x,x,x
+17,2,,AGEP_A,,Age of SA (top coded),Num,42 - 43,2,x,x,x,x
+18,3,HHC.0240.00.1,AGE65,,Age 65 or older,Num,44,1,x,x,x,x
+19,4,Recode,HISP_A,HISP_FINAL,Recode: Hispanic ethnicity of SA,Num,45,1,x,x,x,x
+20,5,Recode,HISPALLP_A,"NATORG; RACE;RACE_SP; RACE_VRBAT,RACEFULL, HISP_FINAL",Single and multiple race groups with Hispanic origin,Num,46 - 47,2,x,x,x,x
+21,6,Recode,RACEALLP_A,RACAEFULL,Single and multiple race groups,Num,48,1,x,x,x,x
+22,7,Recode,HISDETP_A,"HISP_FINAL;HISPTYPE01_A -HISPTYPE07_A",Hispanic origin detail,Num,49,1,x,x,x,x
+23,8,HHC.0330.00.1,AFNOW,,Full-time active duty screener,Num,50,1,x,x,x,x
+24,9,Recode,EDUCP_A,,Educational level of sample adult,Num,51 - 52,2,x,x,,
+25,10,Recode,PCNTLT18TC,,Top-coded count of persons under 18 in the household,Num,53,1,x,x,x,x
+26,11,Recode,PCNT18UPTC,,Top-coded count of persons 18 or older in the household,Num,54,1,x,x,x,x
+27,1,Recode,PCNTADLT_A,PCNTADLTI_A,"Number of adults in Sample Adult family, top-coded 3+",Num,55,1,x,x,x,x
+28,2,Recode,PCNTKIDS_A,PCNTKIDSI_A,"Number of children in Sample Adult family, top-coded 3+",Num,56,1,x,x,x,x
+29,3,Recode,OVER65FLG_A,"AGE_FINAL; AGEGUESS;AGE18; FAMILYA_FLG",Indicator for at least 1 person aged 65+ in SA family,Num,57,1,x,x,x,x
+30,4,Recode,MLTFAMFLG_A,ONEFAM_FLG; TOTPERS,Indicator for multifamily households,Num,58,1,x,x,x,x
+31,5,Recode,MAXEDUCP_A,"EDUC; AGE18PLUS;FAMILYA_FLG;HHSTAT_A","Highest level of education of all the adults in the SA'sfamily",Num,59 - 60,2,x,x,,
+32,1,HIS.0010.00.1,PHSTAT_A,,General health status,Num,61,1,x,x,x,x
+33,1,LSF.0010.00.3,LSATIS4_A,,Life satisfaction/dissatisfaction,Num,62,1,x,,,
+34,1,HYP.0020.00.1,HYPEV_A,,Ever been told you had hypertension,Num,63,1,x,x,x,x
+35,2,HYP.0030.00.1,HYPDIF_A,,Told had hypertension on two or more visits,Num,64,1,x,x,x,x
+36,3,HYP.0040.00.1,HYP12M_A,,"Hypertension, past 12 months",Num,65,1,x,x,x,x
+37,4,HYP.0050.00.1,HYPMED_A,,Now taking high blood pressure medication,Num,66,1,x,x,x,x
+38,1,CHL.0010.00.1,CHLEV_A,,Ever told you had high cholesterol,Num,67,1,x,x,x,x
+39,2,CHL.0020.00.1,CHL12M_A,,"High cholesterol, past 12 months",Num,68,1,x,x,x,x
+40,3,CHL.0030.00.1,CHLMED_A,,Now taking cholesterol medication,Num,69,1,x,x,x,x
+41,1,CVC.0010.00.1,CHDEV_A,,Ever been told you had coronary heart disease,Num,70,1,x,x,x,x
+42,2,CVC.0020.00.1,ANGEV_A,,Ever been told you had angina,Num,71,1,x,x,x,x
+43,3,CVC.0030.00.1,MIEV_A,,Ever been told you had a heart attack,Num,72,1,x,x,x,x
+44,4,CVC.0040.00.1,STREV_A,,Ever been told you had a stroke,Num,73,1,x,x,x,x
+45,1,AST.0010.00.1,ASEV_A,,Ever had asthma,Num,74,1,x,x,x,x
+46,2,AST.0020.00.1,ASTILL_A,,Still have asthma,Num,75,1,x,x,x,x
+47,3,AST.0030.00.1,ASAT12M_A,,Asthma episode,Num,76,1,x,x,x,x
+48,4,AST.0040.00.1,ASER12M_A,,Asthma ER visit,Num,77,1,x,x,x,x
+49,1,CAN.0010.00.1,CANEV_A,,Ever been told you had cancer,Num,78,1,x,x,x,x
+50,2,Recode,BLADDCAN_A,"CANKIND1_A-CANKIND3_A",Bladder cancer mentioned,Num,79,1,x,x,x,x
+51,3,Recode,BLADDAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had bladder cancer,Num,80 - 81,2,x,x,x,x
+52,4,Recode,BLOODCAN_A,"CANKIND1_A-CANKIND3_A",Blood cancer mentioned,Num,82,1,x,x,x,x
+53,5,Recode,BLOODAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had blood cancer,Num,83 - 84,2,x,x,x,x
+54,6,Recode,BONECAN_A,"CANKIND1_A-CANKIND3_A",Bone cancer mentioned,Num,85,1,x,x,x,x
+55,7,Recode,BONEAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had bone cancer,Num,86 - 87,2,x,x,x,x
+56,8,Recode,BRAINCAN_A,"CANKIND1_A-CANKIND3_A",Brain cancer mentioned,Num,88,1,x,x,x,x
+57,9,Recode,BRAINAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had brain cancer,Num,89 - 90,2,x,x,x,x
+58,10,Recode,BREASCAN_A,"CANKIND1_A-CANKIND3_A",Breast cancer mentioned,Num,91,1,x,x,x,x
+59,11,Recode,BREASAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had breast cancer,Num,92 - 93,2,x,x,x,x
+60,12,Recode,CERVICAN_A,"CANKIND1_A-CANKIND3_A",Cervical cancer mentioned,Num,94,1,x,x,x,x
+61,13,Recode,CERVIAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had cervical cancer,Num,95 - 96,2,x,x,x,x
+62,14,Recode,COLONCAN_A,"CANKIND1_A-CANKIND3_A",Colon cancer mentioned,Num,97,1,x,x,x,x
+63,15,Recode,COLONAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had colon cancer,Num,98 - 99,2,x,x,x,x
+64,16,Recode,ESOPHCAN_A,"CANKIND1_A-CANKIND3_A",Esophageal cancer mentioned,Num,100,1,x,x,x,x
+65,17,Recode,ESOPHAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had esophageal cancer,Num,101 - 102,2,x,x,x,x
+66,18,Recode,GALLBCAN_A,"CANKIND1_A-CANKIND3_A",Gallbladder cancer mentioned,Num,103,1,x,x,x,x
+67,19,Recode,GALLBAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had gallbladder cancer,Num,104 - 105,2,x,x,x,x
+68,20,Recode,LARYNCAN_A,"CANKIND1_A-CANKIND3_A",Larynx-trachea cancer mentioned,Num,106,1,x,x,x,x
+69,21,Recode,LARYNAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had larynx-trachea cancer,Num,107 - 108,2,x,x,x,x
+70,22,Recode,LEUKECAN_A,"CANKIND1_A-CANKIND3_A",Leukemia mentioned,Num,109,1,x,x,x,x
+71,23,Recode,LEUKEAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had leukemia,Num,110 - 111,2,x,x,x,x
+72,24,Recode,LIVERCAN_A,"CANKIND1_A-CANKIND3_A",Liver cancer mentioned,Num,112,1,x,x,x,x
+73,25,Recode,LIVERAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had liver cancer,Num,113 - 114,2,x,x,x,x
+74,26,Recode,LUNGCAN_A,"CANKIND1_A-CANKIND3_A",Lung cancer mentioned,Num,115,1,x,x,x,x
+75,27,Recode,LUNGAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had lung cancer,Num,116 - 117,2,x,x,x,x
+76,28,Recode,LYMPHCAN_A,"CANKIND1_A-CANKIND3_A",Lymphoma cancer mentioned,Num,118,1,x,x,x,x
+77,29,Recode,LYMPHAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had lymphoma,Num,119 - 120,2,x,x,x,x
+78,30,Recode,MELANCAN_A,"CANKIND1_A-CANKIND3_A",Melanoma cancer mentioned,Num,121,1,x,x,x,x
+79,31,Recode,MELANAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had melanoma cancer,Num,122 - 123,2,x,x,x,x
+80,32,Recode,MOUTHCAN_A,"CANKIND1_A-CANKIND3_A","Mouth, tongue or lip cancer mentioned",Num,124,1,x,x,x,x
+81,33,Recode,MOUTHAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A","Age when first told had mouth, tongue or lip cancer",Num,125 - 126,2,x,x,x,x
+82,34,Recode,OVARYCAN_A,"CANKIND1_A-CANKIND3_A",Ovarian cancer mentioned,Num,127,1,x,x,x,x
+83,35,Recode,OVARYAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had ovarian cancer,Num,128 - 129,2,x,x,x,x
+84,36,Recode,PANCRCAN_A,"CANKIND1_A-CANKIND3_A",Pancreatic cancer mentioned,Num,130,1,x,x,x,x
+85,37,Recode,PANCRAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had pancreatic cancer,Num,131 - 132,2,x,x,x,x
+86,38,Recode,PROSTCAN_A,"CANKIND1_A-CANKIND3_A",Prostate cancer mentioned,Num,133,1,x,x,x,x
+87,39,Recode,PROSTAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had prostate cancer,Num,134 - 135,2,x,x,x,x
+88,40,Recode,RECTUCAN_A,"CANKIND1_A-CANKIND3_A",Rectal cancer mentioned,Num,136,1,x,x,x,x
+89,41,Recode,RECTUAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had rectal cancer,Num,137 - 138,2,x,x,x,x
+90,42,Recode,SKNMCAN_A,"CANKIND1_A-CANKIND3_A",Skin melanoma cancer mentioned,Num,139,1,x,x,x,x
+91,43,Recode,SKNMAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had skin melanoma cancer,Num,140 - 141,2,x,x,x,x
+92,44,Recode,SKNNMCAN_A,"CANKIND1_A-CANKIND3_A",Skin non-melanoma cancer mentioned,Num,142,1,x,x,x,x
+93,45,Recode,SKNNMAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A- CANAGE3_A",Age when first told skin non-melanoma cancer,Num,143 - 144,2,x,x,x,x
+94,46,Recode,SKNDKCAN_A,"CANKIND1_A-CANKIND3_A",Skin cancer (don't know what kind) mentioned,Num,145,1,x,x,x,x
+95,47,Recode,SKNDKAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A","Age when first told had skin cancer (don't know whatkind)",Num,146 - 147,2,x,x,x,x
+96,48,Recode,STOMACAN_A,"CANKIND1_A-CANKIND3_A",Stomach cancer mentioned,Num,148,1,x,x,x,x
+97,49,Recode,STOMAAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had stomach cancer,Num,149 - 150,2,x,x,x,x
+98,50,Recode,THROACAN_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Throat - pharynx cancer mentioned,Num,151,1,x,x,x,x
+99,51,Recode,THROAAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANKIND3_A",Age when first told had throat-pharynx cancer,Num,152 - 153,2,x,x,x,x
+100,52,Recode,THYROCAN_A,"CANKIND1_A-CANKIND3_A",Thyroid cancer mentioned,Num,154,1,x,x,x,x
+101,53,Recode,THYROAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had thyroid cancer,Num,155 - 156,2,x,x,x,x
+102,54,Recode,UTERUCAN_A,"CANKIND1_A-CANKIND3_A",Uterine cancer mentioned,Num,157,1,x,x,x,x
+103,55,Recode,UTERUAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had uterine cancer,Num,158 - 159,2,x,x,x,x
+104,56,Recode,HDNCKCAN_A,"CANKIND1_A-CANKIND3_A",Head and neck cancers mentioned,Num,160,1,x,x,x,x
+105,57,Recode,HDNCKAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had head or neck cancer,Num,161 - 162,2,x,x,x,x
+106,58,Recode,COLRCCAN_A,"CANKIND1_A-CANKIND3_A",Colorectal cancer mentioned,Num,163,1,x,x,x,x
+107,59,Recode,COLRCAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had colon or rectal cancer,Num,164 - 165,2,x,x,x,x
+108,60,Recode,OTHERCANP_A,"CANKIND1_A-CANKIND3_A",Other cancer mentioned,Num,166,1,x,x,x,x
+109,61,Recode,OTHERAGETC_A,"CANKIND1_A-CANKIND3_A andCANAGE1_A-CANAGE3_A",Age when first told had other cancer,Num,167 - 168,2,x,x,x,x
+110,62,Recode,NUMCAN_A,"CANEV_A andCANKIND1_A-CANKIND3_A",Number of reported types of cancers,Num,169,1,x,x,x,x
+111,1,DIB.0010.00.1,PREDIB_A,,Ever had prediabetes,Num,170,1,x,x,x,x
+112,2,DIB.0020.00.1,GESDIB_A,,Gestational diabetes,Num,171,1,x,x,x,x
+113,3,DIB.0030.00.1,DIBEV_A,,Ever had diabetes,Num,172,1,x,x,x,x
+114,4,Recode,DIBAGETC_A,DIBAGE_A,Age first diagnosed w/diabetes,Num,173 - 174,2,x,x,x,x
+115,5,Recode,DIFYRSTC1_A,DIBAGE_A; AGE_FINAL,Years since first diagnosed w/diabetes,Num,175 - 176,2,x,x,,
+116,6,DIB.0050.00.1,DIBPILL_A,,Taking diabetic pills,Num,177,1,x,x,x,x
+117,7,DIB.0060.00.1,DIBINS_A,,Taking insulin,Num,178,1,x,x,x,x
+118,8,DIB.0070.00.3,DIBINSTIME_A,,Time from diabetes to insulin,Num,179,1,x,x,x,x
+119,9,DIB.0080.00.3,DIBINSSTOP_A,,Ever stop using insulin,Num,180,1,x,x,x,x
+120,10,DIB.0090.00.3,DIBINSSTYR_A,,Only stop insulin in first year,Num,181,1,x,x,x,x
+121,11,DIB.0130.00.1,DIBTYPE_A,,Diabetes type,Num,182,1,x,x,x,x
+122,1,CON.0010.00.1,COPDEV_A,,"Ever been told you had COPD, emphysema, or chronicbronchitis?",Num,183,1,x,x,x,x
+123,2,CON.0020.00.1,ARTHEV_A,,Ever had arthritis,Num,184,1,x,x,x,x
+124,3,CON.0030.00.1,DEMENEV_A,,Ever had dementia,Num,185,1,x,x,x,x
+125,4,CON.0040.00.1,ANXEV_A,,Ever had anxiety disorder,Num,186,1,x,x,x,x
+126,5,CON.0050.00.1,DEPEV_A,,Ever had depression,Num,187,1,x,x,x,x
+127,1,CFS.0010.00.3,CFSEV_A,,Ever had Chronic Fatigue Syndrome,Num,188,1,x,x,,
+128,2,CFS.0020.00.3,CFSNOW_A,,Still have Chronic Fatigue Syndrome,Num,189,1,x,x,,
+129,1,ISN.0010.00.3,MEDRXTRT_A,,Weakened immune system due to prescriptions,Num,190,1,x,x,x,
+130,2,ISN.0020.00.3,HLTHCOND_A,,Weakened immune system due to health condition,Num,191,1,x,x,x,
+131,1,EPI.0010.00.3,EPIEV_A,,Ever had epilepsy,Num,192,1,x,x,,
+132,2,EPI.0020.00.3,EPIMED_A,,Take medication for epilepsy,Num,193,1,x,x,,
+133,3,Recode,EPINUMSEZP_A,EPINUMSEIZ_A,How many seizures past 12 months,Num,194,1,x,x,,
+134,4,EPI.0040.00.3,EPIDR_A,,See a doctor for epilepsy,Num,195,1,x,x,,
+135,1,BMI.0010.00.1,PREGNOW_A,,Pregnant now,Num,196,1,x,x,x,x
+136,2,Recode,HEIGHTTC_A,HEIGHT_A,"Height without shoes (inches), Public Use",Num,197 - 198,2,x,x,x,x
+137,3,Recode,WEIGHTLBTC_A,WEIGHTLB_A; WTLB_A,"Weight without shoes (pounds), Public Use",Num,199 - 201,3,x,x,x,x
+138,4,Recode,BMICAT_A,BMI_A; BMI_A_1,"Categorical Body Mass Index, Public Use",Num,202,1,x,x,x,x
+139,1,VIS.0020.00.1,WEARGLSS_A,,Wear glasses/contact lenses,Num,203,1,x,x,x,x
+140,2,VIS.0030.00.1,VISIONDF_A,,Difficulty seeing,Num,204,1,x,x,x,x
+141,1,HEA.0010.00.1,HEARAID_A,,Use hearing aid,Num,205,1,x,x,x,x
+142,2,HEA.0020.00.1,HEARAIDFR_A,,How often use hearing aid,Num,206,1,x,x,x,x
+143,3,HEA.0030.00.1,HEARINGDF_A,,Difficulty hearing,Num,207,1,x,x,x,x
+144,1,MOB.0010.00.1,DIFF_A,,Difficulty walking/steps,Num,208,1,x,x,x,x
+145,2,MOB.0020.00.1,EQUIP_A,,Use equipment to get around,Num,209,1,x,x,x,x
+146,3,MOB.0030.00.1,WLK100_A,,Difficulty walking 100 yards,Num,210,1,x,x,x,x
+147,4,MOB.0040.00.1,WLK13M_A,,Difficulty walking 1/3 mile,Num,211,1,x,x,x,x
+148,5,MOB.0050.00.1,STEPS_A,,Difficulty walking steps,Num,212,1,x,x,x,x
+149,6,MOB.0060.00.1,CANEWLKR_A,,Use cane or walker,Num,213,1,x,x,x,x
+150,7,MOB.0070.00.1,WCHAIR_A,,Use wheelchair/scooter,Num,214,1,x,x,x,x
+151,8,MOB.0080.00.1,PERASST_A,,Use someone's assistance,Num,215,1,x,x,x,x
+152,9,MOB.0090.00.1,NOEQWLK100_A,,Difficulty walking 100 yards without aid,Num,216,1,x,x,x,x
+153,10,MOB.0100.00.1,NOEQWLK13M_A,,Difficulty walking 1/3 mile without aid,Num,217,1,x,x,x,x
+154,11,MOB.0110.00.1,NOEQSTEPS_A,,Difficulty walking steps without equipment,Num,218,1,x,x,x,x
+155,12,MOB.0120.00.1,EQWLK100_A,,Difficulty walking 100 yards with aid,Num,219,1,x,x,x,x
+156,13,MOB.0130.00.1,EQWLK13M_A,,Difficulty walking 1/3 mile with aid,Num,220,1,x,x,x,x
+157,14,MOB.0140.00.1,EQSTEPS_A,,Difficulty walking steps with equipment,Num,221,1,x,x,x,x
+158,1,COM.0010.00.1,COMDIFF_A,,Difficulty communicating,Num,222,1,x,x,x,x
+159,1,COG.0010.00.1,COGMEMDFF_A,,Difficulty remembering/concentrating,Num,223,1,x,x,x,x
+160,2,COG.0020.00.1,COGTYPEDFF_A,,Remembering/concentrating or both,Num,224,1,x,x,x,x
+161,3,COG.0030.00.1,COGFRQDFF_A,,Difficulty remembering-how often,Num,225,1,x,x,x,x
+162,4,COG.0040.00.1,COGAMTDFF_A,,Difficulty remembering-how much,Num,226,1,x,x,x,x
+163,1,UPP.0010.00.1,UPPSLFCR_A,,Difficulty with self care,Num,227,1,x,x,x,x
+164,2,UPP.0020.00.1,UPPRAISE_A,,Difficulty raising soda bottle,Num,228,1,x,x,x,x
+165,3,UPP.0030.00.1,UPPOBJCT_A,,Difficulty using hands and fingers,Num,229,1,x,x,x,x
+166,4,Recode,DISAB3_A,"VISIONDF_A;HEARINGDF_A; DIFF_A;COMDIFF_A;UPPSLFCR_A;COGMEMDFF_A","The Washington Group Short Set Composite DisabilityIndicator",Num,230,1,x,x,x,x
+167,1,SOC.0010.00.1,SOCERRNDS_A,,Difficulty doing errands alone,Num,231,1,x,x,x,x
+168,2,SOC.0020.00.1,SOCSCLPAR_A,,Difficulty participating in social activities,Num,232,1,x,x,x,x
+169,3,SOC.0030.00.1,SOCWRKLIM_A,,Work limited due to health problem,Num,233,1,x,x,x,x
+170,1,ADO.0010.00.3,DEVDONSET_A,,Difficulty doing activities before age 22,Num,234,1,x,x,x,
+171,1,Recode,NOTCOV_A,"MEDICARE_A;MEDICAID_A;PRIVATE_A; CHIP_A;OTHPUB_A; OTHGOV_A;MILITARY_A",Coverage status as used in Health United States,Num,235,1,x,x,x,x
+172,2,Recode,COVER_A,"MEDICARE_A;MEDICAID_A;PRIVATE_A; CHIP_A;OTHPUB_A; OTHGOV_A;MILITARY_A",Health insurance hierarchy under 65,Num,236,1,x,x,x,x
+173,3,Recode,COVER65_A,"MEDICARE_A;MEDICAID_A;PRIVATE_A; CHIP_A;OTHPUB_A; OTHGOV_A;MILITARY_A;MCCHOICE_A; MCHMO_A;MCADVR_A;PLN1PAY4_A;PLN2PAY4_A",Health Insurance hierarchy 65+,Num,237,1,x,x,x,x
+174,4,INS.0050.00.1,SINCOVDE_A,,Single service plan - dental,Num,238,1,x,x,x,x
+175,5,INS.0060.00.1,SINCOVVS_A,,Single service plan - vision,Num,239,1,x,x,x,x
+176,6,INS.0070.00.1,SINCOVRX_A,,Single service plan - prescription,Num,240,1,x,x,x,x
+177,7,Recode,MEDICARE_A,"HIKIND02_A;MCAREPRB_A",Medicare recode,Num,241,1,x,x,x,x
+178,8,INS.0090.00.1,MCPART_A,,Type of Medicare coverage,Num,242,1,x,x,x,x
+179,9,INS.0100.00.1,MCCHOICE_A,,Enrolled in Medicare Advantage Plan,Num,243,1,x,x,x,x
+180,10,INS.0110.00.1,MCHMO_A,,Medicare HMO,Num,244,1,x,x,x,x
+181,11,Recode,MCADVR_A,MCANAME_A,Medicare Advantage Plan,Num,245,1,x,x,x,x
+182,12,INS.0121.00.1,MCDNCOV_A,,Medicare Advantage Plan pays for any dental care costs,Num,246,1,x,,,
+183,13,INS.0122.00.1,MCVSCOV_A,,Medicare Advantage Plan pays for any vision care costs,Num,247,1,x,,,
+184,14,INS.0130.00.1,MCPARTD_A,,Medicare Part D,Num,248,1,x,x,x,x
+185,15,Recode,MEDICAID_A,"HIKIND03_A;MCAIDPRB_A",Medicaid recode,Num,249,1,x,x,x,x
+186,16,INS.0150.00.1,MAXCHNG_A,,Medicaid through Marketplace,Num,250,1,x,x,x,x
+187,17,INS.0160.00.1,MAPREM_A,,Medicaid premium,Num,251,1,x,x,x,x
+188,18,INS.0170.00.1,MADEDUC_A,,Medicaid deductible,Num,252,1,x,x,x,x
+189,19,INS.0180.00.1,MAHDHP_A,,Medicaid HDHP,Num,253,1,x,x,x,x
+190,20,Recode,MAFLG_A,HIPNAM1_A; HIPNAM2_A,Medicaid reassignment flag,Num,254,1,x,x,x,x
+191,21,Recode,PRIVATE_A,"HIKIND01_A;HIKIND03_A",Private health insurance recode,Num,255,1,x,x,x,x
+192,22,Recode,EXCHANGE_A,"HIPNAM1_A;HIPNAM2_A; MACHMN_A;CHNAME_A; OPNAME_A;OGNAME_A","Plan through Health Insurance Exchange, NCHS algorithm",Num,256,1,x,x,x,x
+193,23,INS.0370.01.1,POLHLD1_A,,Policyholder for private plan 1,Num,257,1,x,x,x,x
+194,24,INS.0380.01.1,PRPLCOV1_A,,Plan coverage for others - plan 1,Num,258,1,x,x,x,x
+195,25,INS.0390.01.1,PRPOLH1_A,,Relation to policyholder - plan 1,Num,259,1,x,x,x,x
+196,26,Recode,PRPLCOV1_C_A,"PRPLCOV1_C;PRPLCOV2_C","Response to PRPLCOV1_C or PRPLCOV2_C  from child - plan1",Num,260,1,x,x,x,x
+197,27,Recode,PLNWRKR1_A,"PLNWRK1_A;PLNWKSP1_A",How plan was originally obtained - plan 1,Num,261 - 262,2,x,x,x,x
+198,28,INS.0420.01.1,PLNEXCHG1_A,,Health plan obtained through Marketplace - plan 1,Num,263,1,x,x,x,x
+199,29,INS.0430.11.1,PLN1PAY1_A,,Paid for by self or family - plan 1,Num,264,1,x,x,x,x
+200,30,INS.0430.12.1,PLN1PAY2_A,,Paid for by employer or union - plan 1,Num,265,1,x,x,x,x
+201,31,INS.0430.13.1,PLN1PAY3_A,,Paid for by someone outside the household - plan 1,Num,266,1,x,x,x,x
+202,32,INS.0430.14.1,PLN1PAY4_A,,Paid for by Medicare - plan 1,Num,267,1,x,x,x,x
+203,33,INS.0430.15.1,PLN1PAY5_A,,Paid for by Medicaid - plan 1,Num,268,1,x,x,x,x
+204,34,INS.0430.16.1,PLN1PAY6_A,,Paid for by other government program - plan 1,Num,269,1,x,x,x,x
+205,35,Recode,HICOSTR1_A,"HICOSTN1_A;HICOSTT1_A",Out-of-pocket premium cost - plan 1,Num,270 - 274,5,x,x,x,x
+206,36,INS.0450.01.1,PRDEDUC1_A,,Deductible - plan 1,Num,275,1,x,x,x,x
+207,37,INS.0460.01.1,PRHDHP1_A,,High deductible health plan - plan 1,Num,276,1,x,x,x,x
+208,38,INS.0470.01.1,HSAHRA1_A,,"Health Savings Accounts / Health Reimbursement Accounts- plan 1",Num,277,1,x,x,x,x
+209,39,INS.0480.01.1,PRRXCOV1_A,,Plan pays for prescription drug - plan 1,Num,278,1,x,x,x,x
+210,40,INS.0490.01.1,PRDNCOV1_A,,Plan pays for dental care - plan 1,Num,279,1,x,x,x,x
+211,41,INS.0500.01.1,PRVSCOV1_A,,Plan pays for vision care - plan 1,Num,280,1,x,x,x,x
+212,42,Recode,EXCHPR1_A,HIPNAM1_A,Exchange company coding NCHS - plan 1,Num,281,1,x,x,x,x
+213,43,Recode,PRFLG_A,,Private reassignment flag,Num,282,1,x,x,x,x
+214,44,Recode,PXCHNG1_A,"MAXCHNG_A;CHXCHNG_A;OPXCHNG_A; OGXCHNG_A","Marketplace or state exchange, reassigned from public toprivate",Num,283,1,x,x,x,x
+215,45,Recode,PRPREM1_A,"MAPREM_A; CHPREM_A;OPPREM_A; OGPREM_A",Premium on plan reassigned from public to private,Num,284,1,x,x,x,x
+216,46,Recode,PLEXCHPR1_A,"MACHMN_A; CHNAME_A;OPNAME_A; OGNAME_A","Exchange company coding, NCHS, reassigned from public toprivate",Num,285,1,x,x,x,x
+217,47,INS.0370.02.1,POLHLD2_A,,Policyholder for private plan 2,Num,286,1,x,x,x,x
+218,48,INS.0380.02.1,PRPLCOV2_A,,Plan coverage for others - plan 2,Num,287,1,x,x,x,x
+219,49,INS.0390.02.1,PRPOLH2_A,,Relation to policyholder - plan 2,Num,288,1,x,x,x,x
+220,50,Recode,PRPLCOV2_C_A,"PRPLCOV1_C;PRPLCOV2_C",Response to PRPLCOV1_C or PRPLCOV2_C from child - plan 2,Num,289,1,x,x,x,x
+221,51,Recode,PLNWRKR2_A,"PLNWRK2_A;PLNWKSP2_A",How plan was originally obtained - plan 2,Num,290 - 291,2,x,x,x,x
+222,52,INS.0420.02.1,PLNEXCHG2_A,,Health plan obtained through Marketplace - plan 2,Num,292,1,x,x,x,x
+223,53,INS.0430.21.1,PLN2PAY1_A,,Paid for by self or family - plan 2,Num,293,1,x,x,x,x
+224,54,INS.0430.22.1,PLN2PAY2_A,,Paid for by employer or union - plan 2,Num,294,1,x,x,x,x
+225,55,INS.0430.23.1,PLN2PAY3_A,,Paid for by someone outside the household - plan 2,Num,295,1,x,x,x,x
+226,56,INS.0430.24.1,PLN2PAY4_A,,Paid for by Medicare - plan 2,Num,296,1,x,x,x,x
+227,57,INS.0430.25.1,PLN2PAY5_A,,Paid for by Medicaid - plan 2,Num,297,1,x,x,x,x
+228,58,INS.0430.26.1,PLN2PAY6_A,,Paid for by other government program - plan 2,Num,298,1,x,x,x,x
+229,59,Recode,HICOSTR2_A,"HICOSTN2_A;HICOSTT2_A",Out-of-pocket premium cost - plan 2,Num,299 - 303,5,x,x,x,x
+230,60,INS.0450.02.1,PRDEDUC2_A,,Deductible - plan 2,Num,304,1,x,x,x,x
+231,61,INS.0460.02.1,PRHDHP2_A,,High deductible health plan - plan 2,Num,305,1,x,x,x,x
+232,62,INS.0470.02.1,HSAHRA2_A,,"Health Savings Accounts / Health Reimbursement Accounts- plan 2",Num,306,1,x,x,x,x
+233,63,INS.0480.02.1,PRRXCOV2_A,,Plan pays for prescription drug - plan 2,Num,307,1,x,x,x,x
+234,64,INS.0490.02.1,PRDNCOV2_A,,Plan pays for dental care - plan 2,Num,308,1,x,x,x,x
+235,65,INS.0500.02.1,PRVSCOV2_A,,Plan pays for vision care - plan 2,Num,309,1,x,x,x,x
+236,66,Recode,EXCHPR2_A,HIPNAM2_A,Exchange company coding NCHS - plan 2,Num,310,1,x,x,x,x
+237,67,Recode,CHIP_A,HIKIND05_A,Children's Health Insurance Program (CHIP) recode,Num,311,1,x,x,x,x
+238,68,INS.0520.00.1,CHXCHNG_A,,CHIP through Marketplace,Num,312,1,x,x,x,x
+239,69,INS.0530.00.1,CHPREM_A,,Pay CHIP premium,Num,313,1,x,x,x,x
+240,70,INS.0540.00.1,CHDEDUC_A,,CHIP deductible,Num,314,1,x,x,x,x
+241,71,INS.0550.00.1,CHHDHP_A,,CHIP HDHP,Num,315,1,x,x,x,x
+242,72,Recode,CHFLG_A,,CHIP reassignment flag,Num,316,1,x,x,x,x
+243,73,Recode,OTHPUB_A,HIKIND08_A,State-sponsored health plan recode,Num,317,1,x,x,x,x
+244,74,INS.0570.00.1,OPXCHNG_A,,State-sponsored plan through Marketplace,Num,318,1,x,x,x,x
+245,75,INS.0580.00.1,OPPREM_A,,Pay premium for state-sponsored plan,Num,319,1,x,x,x,x
+246,76,INS.0590.00.1,OPDEDUC_A,,State-sponsored plan deductible,Num,320,1,x,x,x,x
+247,77,INS.0600.00.1,OPHDHP_A,,State-sponsored plan HDHP,Num,321,1,x,x,x,x
+248,78,Recode,PLEXCHOP_A,OPNAME_A,"Exchange company coding, NCHS (state-sponsored plan)",Num,322,1,x,x,x,x
+249,79,Recode,OPFLG_A,,State-sponsored reassignment flag,Num,323,1,x,x,x,x
+250,80,Recode,OTHGOV_A,HIKIND09_A,Other government program recode,Num,324,1,x,x,x,x
+251,81,INS.0620.00.1,OGXCHNG_A,,Other government program through Marketplace,Num,325,1,x,x,x,x
+252,82,INS.0630.00.1,OGPREM_A,,Pay premium for other government program,Num,326,1,x,x,x,x
+253,83,INS.0640.00.1,OGDEDUC_A,,Other government program deductible,Num,327,1,x,x,x,x
+254,84,INS.0650.00.1,OGHDHP_A,,Other government program HDHP,Num,328,1,x,x,x,x
+255,85,Recode,PLEXCHOG_A,OGNAME_A,"Exchange company coding, NCHS (other government program)",Num,329,1,x,x,x,x
+256,86,Recode,OGFLG_A,,Other government reassignment flag,Num,330,1,x,x,x,x
+257,87,Recode,MILITARY_A,"HIKIND06_A;VAHOSP_A; VACAREEV_A",Military health care coverage recode,Num,331,1,x,x,x,x
+258,88,Recode,MILSPC1R_A,"MILSPC1_A; VAHOSP_A;VACAREEV_A",Types of military health care - VA health care,Num,332,1,x,x,x,x
+259,89,INS.0660.02.1,MILSPC2_A,,Types of military health care - TRICARE,Num,333,1,x,x,x,x
+260,90,INS.0660.03.1,MILSPC3_A,,Types of military health care - CHAMP-VA,Num,334,1,x,x,x,x
+261,91,Recode,IHS_A,HIKIND07_A,Indian Health Service recode,Num,335,1,x,x,x,x
+262,92,INS.0670.00.1,HILAST_A,,How long since last health coverage,Num,336,1,x,x,x,x
+263,93,INS.0680.00.1,HILASTMY_A,,Number of months without coverage,Num,337 - 338,2,x,x,x,x
+264,94,INS.0690.00.1,HISTOPJOB_A,,Lost job or changed employers,Num,339,1,x,x,x,x
+265,95,INS.0700.00.1,HISTOPMISS_A,,Missed deadline,Num,340,1,x,x,x,x
+266,96,INS.0710.00.1,HISTOPAGE_A,,Ineligible because of age/left school,Num,341,1,x,x,x,x
+267,97,INS.0720.00.1,HISTOPCOST_A,,Cost increase,Num,342,1,x,x,x,x
+268,98,INS.0730.00.1,HISTOPELIG_A,,"Not eligible for Medicaid, CHIP, or other publiccoverage",Num,343,1,x,x,x,x
+269,99,INS.0740.00.1,RSNHICOST_A,,Not affordable,Num,344,1,x,x,x,x
+270,100,INS.0750.00.1,RSNHIWANT_A,,Do not need or want coverage,Num,345,1,x,x,x,x
+271,101,INS.0760.00.1,RSNHIELIG_A,,Not eligible for coverage,Num,346,1,x,x,x,x
+272,102,INS.0770.00.1,RSNHICONF_A,,Signing up too difficult or confusing,Num,347,1,x,x,x,x
+273,103,INS.0780.00.1,RSNHIMEET_A,,Cannot find a plan that meets the needs,Num,348,1,x,x,x,x
+274,104,INS.0790.00.1,RSNHIWAIT_A,,Coverage has not started yet,Num,349,1,x,x,x,x
+275,105,INS.0800.00.1,RSNHIOTH_A,,Another reason,Num,350,1,x,x,x,x
+276,106,Recode,RSNHIJOB_A,RSNHIOTHSP_A,Lost job,Num,351,1,x,x,x,x
+277,107,Recode,RSNHIMISS_A,RSNHIOTHSP_A,Missed deadline,Num,352,1,x,x,x,x
+278,108,INS.0820.00.1,HINOTYR_A,,No health coverage during the past 12 months,Num,353,1,x,x,x,x
+279,109,INS.0830.00.1,HINOTMYR_A,,Months without coverage in the past 12 months,Num,354 - 355,2,x,x,x,x
+280,110,INS.0660.01.1,MILSPC1_A,,"Types of military health care - VA health care originalresponse",Num,356,1,x,x,x,x
+281,111,INS.0010.00.1,HICOV_A,,Have health insurance,Num,357,1,x,x,x,x
+282,112,INS.0020.01.1,HIKIND01_A,,Kind(s) of health insurance - private health insurance,Num,358,1,x,x,x,x
+283,113,INS.0020.02.1,HIKIND02_A,,Kind(s) of health insurance - Medicare,Num,359,1,x,x,x,x
+284,114,INS.0020.03.1,HIKIND03_A,,"Kind(s) of health insurance - Medicare supplement(Medigap)",Num,360,1,x,x,x,x
+285,115,INS.0020.04.1,HIKIND04_A,,Kind(s) of health insurance - Medicaid,Num,361,1,x,x,x,x
+286,116,INS.0020.05.1,HIKIND05_A,,Kind(s) of health insurance - CHIP,Num,362,1,x,x,x,x
+287,117,INS.0020.06.1,HIKIND06_A,,"Kind(s) of health insurance - military related healthcare",Num,363,1,x,x,x,x
+288,118,INS.0020.07.1,HIKIND07_A,,Kind(s) of health insurance - Indian Health Service,Num,364,1,x,x,x,x
+289,119,INS.0020.08.1,HIKIND08_A,,"Kind(s) of health insurance - State-sponsored healthplan",Num,365,1,x,x,x,x
+290,120,INS.0020.09.1,HIKIND09_A,,Kind(s) of health insurance - Other government program,Num,366,1,x,x,x,x
+291,121,INS.0020.10.1,HIKIND10_A,,Kind(s) of health insurance - No coverage of any type,Num,367,1,x,x,x,x
+292,122,INS.0030.00.1,MCAREPRB_A,,Medicare coverage probe,Num,368,1,x,x,x,x
+293,123,INS.0040.00.1,MCAIDPRB_A,,Medicaid coverage probe,Num,369,1,x,x,x,x
+294,1,PAY.0020.00.1,PAYBLL12M_A,,"Problems paying medical bills, past 12m",Num,370,1,x,x,x,x
+295,2,PAY.0030.00.1,PAYNOBLLNW_A,,Unable to pay medical bills,Num,371,1,x,x,x,x
+296,3,PAY.0040.00.1,PAYWORRY_A,,"Get sick or have accident, worry about paying medicalbills",Num,372,1,x,x,x,x
+297,1,CVL.0020.00.4,CVDDIAG_A,,Ever had COVID-19,Num,373,1,x,x,x,
+298,2,CVL.0030.00.4,POSTEST_A,,Ever had positive COVID-19 test,Num,374,1,x,,,
+299,3,CVL.0040.00.4,CVDSEV_A,,Symptoms of COVID-19,Num,375,1,x,x,x,
+300,4,CVL.0050.00.4,LONGCVD_A,,Had COVID-19 symptoms for 3 or more months,Num,376,1,x,,,
+301,5,CVL.0060.00.4,SYMPNOW_A,,Currently has COVID-19 symptoms,Num,377,1,x,,,
+302,1,DNC.0020.00.2,DENPREV_A,,Time since last dental exam/cleaning,Num,378,1,x,,x,x
+303,2,DNC.0030.00.2,DENDL12M_A,,"Delayed dental care due to cost, past 12m",Num,379,1,x,,x,x
+304,3,DNC.0040.00.2,DENNG12M_A,,"Needed dental care but did not get it due to cost, past12m",Num,380,1,x,,x,x
+305,1,UTZ.0020.00.1,LASTDR_A,,Time since last saw doctor,Num,381,1,x,x,x,x
+306,2,UTZ.0030.00.1,WELLNESS_A,,Was last visit a wellness visit,Num,382,1,x,x,x,x
+307,3,UTZ.0040.00.1,WELLVIS_A,,Time since last wellness visit,Num,383,1,x,x,x,x
+308,4,UTZ.0050.00.1,USUALPL_A,,Have a usual place for care,Num,384,1,x,x,x,x
+309,5,UTZ.0060.00.1,USPLKIND_A,,Type of place for usual care,Num,385,1,x,x,x,x
+310,6,Recode,URGNT12MTC_A,URGENT12M_A,"Number of times visited urgent care, past 12m, top-coded",Num,386,1,x,x,x,x
+311,7,Recode,EMERG12MTC_A,EMERGE12M_A,"Number of times visited hospital emergency room, past12m, top-coded",Num,387,1,x,x,x,x
+312,8,UTZ.0090.00.1,HOSPONGT_A,,"Hospitalized overnight, past 12m",Num,388,1,x,x,x,x
+313,9,UTZ.0100.00.1,MEDDL12M_A,,"Delayed medical care due to cost, past 12m",Num,389,1,x,x,x,x
+314,10,UTZ.0110.00.1,MEDNG12M_A,,"Needed medical care but did not get it due to cost, past12m",Num,390,1,x,x,x,x
+315,1,ABH.0010.00.4,ABINSUR_A,,"Delay care because can't find doctor that acceptsinsurance",Num,391,1,x,,,
+316,2,ABH.0020.00.4,ABAVAIL_A,,Delay care because an appointment wasn't available,Num,392,1,x,,,
+317,3,ABH.0030.00.4,ABOPEN_A,,"Delay care because couldn't get to doctor's office whenopen",Num,393,1,x,,,
+318,4,ABH.0040.00.4,ABTOOLONG_A,,"Delay care because takes too long to get to doctor'soffice",Num,394,1,x,,,
+319,5,ABH.0050.00.4,ABTIME_A,,Delay care because you were too busy to take the time,Num,395,1,x,,,
+320,1,TLH.0010.00.4,VIRAPP12M_A,,"Virtual medical appointment, past 12m",Num,396,1,x,x,x,
+321,1,HIT.0010.00.4,ACCSSINT_A,,Internet access,Num,397,1,x,,,
+322,2,HIT.0020.00.4,ACCSSHOM_A,,Internet access at home,Num,398,1,x,,,
+323,3,HIT.0030.00.4,HITLOOK_A,,Used internet for health information,Num,399,1,x,,,
+324,4,HIT.0040.00.4,HITCOMM_A,,Communicated with doctor's office,Num,400,1,x,,,
+325,5,HIT.0050.00.4,HITTEST_A,,Used internet for test results,Num,401,1,x,,,
+326,1,PMD.0010.00.1,RX12M_A,,"Took prescription medication, past 12m",Num,402,1,x,x,x,x
+327,2,PMD.0020.00.1,RXSK12M_A,,"Skipped medication doses to save money, past 12m",Num,403,1,x,x,x,x
+328,3,PMD.0030.00.1,RXLS12M_A,,"Took less medication to save money, past 12m",Num,404,1,x,x,x,x
+329,4,PMD.0040.00.1,RXDL12M_A,,"Delayed filling prescription to save money, past 12m",Num,405,1,x,x,x,x
+330,5,PMD.0050.00.1,RXDG12M_A,,"Needed prescription medication but did not get it due tocost, past 12m",Num,406,1,x,x,x,x
+331,1,IMS.0010.00.3,PREGFLUYR_A,,Was sample adult pregnant last flu season,Num,407,1,x,x,x,x
+332,2,IMS.0020.00.3,LIVEBIRTH_A,,Any live births,Num,408,1,x,x,x,x
+333,3,IMS.0030.00.1,SHTFLU12M_A,,"Flu vaccine, past 12 months",Num,409,1,x,x,x,x
+334,4,IMS.0040.01.1,SHTFLUM_A,,Month of last flu vaccine,Num,410 - 411,2,x,x,x,x
+335,5,IMS.0040.02.1,SHTFLUY_A,,Year of last flu vaccine,Num,412 - 415,4,x,x,x,x
+336,6,IMS.0050.00.3,FLUPREG_A,,Was flu shot before or during pregnancy,Num,416,1,x,x,x,x
+337,7,IMS.0060.00.3,FLUPREG2_A,,Earlier pregnancy and flu vaccine,Num,417,1,x,x,x,x
+338,8,IMS.0061.00.3,SHTCVD191_A,,COVID-19 vaccination,Num,418,1,x,,,
+339,9,IMS.0062.00.3,SHTCVD19NM_A,,Number of COVID-19 vaccinations,Num,419,1,x,x,,
+340,10,IMS.0063.01.3,CVDVAC1M_A,,Month of most recent COVID-19 vaccination,Num,420 - 421,2,x,,,
+341,11,IMS.0063.02.3,CVDVAC1Y_A,,Year of most recent COVID-19 vaccination,Num,422 - 425,4,x,,,
+342,12,IMS.0064.01.3,CVDVAC2M_A,,Month of next most recent COVID-19 vaccination,Num,426 - 427,2,x,,,
+343,13,IMS.0064.02.3,CVDVAC2Y_A,,Year of next most recent COVID-19 vaccination,Num,428 - 431,4,x,,,
+344,14,Recode,SHOTTYPER_A,"SHOTTYPE_A;SHOTTYPE1_A",Brand of first COVID-19 shot,Num,432,1,x,,,
+345,15,IMS.0065.00.3,SHOTTYPE_A,,Brand of first COVID-19 shot,Num,433,1,x,,,
+346,16,IMS.0065.00.3,SHOTTYPE1_A,,Brand of first COVID-19 shot,Num,434,1,x,,,
+347,17,IMS.0070.00.1,SHTPNUEV_A,,Ever had pneumonia shot,Num,435,1,x,x,x,x
+348,18,IMS.0080.00.1,SHTPNEUNB_A,,Number of pneumonia shots,Num,436,1,x,x,x,x
+349,19,IMS.0090.00.3,SHTSHINGL1_A,,Ever had a shingles vaccination,Num,437,1,x,,,
+350,20,Recode,SHINGYEARP_A,SHINGYEAR_A,Year of most recent Shingles vaccine,Num,438 - 441,4,x,,,
+351,21,IMS.0110.00.3,SHINGWHEN1_A,,Was last shingles shot before 2017,Num,442,1,x,,,
+352,22,IMS.0120.00.3,SHINGRIX2_A,,Ever had Shingrix vaccination,Num,443,1,x,,,
+353,23,IMS.0140.00.3,SHINGRIXN2_A,,How many Shingrix shots,Num,444,1,x,,,
+354,24,IMS.0150.00.3,SHINGRIXFS_A,,First or second Shingrix shot,Num,445,1,x,,,
+355,25,IMS.0170.00.3,TDAPPREG_A,,Have a Tdap booster shot,Num,446,1,x,x,x,x
+356,26,IMS.0180.00.3,SHTTETANUS_A,,Tetanus shot in past 10 years,Num,447,1,x,,,x
+357,27,IMS.0190.00.3,SHTTDAP_A,,Kind of tetanus shot,Num,448,1,x,,,x
+358,28,IMS.0200.00.3,SHTHPV_A,,Ever had an HPV shot,Num,449,1,x,,,x
+359,29,IMS.0210.00.3,SHTHPVAGE_A,,Age at first HPV shot,Num,450 - 451,2,x,,,
+360,30,IMS.0220.00.3,WORKHEALTH_A,,Currently provide medical care to patients,Num,452,1,x,x,x,x
+361,31,IMS.0230.00.3,WRKHLTHFC_A,,Currently volunteer or work in health care,Num,453,1,x,x,x,x
+362,1,PTC.0010.00.2,EYEEX12M_A,,"Had eye exam, past 12m",Num,454,1,x,,x,x
+363,2,PTC.0020.00.2,THERA12M_A,,"Received physical/speech/rehabilitative/occupationaltherapy, past 12m",Num,455,1,x,,x,x
+364,3,PTC.0030.00.2,HOMEHC12M_A,,"Received care at home, past 12m",Num,456,1,x,x,x,x
+365,1,ANX.0010.00.1,ANXFREQ_A,,"How often feel worried, nervous, or anxious",Num,457,1,x,x,x,x
+366,2,ANX.0020.00.1,ANXMED_A,,Take medication for worried/nervous/anxious feelings,Num,458,1,x,x,x,x
+367,3,ANX.0030.00.1,ANXLEVEL_A,,Level of feelings when last felt worried/nervous/anxious,Num,459,1,x,x,x,x
+368,1,DEP.0010.00.1,DEPFREQ_A,,How often depressed,Num,460,1,x,x,x,x
+369,2,DEP.0020.00.1,DEPMED_A,,Take medication for depression,Num,461,1,x,x,x,x
+370,3,DEP.0030.00.1,DEPLEVEL_A,,Level of how depressed,Num,462,1,x,x,x,x
+371,1,MHC.0010.00.1,MHRX_A,,"Took medication for otheremotions/concentration/behavior/mental health, past 12m",Num,463,1,x,x,x,x
+372,2,MHC.0020.00.1,MHTHRPY_A,,"Received counseling/therapy from mental healthprofessional, past 12m",Num,464,1,x,x,x,x
+373,3,MHC.0030.00.1,MHTPYNOW_A,,"Currently receiving counseling/therapy from mentalhealth professional",Num,465,1,x,x,x,x
+374,4,MHC.0040.00.1,MHTHDLY_A,,"Delayed counseling/therapy due to cost, past 12m",Num,466,1,x,x,x,x
+375,5,MHC.0050.00.1,MHTHND_A,,"Needed counseling/therapy but did not get it due tocost, past 12m",Num,467,1,x,x,x,x
+376,1,PHQ.0010.00.2,PHQ81_A,,"How often little interest in things, past 2 weeks",Num,468,1,x,,,x
+377,2,PHQ.0020.00.2,PHQ82_A,,"How often feeling down, past 2 weeks",Num,469,1,x,,,x
+378,3,PHQ.0030.00.2,PHQ83_A,,"How often trouble with sleeping, past 2 weeks",Num,470,1,x,,,x
+379,4,PHQ.0040.00.2,PHQ84_A,,"How often feeling tired, past 2 weeks",Num,471,1,x,,,x
+380,5,PHQ.0050.00.2,PHQ85_A,,"How often undereating or overeating, past 2 weeks",Num,472,1,x,,,x
+381,6,PHQ.0060.00.2,PHQ86_A,,"How often feeling bad about self, past 2 weeks",Num,473,1,x,,,x
+382,7,PHQ.0070.00.2,PHQ87_A,,"How often trouble concentrating, past 2 weeks",Num,474,1,x,,,x
+383,8,PHQ.0080.00.2,PHQ88_A,,"How often moving or speaking slow or fast, past 2 weeks",Num,475,1,x,,,x
+384,9,Recode,PHQCAT_A,PHQ81_A-PHQ88_A,"Severity of depressive symptoms - PHQ scalecategorization",Num,476,1,x,,,x
+385,1,GAD.0010.00.2,GAD71_A,,"How often felt nervous/anxious/on edge, past 2 weeks",Num,477,1,x,,,x
+386,2,GAD.0020.00.2,GAD72_A,,"How often can't stop/control worrying, past 2 weeks",Num,478,1,x,,,x
+387,3,GAD.0030.00.2,GAD73_A,,"How often worrying too much, past 2 weeks",Num,479,1,x,,,x
+388,4,GAD.0040.00.2,GAD74_A,,"How often had trouble relaxing, past 2 weeks",Num,480,1,x,,,x
+389,5,GAD.0050.00.2,GAD75_A,,"How often can't sit still, past 2 weeks",Num,481,1,x,,,x
+390,6,GAD.0060.00.2,GAD76_A,,"How often became easily annoyed, past 2 weeks",Num,482,1,x,,,x
+391,7,GAD.0070.00.2,GAD77_A,,"How often felt afraid, past 2 weeks",Num,483,1,x,,,x
+392,8,Recode,GADCAT_A,GAD71_A-GAD77_A,Severity of anxiety symptoms - GAD scale categorization,Num,484,1,x,,,x
+393,1,FGE.0010.00.2,FGEFRQTRD_A,,"How often tired, past 3m",Num,485,1,x,,x,
+394,2,FGE.0020.00.2,FGELNGTRD_A,,How long tiredness lasted,Num,486,1,x,,x,
+395,3,FGE.0030.00.2,FGELEVTRD_A,,Level of tiredness,Num,487,1,x,,x,
+396,1,CIG.0020.00.1,SMKEV_A,,Ever smoked 100 cigarettes,Num,488,1,x,x,x,x
+397,2,CIG.0030.00.2,SMKAGE_A,,Age started smoking regularly,Num,489 - 490,2,x,,x,
+398,3,CIG.0040.00.1,SMKNOW_A,,Now smoke cigarettes,Num,491,1,x,x,x,x
+399,4,Recode,SMKCIGST_A,SMKEV_A; SMKNOW_A,Cigarette smoking status,Num,492,1,x,x,x,x
+400,5,CIG.0050.00.1,CIGNOW_A,,Number of cigarettes a day,Num,493 - 494,2,x,x,x,x
+401,6,CIG.0060.00.1,SMK30D_A,,Number of days smoked past month,Num,495 - 496,2,x,x,x,x
+402,7,CIG.0070.00.1,CIG30D_A,,Number of cigarettes on days smoked past month,Num,497 - 498,2,x,x,x,x
+403,8,CIG.0075.00.3,MENTHOLC_A,,Smoke menthol or non-menthol cigarettes,Num,499,1,x,,,
+404,9,CIG.0080.00.2,SMKQT12M_A,,"Stopped smoking for 1+ day, past 12 months",Num,500,1,x,,x,
+405,10,Recode,SMKQTNP_A,SMKQTN_A,Time since quitting smoking-number,Num,501 - 503,3,x,,x,
+406,11,CIG.0090.02.2,SMKQTTP_A,,Time since quitting smoking-time period,Num,504,1,x,,x,
+407,12,Recode,SMKQTY_A,SMKQTTP_A; SMKQTN_A,Years since quit smoking,Num,505 - 506,2,x,,x,
+408,13,CIG.0120.00.3,MENTHOLF_A,,Smoked menthol or non-menthol cigarettes,Num,507,1,x,,,
+409,14,CIG.0140.00.2,SMKTLK1_A,,"Advised by doctor about quitting, past 12m",Num,508,1,x,,,
+410,15,CIG.0150.00.1,ECIGEV_A,,Ever used electronic cigarettes,Num,509,1,x,x,x,x
+411,16,CIG.0160.00.1,ECIGNOW_A,,Now use electronic cigarettes,Num,510,1,x,x,x,x
+412,17,Recode,SMKECIGST_A,ECIGEV_A; ECIGNOW_A,Electronic cigarette use status,Num,511,1,x,x,x,x
+413,18,CIG.0170.00.3,FQUITA1_A,,"Quit method-nicotine patch, former smoker",Num,512,1,x,,,
+414,19,CIG.0180.00.3,FQUITA2_A,,"Quit method-nicotine gum or lozenge, former smoker",Num,513,1,x,,,
+415,20,CIG.0190.00.3,FQUITA3_A,,"Quit method-nicotine nasal spray or inhaler, formersmoker",Num,514,1,x,,,
+416,21,CIG.0200.00.3,FQUITA4_A,,"Quit method-Chantix/Varenicline, former smoker",Num,515,1,x,,,
+417,22,CIG.0210.00.3,FQUITA5_A,,"Quit method-Zyban/Bupropion/Wellbutrin, former smoker",Num,516,1,x,,,
+418,23,CIG.0220.00.3,FQUITB1_A,,"Quit method-phone/help line, former smoker",Num,517,1,x,,,
+419,24,CIG.0230.00.3,FQUITB2_A,,"Quit method-one-on-one counseling, former smoker",Num,518,1,x,,,
+420,25,CIG.0240.00.3,FQUITB3_A,,"Quit method-stop smoking clinic/class/support group -former smoker",Num,519,1,x,,,
+421,26,CIG.0250.00.3,FQUITE_A,,"Quit method-e-cigarettes, former smoker",Num,520,1,x,,,
+422,27,CIG.0260.00.3,CQUITA1_A,,"Quit method-nicotine patch, attempted to quit smoking",Num,521,1,x,,,
+423,28,CIG.0270.00.3,CQUITA2_A,,"Quit method-nicotine gum or lozenge, attempted to quitsmoking",Num,522,1,x,,,
+424,29,CIG.0280.00.3,CQUITA3_A,,"Quit method-nicotine nasal spray or inhaler, attemptedto quit smoking",Num,523,1,x,,,
+425,30,CIG.0290.00.3,CQUITA4_A,,"Quit method-Chantix/Varenicline, attempted to quitsmoking",Num,524,1,x,,,
+426,31,CIG.0300.00.3,CQUITA5_A,,"Quit method-Zyban/Bupropion/Wellbutrin, attempted toquit smoking",Num,525,1,x,,,
+427,32,CIG.0310.00.3,CQUITB1_A,,"Quit method-phone/help line, attempted to quit smoking",Num,526,1,x,,,
+428,33,CIG.0320.00.3,CQUITB2_A,,"Quit method-one-on-one counseling, attempted to quitsmoking",Num,527,1,x,,,
+429,34,CIG.0330.00.3,CQUITB3_A,,"Quit method-stop smoking clinic/class/support group -attempted to quit smoking",Num,528,1,x,,,
+430,35,CIG.0340.00.3,CQUITE_A,,"Quit method-e-cigarettes, attempted to quit smoking",Num,529,1,x,,,
+431,36,CIG.0350.00.3,QWANT_A,,Want to quit smoking,Num,530,1,x,,,
+432,1,OTB.0010.00.3,CIGAREV_A,,Ever smoked a cigar,Num,531,1,x,x,x,x
+433,2,OTB.0020.00.3,CIGARCUR_A,,Now smoke cigars,Num,532,1,x,x,x,x
+434,3,OTB.0030.00.3,CIGAR30D_A,,"How many days smoked a cigar, past 30 days",Num,533 - 534,2,x,x,x,x
+435,4,OTB.0040.00.3,PIPEEV_A,,Ever smoked a pipe filled with tobacco,Num,535,1,x,x,x,x
+436,5,OTB.0050.00.3,PIPECUR_A,,Now smoked pipe filled with tobacco,Num,536,1,x,x,x,x
+437,6,OTB.0060.00.3,SMOKELSEV_A,,Ever used smokeless tobacco,Num,537,1,x,x,x,x
+438,7,OTB.0070.00.3,SMOKELSCUR_A,,Now use smokeless tobacco,Num,538,1,x,x,x,x
+439,1,AQS.0010.00.3,HPTOB3_A,,"Advised by doctor about quitting smoking or using othertobacco, past 12m",Num,539,1,x,,,
+440,1,ALC.0010.00.2,DRKLIFE_A,,Had at least one alcohol drink in lifetime,Num,540,1,x,,x,
+441,2,ALC.0020.01.2,DRK12MN_A,,Days drank alcohol past 12m-number,Num,541 - 543,3,x,,x,
+442,3,ALC.0020.02.2,DRK12MTP_A,,Days drank alcohol past 12m-time period,Num,544,1,x,,x,
+443,4,Recode,DRK12MWK_A,"DRK12MN_A;DRK12MTP_A","Days drank alcohol per week, past 12m",Num,545 - 546,2,x,,x,
+444,5,Recode,DRK12MYR_A,"DRK12MN_A;DRK12MTP_A","Days drank alcohol per year, past 12m",Num,547 - 549,3,x,,x,
+445,6,ALC.0030.00.2,DRKAVG12M_A,,Average number of alcohol drinks on days drank,Num,550 - 551,2,x,,x,
+446,7,ALC.0040.00.2,DRK12ANYR_A,,Ever had 12+ alcohol drinks in any one year,Num,552,1,x,,x,
+447,8,Recode,DRKSTAT_A,"DRKLIFE_A;DRK12MN_A;DRK12MTP_A;DRKAVG12M_A;DRK12ANYR_A; SEX_A",Alcohol drinking status,Num,553 - 554,2,x,,x,
+448,9,ALC.0050.00.2,DRKBNG12M_A,,"Ever had 4+/5+ alcohol drinks in a day, past 12m",Num,555,1,x,,x,
+449,10,ALC.0060.00.2,DRKANY30D_A,,"Had any alcohol drink, past 30 days",Num,556,1,x,,x,
+450,11,ALC.0070.00.2,DRKBNG30D_A,,"Number of times had 4+/5+ alcohol drinks on an occasion,past 30d",Num,557 - 558,2,x,,x,
+451,12,Recode,DRKHVY12M_A,"DRKAVG12M_A;DRKBNG12M_A;DRKBNG30D_A; SEX_A",Heavy alcohol drinking in the past 12m,Num,559,1,x,,x,
+452,13,ALC.0080.00.2,DRKADVISE1_A,,"Advised by doctor to cut drinking, past 12m",Num,560,1,x,,,
+453,1,Recode,MODNR_A,MODN_A,Moderate physical activity-number,Num,561 - 564,4,x,,x,
+454,2,Recode,MODTPR_A,MODTP_A,Moderate physical activity-time period,Num,565,1,x,,x,
+455,3,Recode,MODFREQW_A,MODN_A and MODTP_A,Frequency of moderate physical activity (times per week),Num,566 - 567,2,x,,x,
+456,4,Recode,MODLNR_A,MODLN_A,Length of moderate physical activity-number,Num,568 - 570,3,x,,x,
+457,5,Recode,MODLTPR_A,MODLTP_A,Length of moderate physical activity-time period,Num,571,1,x,,x,
+458,6,Recode,MODMIN_A,MODLN_A and MODLTP_A,Duration of moderate physical activity (in minutes),Num,572 - 574,3,x,,x,
+459,7,Recode,VIGNR_A,VIGN_A,Vigorous physical activity-number,Num,575 - 578,4,x,,x,
+460,8,Recode,VIGTPR_A,VIGTP_A,Vigorous physical activity-time period,Num,579,1,x,,x,
+461,9,Recode,VIGFREQW_A,VIGN_A and VIGTP_A,Frequency of vigorous physical activity (times per week),Num,580 - 581,2,x,,x,
+462,10,Recode,VIGLNR_A,VIGLN_A,Length of vigorous physical activity-number,Num,582 - 584,3,x,,x,
+463,11,Recode,VIGLTPR_A,VIGLTP_A,Length of vigorous physical activity-time period,Num,585,1,x,,x,
+464,12,Recode,VIGMIN_A,VIGLN_A and VIGLTP_A,Duration of vigorous physical activity (in minutes),Num,586 - 588,3,x,,x,
+465,13,Recode,PA18_02R_A,"MODN_A; MODTP_A;MODLN_A; MODLTP_A;VIGN_A; VIGTP_A;VIGLN_A; VIGLTP_A",Physical activity met guidelines for aerobic activity,Num,589,1,x,,x,
+466,14,Recode,STRNR_A,STRN_A,Strengthening physical activity-number,Num,590 - 593,4,x,,x,
+467,15,Recode,STRTPR_A,STRTP_A,Strengthening physical activity-time period,Num,594,1,x,,x,
+468,16,Recode,STRFREQW_A,STRN_A and STRTP_A,"Frequency of strengthening physical activity (times perweek)",Num,595 - 596,2,x,,x,
+469,17,Recode,PA18_05R_A,"MODN_A; MODTP_A;MODLN_A; MODLTP_A;VIGN_A; VIGTP_A;VIGLN_A; VIGLTP_A;STRN_A; STRTP_A","Physical activity met guidelines for aerobic and/orstrengthening activity",Num,597,1,x,,x,
+470,1,WLK.0010.00.2,WLKTRAN_A,,"Walk for transportation, past 7 days",Num,598,1,x,,x,
+471,2,WLK.0020.00.2,WLKTRANDAY_A,,"How many days for transportation walk, past 7 days",Num,599 - 600,2,x,,x,
+472,3,WLK.0030.00.2,WLKTRANTPD_A,,"How many times per day for transportation walk, past 7days",Num,601 - 602,2,x,,x,
+473,4,Recode,WLKTRANTC_A,"WLKTRANDAY_A,WLKTRANTPD_A,WLKTRANLGT_A,WLKTRANTP_A","Length of walk for transportation, top coded at 181minutes",Num,603 - 605,3,x,,x,
+474,5,WLK.0050.00.2,WLKLEIS_A,,"Walk for leisure, past 7 days",Num,606,1,x,,x,
+475,6,WLK.0060.00.2,WLKLEISDAY_A,,"How many days for leisure walk, past 7 days",Num,607 - 608,2,x,,x,
+476,7,WLK.0070.00.2,WLKLEISTPD_A,,"How many times per day for leisure walk, past 7 days",Num,609 - 610,2,x,,x,
+477,8,Recode,WLKLEISTC_A,"WLKLEISDAY_A,WLKLEISTPD_A,WLKLEISLGT_A,WLKLEISTP_A","Length of walk for leisure, top-coded at 181 minutes",Num,611 - 613,3,x,,x,
+478,1,CPA.0010.00.2,ADVACTIVE_A,,Doctor advised increase activity,Num,614,1,x,,x,
+479,1,SLP.0010.01.2,SLPHOURS_A,,Hours of sleep in a 24-hour period,Num,615 - 616,2,x,,x,
+480,2,SLP.0020.00.2,SLPREST_A,,"Wake up well rested, past 30 days",Num,617,1,x,,x,
+481,3,SLP.0030.00.2,SLPFLL_A,,"Trouble falling asleep, past 30 days",Num,618,1,x,,x,
+482,4,SLP.0040.00.2,SLPSTY_A,,"Trouble staying asleep, past 30 days",Num,619,1,x,,x,
+483,5,SLP.0050.00.2,SLPMED_A,,"Take medication for sleep, past 30 days",Num,620,1,x,,x,
+484,1,DNU.0010.01.3,SODANO_A,,Number of times drank soda with sugar,Num,621 - 623,3,x,,,
+485,2,DNU.0010.02.3,SODATP_A,,Number of times drank soda - time period,Num,624,1,x,,,
+486,3,DNU.0020.01.3,FRJUICNO_A,,Number of times drank pure fruit juice,Num,625 - 627,3,x,,,
+487,4,DNU.0020.02.3,FRJUICTP_A,,Number of times drank pure fruit juice - time period,Num,628,1,x,,,
+488,5,DNU.0030.01.3,COFFEENO_A,,Number of times drank coffee or tea with sugar,Num,629 - 631,3,x,,,
+489,6,DNU.0030.02.3,COFFEENOTP_A,,"Number of times drank coffee or tea with sugar - timeperiod",Num,632,1,x,,,
+490,7,DNU.0040.01.3,SPORDRNO_A,,Number of times drank sport or energy drinks,Num,633 - 635,3,x,,,
+491,8,DNU.0040.02.3,SPORDRTP_A,,"Number of times drank sport or energy drinks - timeperiod",Num,636,1,x,,,
+492,9,DNU.0050.01.3,FRTDRNO_A,,Number of times drank sweetened fruit drinks,Num,637 - 639,3,x,,,
+493,10,DNU.0050.02.3,FRTDRTP_A,,"Number of times drank sweetened fruit drinks - timeperiod",Num,640,1,x,,,
+494,11,DNU.0060.01.3,FRUITNO_A,,Number of times eat fruit,Num,641 - 643,3,x,,,
+495,12,DNU.0060.02.3,FRUITTP_A,,Number of times eat fruit - time period,Num,644,1,x,,,
+496,13,DNU.0070.01.3,SALADNO_A,,Number of times eat salad,Num,645 - 647,3,x,,,
+497,14,DNU.0070.02.3,SALADTP_A,,Number of times eat salad - time period,Num,648,1,x,,,
+498,15,DNU.0080.01.3,FRIESNO_A,,Number of times eat fried potatoes,Num,649 - 651,3,x,,,
+499,16,DNU.0080.02.3,FRIESTP_A,,Number of times eat fried potatoes - time period,Num,652,1,x,,,
+500,17,DNU.0090.01.3,POTATONO_A,,Number of times eat other kinds of potatoes,Num,653 - 655,3,x,,,
+501,18,DNU.0090.02.3,POTATOTP_A,,Number of times eat other kind of potatoes - time period,Num,656,1,x,,,
+502,19,DNU.0100.01.3,BEANSNO_A,,Number of times eat beans,Num,657 - 659,3,x,,,
+503,20,DNU.0100.02.3,BEANSTP_A,,Number of times eat beans - time period,Num,660,1,x,,,
+504,21,DNU.0110.01.3,OVEGNO_A,,Number of times eat other vegetables,Num,661 - 663,3,x,,,
+505,22,DNU.0110.02.3,OVEGTP_A,,Number of times eat other vegetables - time period,Num,664,1,x,,,
+506,23,DNU.0120.01.3,SALSANO_A,,Number of times eat salsa,Num,665 - 667,3,x,,,
+507,24,DNU.0120.02.3,SALSATP_A,,Number of times eat salsa - time period,Num,668,1,x,,,
+508,25,DNU.0130.01.3,PIZZANO_A,,Number of times eat pizza,Num,669 - 671,3,x,,,
+509,26,DNU.0130.02.3,PIZZATP_A,,Number of times eat pizza - time period,Num,672,1,x,,,
+510,27,DNU.0140.01.3,TOMSAUNO_A,,Number of times eat tomato sauce,Num,673 - 675,3,x,,,
+511,28,DNU.0140.02.3,TOMSAUTP_A,,Number of times eat tomato sauce - time period,Num,676,1,x,,,
+512,1,CIH.0010.00.3,CHIRO_A,,Seen or talked to a chiropractor,Num,677,1,x,,,
+513,2,CIH.0020.00.3,CHIROPAIN_A,,Chiropractor visit for pain,Num,678,1,x,,,
+514,3,CIH.0030.00.3,CHIROHLTH_A,,Chiropractor visit to restore overall health,Num,679,1,x,,,
+515,4,CIH.0040.00.3,ACU_A,,Saw a practitioner of acupuncture,Num,680,1,x,,,
+516,5,CIH.0050.00.3,ACUPAIN_A,,Acupuncture visit for pain,Num,681,1,x,,,
+517,6,CIH.0060.00.3,ACUHLTH_A,,Acupuncture visit to restore overall health,Num,682,1,x,,,
+518,7,CIH.0070.00.3,MASS_A,,Saw a practitioner of massage,Num,683,1,x,,,
+519,8,CIH.0080.00.3,MASSPAIN_A,,Massage visit for pain,Num,684,1,x,,,
+520,9,CIH.0090.00.3,MASSHLTH_A,,Massage visit to restore overall health,Num,685,1,x,,,
+521,10,CIH.0100.00.3,NATUR_A,,Saw a practitioner of naturopathy,Num,686,1,x,,,
+522,11,CIH.0110.00.3,NATURPAIN_A,,Naturopath visit for pain,Num,687,1,x,,,
+523,12,CIH.0120.00.3,NATURHLTH_A,,Naturopath visit to restore overall health,Num,688,1,x,,,
+524,13,CIH.0130.00.3,ARTTHPY_A,,Saw an art therapist,Num,689,1,x,,,
+525,14,CIH.0140.00.3,MUSICTHPY_A,,Saw a music therapist,Num,690,1,x,,,
+526,15,CIH.0150.00.3,MEDITATE_A,,Practice meditation,Num,691,1,x,,,
+527,16,CIH.0160.00.3,MEDIPAIN_A,,Meditation for pain,Num,692,1,x,,,
+528,17,CIH.0170.00.3,MEDIHLTH_A,,Meditation to restore overall health,Num,693,1,x,,,
+529,18,CIH.0180.00.3,GIPR_A,,Use guided imagery or progressive relaxation,Num,694,1,x,,,
+530,19,CIH.0190.00.3,GIPRPAIN_A,,Use guided imagery or progressive relaxation for pain,Num,695,1,x,,,
+531,20,CIH.0200.00.3,GIPRHLTH_A,,"Use guided imagery or progressive relaxation to restoreoverall health",Num,696,1,x,,,
+532,21,CIH.0210.00.3,YOGA_A,,Practice Yoga,Num,697,1,x,,,
+533,22,CIH.0220.00.3,YOGABRTH_A,,Breathing exercises as part of Yoga,Num,698,1,x,,,
+534,23,CIH.0230.00.3,YOGAMED_A,,Meditation as part of Yoga,Num,699,1,x,,,
+535,24,CIH.0240.00.3,YOGAPAIN_A,,Yoga for pain,Num,700,1,x,,,
+536,25,CIH.0250.00.3,YOGAHLTH_A,,Yoga to restore overall health,Num,701,1,x,,,
+537,1,VSL.0010.00.3,VSLVYR_A,,Voice problem in the past 12m,Num,702,1,x,,,
+538,2,VSL.0020.00.3,VSLVDYS_A,,Duration of voice problem,Num,703,1,x,,,
+539,3,VSL.0030.00.3,VSLVDIF_A,,Amount of difficulty with voice problem,Num,704,1,x,,,
+540,4,VSL.0040.00.3,VSLSWYR_A,,Swallowing problem in the past 12m,Num,705,1,x,,,
+541,5,VSL.0050.00.3,VSLSWDYS_A,,Duration of swallowing problem,Num,706,1,x,,,
+542,6,VSL.0060.00.3,VSLSWDIF_A,,Amount of difficulty with swallowing problem,Num,707,1,x,,,
+543,7,VSL.0070.00.3,VSLSPYR_A,,Speech problem in the past 12m,Num,708,1,x,,,
+544,8,VSL.0080.00.3,VSLSPDYS_A,,Duration of speech problem,Num,709,1,x,,,
+545,9,VSL.0090.00.3,VSLSPDIF_A,,Amount of difficulty with speech problem,Num,710,1,x,,,
+546,10,VSL.0100.00.3,VSLSPST_A,,Stuttering problem in the past 12m,Num,711,1,x,,,
+547,11,VSL.0110.00.3,VSLLGYR_A,,Language problem in the past 12m,Num,712,1,x,,,
+548,12,VSL.0120.00.3,VSLLGDYS_A,,Duration of language problem,Num,713,1,x,,,
+549,13,VSL.0130.00.3,VSLLGDIF_A,,Amount of difficulty with language problem,Num,714,1,x,,,
+550,14,VSL.0140.00.3,VSLBRAIN_A,,VSL problems following a brain injury or stroke,Num,715,1,x,,,
+551,15,VSL.0150.00.3,VSLPA_A,,Saw a doctor for treatment in the past 12m,Num,716,1,x,,,
+552,16,VSL.0160.00.3,VSLPALF_A,,"Seeing a doctor for treatment in the past 12m affectedlife",Num,717,1,x,,,
+553,17,VSL.0170.00.3,VSLBTWR_A,,VSL problem better or worse,Num,718,1,x,,,
+554,1,ORN.0020.00.1,ORIENT_A,,Sexual orientation,Num,719,1,x,x,x,x
+555,1,MAR.0010.00.1,MARITAL_A,,Sample adult's current marital status,Num,720,1,x,x,x,x
+556,2,MAR.0020.00.1,SPOUSLIV_A,,Sample adult's spouse lives here,Num,721,1,x,x,x,x
+557,3,MAR.0060.00.1,SPOUSEP_A,,"Sample adult's spouse does not reside here due to legalseparation",Num,722,1,x,x,x,x
+558,4,MAR.0100.00.1,EVRMARRIED_A,,Sample adult has ever been married,Num,723,1,x,x,x,x
+559,5,Recode,MARSTAT_A,"MARITAL_A;SPOUSLIV_A;EVRMARRIED_A;WIDIVSEP_A",Current marital status of sample adult,Num,724,1,x,x,x,x
+560,6,Recode,LEGMSTAT_A,"MARSTAT_A;LEGALSTAT_A",Legal marital status of sample adult,Num,725,1,x,x,x,x
+561,7,Recode,SPOUSESEX_A,"SPOUSSEX_A;SPOUNEWSEX_A;SEX_FINAL",Sex of sample adult's spouse,Num,726,1,x,x,x,x
+562,8,Recode,SASPPRACE_A,"SPOUSRACE_A;PRTNRRACE_A",Race of sample adult and spouse or partner are the same,Num,727,1,x,x,x,x
+563,9,Recode,SASPPHISP_A,"SPOUSHISP_A;PRTNRHISP_A","Hispanic ethnicity of sample adult and spouse or partnerare the same",Num,728,1,x,x,x,x
+564,10,Recode,SPOUSAGETC_A,AGE_FINAL,"Age of sample adult's spouse, top-coded",Num,729 - 730,2,x,x,x,x
+565,11,Recode,SPOUSEDUCP_A,EDUC,Education level of sample adult's spouse,Num,731 - 732,2,x,x,,
+566,12,Recode,SPOUSWRK_A,FEMWORK_A; FEMWORK_C,Working status of sample adult's spouse,Num,733,1,x,x,x,x
+567,13,Recode,SPOUSWKFT_A,"SPOUSWRK_A;FEMWKFT_A; FEMWKFT_C",Sample adult's spouse is working full-time,Num,734,1,x,x,x,x
+568,14,Recode,PRTNRSEX_A,"SEX_FINAL;PARTNERSEX_A;PARTNEWSEX_A",Sex of the sample adult's partner,Num,735,1,x,x,x,x
+569,15,Recode,PRTNRAGETC_A,AGE_FINAL,"Age of sample adult's partner, top-coded",Num,736 - 737,2,x,x,x,x
+570,16,Recode,PRTNREDUCP_A,EDUC,Education level of sample adult's partner,Num,738 - 739,2,x,x,,
+571,17,Recode,PRTNRWRK_A,FEMWORK_A; FEMWORK_C,Working status of sample adult's partner,Num,740,1,x,x,x,x
+572,18,Recode,PRTNRWKFT_A,FEMWKFT_A; FEMWKFT_C,Sample adult's partner is working full-time,Num,741,1,x,x,x,x
+573,19,Recode,SAPARENTSC_A,"SAMEFAM_FLG;PARENTS_FINAL01-PARENTS_FINAL04",Sample adult relationship to sample child,Num,742,1,x,x,x,x
+574,20,Recode,PARSTAT_A,"PARENTS_FINAL01-PARENTS_FINAL04",Parental Status of sample adult,Num,743,1,x,x,x,x
+575,1,VET.0010.00.1,AFVET_A,,Ever serve active duty military,Num,744,1,x,x,x,x
+576,2,VET.0020.00.1,AFVETTRN_A,,Reserves or National Guard,Num,745,1,x,x,x,x
+577,3,VET.0030.00.1,COMBAT_A,,Ever served abroad during armed conflict,Num,746,1,x,x,x,x
+578,4,VET.0040.00.1,VADISB_A,,Have VA disability rating,Num,747,1,x,x,x,x
+579,5,VET.0050.00.1,VAHOSP_A,,Receive care at VA facility,Num,748,1,x,x,x,x
+580,6,VET.0060.00.1,VACAREEV_A,,Ever use VA health care,Num,749,1,x,x,x,x
+581,1,NAT.0010.00.1,NATUSBORN_A,,Born in U.S. or U.S. territory,Num,750,1,x,x,x,x
+582,2,Recode,YRSINUS_A,"NATUSBORN_A;NATUSLG_A",Years that sample adult has been in the United States,Num,751,1,x,x,x,x
+583,3,,CITZNSTP_A,"NATUSBORN_A;CITIZEN_A; NATCTZN_A",Citizenship status,Num,752,1,x,x,x,x
+584,1,SCH.0010.00.1,SCHCURENR_A,,Currently in school,Num,753,1,x,x,x,x
+585,2,Recode,SCHDYMSSTC_A,SCHDYSMSS_A,"Days of school missed  due to illness/injury past 12months, top-coded",Num,754 - 755,2,x,x,x,x
+586,1,EMP.0010.00.1,EMPLASTWK_A,,Worked for pay last week,Num,756,1,x,,,
+587,2,EMP.0020.00.1,EMPNOWRK_A,,Temporarily absent from work last week,Num,757,1,x,,,
+588,3,EMP.0030.00.1,EMPWHYNOT_A,,Main reason not working,Num,758 - 759,2,x,x,,
+589,4,EMP.0040.00.1,EMPWHENWRK_A,,Last time worked,Num,760,1,x,,,
+590,5,Recode,EMPWRKLSW1_A,"EMPLASTWK_A;EMPNOWRK_A;EMPWHYNOT_A;EMPWHENWRK_A;FEMWORK_A; FEMWORK_C",Worked last week,Num,761,1,x,x,,
+591,6,Recode,EMPLSTWOR1_A,"EMPWHENWRK_A;EMPWHYNOT_A",Last time worked for pay,Num,762,1,x,x,,
+592,7,Recode,EMPWKHRS3_A,EMPHOURS_A,Hours worked per week (topcoded for Public Use),Num,763 - 764,2,x,x,,
+593,8,Recode,EMPWRKFT1_A,"EMPLASTWK_A;EMPFULLTIM_A;EMPHOURS_A;FEMWKFT_A; FEMWKFT_C",Usually work 35+ hours per week,Num,765,1,x,x,,
+594,9,EMP.0070.00.1,EMPSICKLV_A,,Paid sick leave,Num,766,1,x,x,,
+595,10,EMP.0080.00.1,EMPHEALINS_A,,Health insurance offered,Num,767,1,x,x,,
+596,11,Recode,EMPDYSMSS3_A,EMPDAYMISS_A,"Days missed work, past 12 months (top-coded)",Num,768 - 770,3,x,x,,
+597,1,VOL.0010.00.4,CEVOLUN1_A,,Volunteer for organization or association,Num,771,1,x,,,
+598,2,VOL.0020.00.4,CEVOLUN2_A,,Other volunteer activities,Num,772,1,x,,,
+599,1,Recode,PCNTADTWKP_A,"EMPWRKLSW1_A;FEMWORK_A;FEMWORK_C;FAMILYA_FLG","Number of adults in sample adult's family who areworking",Num,773,1,x,x,x,x
+600,2,Recode,PCNTADTWFP_A,"EMPWRKFT1_A;FEMWKFT_A;FEMWKFT_C;FAMILYA_FLG","Number of adults in sample adult's family who areworking full-time",Num,774,1,x,x,x,x
+601,1,INC.0020.00.1,INCWRKO_A,,Income from wages,Num,775,1,x,x,x,x
+602,2,INC.0030.00.1,INCINTER_A,,Income from accounts,Num,776,1,x,x,x,x
+603,3,INC.0040.00.1,INCSSRR_A,,Income from SS/Railroad Retirement,Num,777,1,x,x,x,x
+604,4,INC.0050.00.1,INCSSISSDI_A,,Family income from SSDI,Num,778,1,x,x,x,x
+605,5,INC.0060.00.1,SSISSDIBTH_A,,Which family income SSI/SSDI,Num,779,1,x,x,x,x
+606,6,INC.0070.00.1,SSISSDIDSB_A,,SSI/SSDI due to disability,Num,780,1,x,x,x,x
+607,7,INC.0100.00.1,INCWELF_A,,Income from public assistance,Num,781,1,x,x,x,x
+608,8,INC.0110.00.1,INCRETIRE_A,,Income from retirement,Num,782,1,x,x,x,x
+609,9,INC.0120.00.1,INCOTHR_A,,Income from other sources,Num,783,1,x,x,x,x
+610,10,Recode,IMPNUM_A,,Imputation num,Num,784 - 785,2,x,x,,
+611,11,Recode,POVRATTC_A,INCTOTAL_A,SA family poverty ratio (top-coded),Num,786 - 790,5,x,x,x,x
+612,12,Recode,RATCAT_A,"INCTOTAL_A PCNT_AINC100FILL_AINC250FILL_AINC138FILL_AINC75K_A INC100K_AINC138K_A INC150K_AINC250K_A INC400K_AINC100PCT_AINC138PCT_AINC200PCT_AINC250PCT_AINC400PCT_A","Ratio of family income to poverty threshold for SA'sfamily",Num,791 - 792,2,x,x,x,x
+613,13,Recode,IMPINCFLG_A,,Imputed SA family income imputation flag,Num,793,1,x,x,x,x
+614,14,Recode,INCTCFLG_A,,Sample adult family income top-code flag,Num,794,1,x,,x,x
+615,1,FOO.0010.00.1,FSNAP12M_A,,"Receive food stamps, past 12m",Num,795,1,x,x,x,x
+616,2,FOO.0020.00.3,FSNAP30D_A,,"Receive food stamps, past 30d",Num,796,1,x,x,x,x
+617,3,FOO.0030.00.1,FWIC12M_A,,"Receive WIC benefits, past 12m",Num,797,1,x,x,x,x
+618,4,FOO.0040.00.1,FLUNCH12M_A,,Receive free/reduced meals at school,Num,798,1,x,x,x,x
+619,1,FDS.0020.00.3,FDSRUNOUT_A,,Worry food would run out,Num,799,1,x,x,x,x
+620,2,FDS.0030.00.3,FDSLAST_A,,Food didn't last,Num,800,1,x,x,x,x
+621,3,FDS.0040.00.3,FDSBALANCE_A,,Couldn't afford to eat balanced meals,Num,801,1,x,x,x,x
+622,4,FDS.0050.00.3,FDSSKIP_A,,Cut the size of meals or skip meals,Num,802,1,x,x,x,x
+623,5,FDS.0060.00.3,FDSSKIPDYS_A,,"How many days did you/adults in the family cut the sizeof meals or skip meals",Num,803 - 804,2,x,x,x,x
+624,6,FDS.0070.00.3,FDSLESS_A,,Eat less than should,Num,805,1,x,x,x,x
+625,7,FDS.0080.00.3,FDSHUNGRY_A,,Ever hungry because not enough money for food,Num,806,1,x,x,x,x
+626,8,FDS.0090.00.3,FDSWEIGHT_A,,Lose weight because not enough money for food,Num,807,1,x,x,x,x
+627,9,FDS.0100.00.3,FDSNOTEAT_A,,not eat for a whole day,Num,808,1,x,x,x,x
+628,10,FDS.0110.00.3,FDSNEDAYS_A,,How many days not eat,Num,809 - 810,2,x,x,x,x
+629,11,Recode,FDSCAT3_A,"FDSRUNOUT_A;FDSLAST_A;FDSBALANCE_A;FDSSKIP_A;FDSSKIPDYS_A;FDSLESS_A;FDSHUNGRY_A;FDSWEIGHT_A;FDSNOTEAT_A;FDSNEDAYS_A",Adult 3 category food security recode,Num,811,1,x,x,x,x
+630,12,Recode,FDSCAT4_A,"FDSRUNOUT_A;FDSLAST_A;FDSBALANCE_A;FDSSKIP_A;FDSSKIPDYS_A;FDSLESS_A;FDSHUNGRY_A;FDSWEIGHT_A;FDSNOTEAT_A;FDSNEDAYS_A",Adult  4 category food security recode,Num,812,1,x,x,x,x
+631,1,HOU.0010.00.1,HOUYRSLIV_A,,Length of time in house/apartment,Num,813,1,x,x,x,x
+632,2,HOU.0020.00.1,HOUTENURE_A,,Residence owned/rented,Num,814,1,x,x,x,x
+633,3,HOU.0030.00.1,HOUGVASST_A,,Paying lower rent,Num,815,1,x,x,x,x
+634,1,TBH.0010.00.4,TRANSPOR_A,,"Delay care in the past 12 months because no reliabletransportation",Num,816,1,x,,,
+635,1,CIV.0010.00.4,CEMMETNG_A,,Attend public meeting,Num,817,1,x,,,
+636,2,CIV.0020.00.4,CEVOTELC_A,,Vote in last local elections,Num,818,1,x,,,
+637,1.0,Recode,LSATIS11R_A,"LSATIS11_A;LSATORDER1_A",Life satisfaction - 11 category question,Num,62 - 63,2,,x,,
+638,2.0,Recode,LSATIS4R_A,"LSATIS4_A;LSATORDER2_A",Life satisfaction - 4 category question,Num,64,1,,x,,
+639,3.0,GEN.2070.00.1,LSROTATE_FLG,,Life Satisfaction section rotation flag,Num,65,1,,x,,
+640,1.0,ASP.0010.00.2,ASPMEDEV_A,,Told to take low-dose aspirin,Num,77,1,,x,,x
+641,2.0,ASP.0020.00.2,ASPMEDNOWN_A,,Now following aspirin advice,Num,78,1,,x,,x
+642,3.0,ASP.0030.00.2,ASPMEDSTP_A,,Advise to stop taking aspirin,Num,79,1,,x,,x
+643,4.0,ASP.0040.00.2,ASPONOWN_A,,Taking low dose-aspirin on own,Num,80,1,,x,,x
+644,11.0,DIB.0100.00.3,INSSKIP12M_A,,"Skipped insulin, past 12m",Num,189,1,,x,,
+645,12.0,DIB.0110.00.3,INSLESS12M_A,,"Took less insulin, past 12m",Num,190,1,,x,,
+646,13.0,DIB.0120.00.3,INSDLY12M_A,,"Delayed buying insulin, past 12m",Num,191,1,,x,,
+647,15.0,DIB.0140.00.3,DIBSTRESS_A,,Overwhelmed by diabetes,Num,193,1,,x,,
+648,16.0,DIB.0150.00.3,DIBCSTRESS_A,,Change in diabetes distress,Num,194,1,,x,,
+649,1.0,RCN.0010.00.4,KIDWEAKEV_A,,Ever had weak/failing kidneys,Num,200,1,,x,x,
+650,2.0,RCN.0020.00.4,HEPEV_A,,Ever had hepatitis,Num,201,1,,x,x,
+651,3.0,RCN.0030.00.4,LIVEREV_A,,Ever had cirrhosis/liver condition,Num,202,1,,x,x,
+652,6.0,RCN.0060.00.3,COLDFLU12M_A,,Cold or flu 12m,Num,205,1,,x,,
+653,7,RCN.0070.00.3,DRYMTH12M_A,,Dry mouth 12m,Num,206,1,,x,,
+654,1.0,ALG.0020.00.2,CURRESP_A,,Current respiratory allergy,Num,213,1,,x,,
+655,2.0,ALG.0030.00.2,DXRESP_A,,Respiratory allergy diagnosis,Num,214,1,,x,,
+656,3.0,ALG.0040.00.2,CURFOOD_A,,Current food allergy,Num,215,1,,x,,
+657,4.0,ALG.0050.00.2,DXFOOD_A,,Food allergy diagnosis,Num,216,1,,x,,
+658,5.0,ALG.0060.00.2,CURSKIN_A,,Current skin allergy,Num,217,1,,x,,
+659,6.0,ALG.0070.00.2,DXSKIN_A,,Skin allergy diagnosis,Num,218,1,,x,,
+660,4,HEA.0040.00.2,HEARQTRM_A,,Hearing conversation in quiet room,Num,231,1,,x,,
+661,5,HEA.0050.00.2,HEARNYRM_A,,Hearing conversation in noisy room,Num,232,1,,x,,
+662,2.0,COM.0020.00.2,COMUSESL_A,,Use sign language,Num,248,1,,x,,
+663,2.0,CVD.0030.00.4,COVIDTEST_A,,Ever been tested for COVID-19,Num,398,1,,x,x,
+664,3.0,CVD.0040.00.4,CVDRSLT_A,,Tested positive for COVID-19,Num,399,1,,x,x,
+665,1.0,TSC.0010.00.3,CVDSYMSM_A,,COVID-19 symptom - loss of smell,Num,401,1,,x,,
+666,2.0,TSC.0020.00.3,CVDSMREC_A,,COVID-19 symptom - smell recovery,Num,402,1,,x,,
+667,3.0,TSC.0030.00.3,CVDSYMTST_A,,COVID-19 symptom - loss of taste,Num,403,1,,x,,
+668,4.0,TSC.0040.00.3,CVDTSTREC_A,,COVID-19 symptom - taste recovery,Num,404,1,,x,,
+669,1.0,ACC.0010.00.4,DLYCARE_A,,Delayed medical care due to COVID-19,Num,415,1,,x,x,
+670,2.0,ACC.0020.00.4,DNGCARE_A,,Did not get medical care due to COVID-19,Num,416,1,,x,x,
+671,4.0,ACC.0040.00.4,VIRAPPCVD_A,,Virtual medical appointment related to COVID-19,Num,418,1,,x,x,
+672,1.0,CNV.0010.00.3,CANCOVTREA_A,,"Cancer treatment since the start of the coronaviruspandemic",Num,419,1,,x,x,
+673,2.0,CNV.0020.00.3,CANCOVCHG_A,,"Cancer treatment changed, delayed or cancelled due tothe coronavirus pandemic",Num,420,1,,x,x,
+674,3.0,CNV.0030.00.3,CANCOVOTH_A,,"Other cancer medical care since the start of thecoronavirus pandemic",Num,421,1,,x,x,
+675,4.0,CNV.0040.00.3,CANCOVCARE_A,,"Other cancer care changed, delayed, or cancelled due tocoronavirus pandemic",Num,422,1,,x,x,
+676,1.0,PRV.0010.00.2,BPLAST_A,,Last time blood pressure checked,Num,428,1,,x,,x
+677,2.0,PRV.0020.00.2,CHOLLAST_A,,Last time cholesterol checked,Num,429,1,,x,,x
+678,3.0,PRV.0030.00.2,DIBLAST1_A,,Last time blood sugar test,Num,430,1,,x,,
+679,4.0,PRV.0033.00.3,DIBA1CLAST_A,,Last A1C,Num,431,1,,x,,
+680,5.0,Recode,DIBA1CNMT_A,DIBA1CNUM_A,Number of A1Cs - topcoded,Num,432,1,,x,,
+681,6.0,PRV.0040.00.2,COLORECTEV_A,,Colonoscopy or sigmoidoscopy,Num,433,1,,x,,x
+682,7.0,PRV.0050.00.2,COLORECTYP_A,,Colonoscopy or sigmoidoscopy or both,Num,434,1,,x,,x
+683,8.0,PRV.0060.00.2,COLWHEN_A,,Most recent colonoscopy,Num,435,1,,x,,x
+684,9.0,PRV.0070.00.3,COLREASON_A,,Why did you have a colonoscopy,Num,436,1,,x,,x
+685,10.0,PRV.0080.00.3,COLPAY_A,,Pay for most recent colonoscopy,Num,437,1,,x,,x
+686,11.0,PRV.0090.00.2,COLSIGWHEN_A,,Most recent colonoscopy or sigmoidoscopy,Num,438,1,,x,,x
+687,12.0,PRV.0100.00.2,SIGWHEN_A,,Most recent sigmoidoscopy,Num,439,1,,x,,x
+688,13.0,PRV.0120.00.2,CTCOLEV1_A,,Ever had colonography/virtual colonoscopy,Num,440,1,,x,,
+689,14.0,PRV.0130.00.2,CTCOLWHEN1_A,,Most recent colonography/virtual colonoscopy,Num,441,1,,x,,
+690,15.0,PRV.0140.00.2,FITHEV1_A,,Ever had home blood stool test,Num,442,1,,x,,
+691,16.0,PRV.0150.00.2,FITHWHEN1_A,,Most recent home blood stool test,Num,443,1,,x,,
+692,17.0,PRV.0160.00.3,COLOGUARD1_A,,Ever had Cologuard,Num,444,1,,x,,
+693,18.0,PRV.0170.00.3,FITCOLG1_A,,Was blood stool/FIT part of Cologuard test?,Num,445,1,,x,,
+694,19.0,PRV.0180.00.3,CGUARDWHE1_A,,When was your last Cologuard?,Num,446,1,,x,,
+695,20.0,PRV.0190.00.3,COLPROB1_A,,"Did doctor recommend you be tested to look for problemsin colon/rectum",Num,447,1,,x,,
+696,21.0,Recode,COLTEST1_A,COLTEST_A,Stool blood test/fecal occult blood/FIT test,Num,448,1,,x,,
+697,22.0,Recode,COLTEST2_A,COLTEST_A,Cologuard or FIT DNA test,Num,449,1,,x,,
+698,23.0,Recode,COLTEST3_A,COLTEST_A,Sigmoidoscopy,Num,450,1,,x,,
+699,24.0,Recode,COLTEST4_A,COLTEST_A,Colonoscopy,Num,451,1,,x,,
+700,25.0,Recode,COLTEST5_A,COLTEST_A,CT colonography/virtual colonoscopy,Num,452,1,,x,,
+701,26,Recode,COLTEST6_A,COLTEST_A,Other test for colon cancer,Num,453,1,,x,,
+702,27,PRV.0210.00.3,PSATEST_A,,Ever had a PSA test,Num,454,1,,x,,x
+703,28,PRV.0220.00.3,PSAWHEN_A,,When had most recent PSA test,Num,455,1,,x,,x
+704,29,PRV.0230.00.3,PSAREASON_A,,Reason had a PSA test,Num,456,1,,x,,x
+705,30,PRV.0250.00.3,PSASUGGEST_A,,Who suggested PSA test,Num,457,1,,x,,x
+706,31,PRV.0280.00.2,CERVICEV1_A,,Ever had cervical cancer screening test,Num,458,1,,x,,
+707,32,PRV.0290.00.2,CERVICWHEN_A,,When was most recent cervical cancer test,Num,459,1,,x,,x
+708,33,PRV.0300.00.3,CERREASON1_A,,Reason for cervical cancer screening,Num,460,1,,x,,
+709,34,PRV.0310.00.3,PAPTEST_A,,PAP test at most recent cervical cancer screening,Num,461,1,,x,,x
+710,35,PRV.0320.00.3,HPVTEST_A,,HPV test at most recent cervical cancer screening,Num,462,1,,x,,x
+711,36,PRV.0325.00.3,TELLCERVIC_A,,Doctor tell type of cervical exam,Num,463,1,,x,,
+712,37,PRV.0330.00.3,CERVICRES_A,,Abnormal pap in past 5 years,Num,464,1,,x,,x
+713,38,PRV.0340.00.3,CERVICNOT1_A,,Why did not get a PAP/HPV test in past 5 years,Num,465 - 466,2,,x,,
+714,39,PRV.0350.00.2,HYSTEV1_A,,Had hysterectomy,Num,467,1,,x,,
+715,40,PRV.0360.00.2,MAMEV_A,,Ever had mammogram,Num,468,1,,x,,x
+716,41,PRV.0370.00.2,MAMWHEN_A,,Most recent mammogram,Num,469,1,,x,,x
+717,42,PRV.0380.00.3,MAMPAY_A,,Pay mammogram,Num,470,1,,x,,
+718,43,PRV.0390.00.3,MAMREASON_A,,Reason for mammogram,Num,471,1,,x,,x
+719,44,PRV.0400.00.3,MAMAGE1ST1_A,,Age of first mammogram,Num,472,1,,x,,
+720,45,PRV.0410.00.3,MAMNOT1_A,,Reason no mammogram,Num,473 - 474,2,,x,,
+721,8.0,IMS.0061.00.3,SHTCVD19_A,,COVID-19 vaccination,Num,486,1,,x,,
+722,10.0,Recode,CVDVAC1MR_A,"CVDVAC1M_A;CVDVAC1Y_A;CVDVAC2M_A;CVDVAC2Y_A",Month of most recent COVID-19 vaccination,Num,488 - 489,2,,x,,
+723,11,Recode,CVDVAC1YR_A,"CVDVAC1M_A;CVDVAC1Y_A;CVDVAC2M_A;CVDVAC2Y_A",Year of most recent COVID-19 vaccination,Num,490 - 493,4,,x,,
+724,12,Recode,CVDVAC2MR_A,"CVDVAC2M_A;CVDVAC2Y_A;CVDVAC1M_A;CVDVAC1Y_A",Month of next most recent COVID-19 vaccination,Num,494 - 495,2,,x,,
+725,13,Recode,CVDVAC2YR_A,"CVDVAC2M_A;CVDVAC2Y_A;CVDVAC1M_A;CVDVAC1Y_A",Year of next most recent COVID-19 vaccination,Num,496 - 499,4,,x,,
+726,14,IMS.0065.00.3,SHTCVD19AV_A,,Doctor told need another COVID-19 vaccination,Num,500,1,,x,,
+727,17,IMS.0090.00.3,SHTSHINGLE_A,,Ever had a shingles vaccination,Num,503,1,,x,x,x
+728,18,IMS.0100.00.3,ZOSTAVAX1_A,,Ever had Zostavax,Num,504,1,,x,,
+729,19,Recode,ZOSTAVXYRP_A,ZOSTAVAXYR_A,When was most recent Zostavax shot,Num,505 - 508,4,,x,x,x
+730,20,IMS.0120.00.3,ZOSTAWHEN_A,,Was Zostavax before 2018,Num,509,1,,x,x,x
+731,21,IMS.0130.00.3,SHINGRIX1_A,,Ever had Shingrix vaccination,Num,510,1,,x,,
+732,22,IMS.0140.00.3,SHINGRIXNB_A,,How many Shingrix shots,Num,511,1,,x,x,x
+733,23,Recode,SHINGRXYRP_A,SHINGRIXYR_A,What year did you get your most recent Shingrix shot,Num,512 - 515,4,,x,x,x
+734,24,IMS.0160.00.3,SHINGWHEN_A,,Was last Shingrix before 2018,Num,516,1,,x,x,x
+735,26,IMS.0180.00.3,SHTHEPB_A,,Ever receive hepatitis B vaccine,Num,518,1,,x,,
+736,27,IMS.0190.00.3,SHTHEPA_A,,Ever receive hepatitis A vaccine,Num,519,1,,x,,
+737,28,IMS.0200.00.3,LIVEHEP_A,,Live with someone with hepatitis,Num,520,1,,x,,
+738,31,IMS.0240.00.3,TRAVEL_A,,Travel to other countries since 1995,Num,523,1,,x,,
+739,2.0,CGR.0020.00.4,HOMECAREDG_A,,Did not get home care due to COVID-19,Num,525,1,,x,x,
+740,3.0,CGR.0030.00.4,FAMCARE12M_A,,Received home care from friend/family,Num,526,1,,x,x,
+741,4.0,CGR.0040.00.4,FAMCAREDNG_A,,Did not get family care due to COVID-19,Num,527,1,,x,x,
+742,5.0,CGR.0050.00.4,FAMCARECVD_A,,Received family care due to COVID-19,Num,528,1,,x,x,
+743,1.0,SPD.0020.00.2,SAD_A,,"How often felt so sad nothing cheers you up, past 30days",Num,540,1,,x,,
+744,2.0,SPD.0030.00.2,NERVOUS_A,,"How often felt nervous, past 30 days",Num,541,1,,x,,
+745,3.0,SPD.0040.00.2,RESTLESS_A,,"How often felt restless/fidgety, past 30 days",Num,542,1,,x,,
+746,4.0,SPD.0050.00.2,HOPELESS_A,,"How often felt hopeless, past 30 days",Num,543,1,,x,,
+747,5.0,SPD.0060.00.2,EFFORT_A,,"How often felt everything was an effort, past 30 days",Num,544,1,,x,,
+748,6.0,SPD.0070.00.2,WORTHLESS_A,,"How often felt worthless, past 30 days",Num,545,1,,x,,
+749,7.0,Recode,K6SPD_A,"SAD_A; NERVOUS_A;RESTLESS_A;HOPELESS_A;EFFORT_A;WORTHLESS_A",Experienced serious psychological distress - K6 scale,Num,546,1,,x,,
+750,1.0,PAI.0020.00.2,PAIFRQ3M_A,,How often had pain,Num,547,1,,x,x,x
+751,2,PAI.0030.00.2,PAIAMNT_A,,How much pain last time,Num,548,1,,x,x,x
+752,3,PAI.0040.00.2,PAIWKLM3M_A,,How often pain limits life/work,Num,549,1,,x,x,x
+753,4,PAI.0050.00.2,PAIAFFM3M_A,,How often pain impacts family,Num,550,1,,x,x,x
+754,5,PAI.0060.00.2,PAIBACK3M_A,,Back pain,Num,551,1,,x,,x
+755,6,PAI.0070.00.2,PAIULMB3M_A,,Pain in hands,Num,552,1,,x,,x
+756,7,PAI.0080.00.2,PAILLMB3M_A,,Pain in hips,Num,553,1,,x,,x
+757,8,PAI.0090.00.2,PAIHDFC3M_A,,Migraine,Num,554,1,,x,,x
+758,9,PAI.0100.00.2,PAIAPG3M_A,,Abdominal pain,Num,555,1,,x,,x
+759,10,PAI.0110.00.2,PAITOOTH3M_A,,Toothache/jaw pain,Num,556,1,,x,,x
+760,1.0,REP.0010.00.2,REPSTRAIN_A,,Repetitive strain injuries in the past 3 months,Num,557,1,,x,x,
+761,2.0,REP.0020.00.2,REPLIMIT_A,,Limited by repetitive strain injury in the past 3 months,Num,558,1,,x,x,
+762,3.0,REP.0030.00.2,REPSAWDOC_A,,Saw a doctor about repetitive strain injury,Num,559,1,,x,x,
+763,4.0,Recode,REPWRKDYTC_A,REPWRKDAYS_A,"Number of workdays missed due to repetitive straininjury in the past 3 months",Num,560 - 561,2,,x,x,
+764,5.0,REP.0050.00.2,REPFUTWRK_A,,Expected workdays missed due to repetitive strain injury,Num,562,1,,x,x,
+765,6.0,REP.0060.00.2,REPSTOPCHG_A,,"Stopped working or changed job due to repetitive straininjury",Num,563,1,,x,x,
+766,7.0,REP.0070.00.2,REPREDUCE_A,,"Reduced work or changed tasks due to repetitive straininjury",Num,564,1,,x,x,
+767,8.0,REP.0080.00.2,REPWRKCAUS_A,,Did repetitive strain injury occur while working,Num,565,1,,x,x,
+768,1.0,INJ.0020.00.2,ANYINJURY_A,,"Any injury in the past 3 months (not includingrepetitive strain injuries)",Num,566,1,,x,x,
+769,2.0,INJ.0030.00.2,INJLIMIT_A,,Limited by injury in the past 3 months,Num,567,1,,x,x,
+770,3.0,Recode,NUMINJTC_A,NUMINJ_A,"Number of non-repetitive strain injuries in the past 3months",Num,568 - 569,2,,x,x,
+771,4.0,INJ.0050.00.2,INJHOME_A,,Did injury occur at home,Num,570,1,,x,x,
+772,5.0,INJ.0060.00.2,INJWORK_A,,Did injury occur at work,Num,571,1,,x,x,
+773,6.0,INJ.0070.00.2,INJSPORTS_A,,Did injury occur while playing sports or exercising,Num,572,1,,x,x,
+774,7.0,INJ.0080.00.2,INJFALL_A,,Did injury occur because of a fall,Num,573,1,,x,x,
+775,8.0,INJ.0090.00.2,INJFALLHOM_A,,Did fall occur at home,Num,574,1,,x,x,
+776,9.0,INJ.0100.00.2,INJFALLWRK_A,,Did fall occur at work,Num,575,1,,x,x,
+777,10.0,INJ.0110.00.2,INJMOTOR_A,,Injury caused by a motor vehicle crash or collision,Num,576,1,,x,x,
+778,11,Recode,INJMVTYPE1_A,INJMVTYPE_A,Motor vehicle accident - driver,Num,577,1,,x,x,
+779,12,Recode,INJMVTYPE2_A,INJMVTYPE_A,Motor vehicle accident - passenger,Num,578,1,,x,x,
+780,13,Recode,INJMVTYPE3_A,INJMVTYPE_A,Motor vehicle accident - bicyclist,Num,579,1,,x,x,
+781,14,Recode,INJMVTYPE4_A,INJMVTYPE_A,Motor vehicle accident - pedestrian,Num,580,1,,x,x,
+782,15,Recode,INJMVTYPE5_A,INJMVTYPE_A,Motor vehicle accident - something else,Num,581,1,,x,x,
+783,16,INJ.0130.00.2,INJCHORES_A,,Did injury occur while doing household activities,Num,582,1,,x,x,
+784,17,INJ.0140.00.2,INJSAWDOC_A,,Saw a doctor about injury,Num,583,1,,x,x,
+785,18,INJ.0150.00.2,INJER_A,,Visited ER for injury,Num,584,1,,x,x,
+786,19,INJ.0160.00.2,INJHOSP_A,,Hospitalized for injury,Num,585,1,,x,x,
+787,20,INJ.0170.00.2,INJBONES_A,,Did injury cause broken bones,Num,586,1,,x,x,
+788,21,INJ.0180.00.2,INJSTITCH_A,,Did injury require stitches or staples,Num,587,1,,x,x,
+789,22,Recode,INJWRKDYTC_A,INJWRKDAYS_A,"Number of workdays missed due to injury in the past 3months",Num,588 - 589,2,,x,x,
+790,23,INJ.0200.00.2,INJFUTWRK_A,,Expected workdays missed due to injury,Num,590,1,,x,x,
+791,24,INJ.0210.00.2,INJSTOPCHG_A,,Stopped working or changed jobs due to injury,Num,591,1,,x,x,
+792,25,INJ.0220.00.2,INJREDUCE_A,,Reduced work or changed tasks due to injury,Num,592,1,,x,x,
+793,1.0,TSM.0010.00.3,SMELLDF_A,,Difficulty smelling,Num,593,1,,x,,
+794,2.0,TSM.0020.00.3,SMELLCOMP_A,,Smelling compared to past,Num,594,1,,x,,
+795,3.0,TSM.0030.00.3,SMELLPHT_A,,Smell unpleasant odor,Num,595,1,,x,,
+796,4.0,TSM.0040.00.3,TASTEDF_A,,Difficulty tasting,Num,596,1,,x,,
+797,5.0,TSM.0050.00.3,TASTECOMP_A,,Tasting compared to past,Num,597,1,,x,,
+798,6.0,TSM.0060.00.3,TASTEFLAV_A,,Tasting flavors,Num,598,1,,x,,
+799,7.0,TSM.0070.00.3,TASTEUNW_A,,Unwanted taste,Num,599,1,,x,,
+800,8.0,TSM.0080.00.3,TSTSMHP_A,,Ever discuss problem with smell/taste with doctor,Num,600,1,,x,,
+801,9.0,TSM.0090.00.3,TSTSMLAST_A,,"Last time you discuss problem with smell/taste withdoctor",Num,601,1,,x,,
+802,1.0,SOS.0010.00.4,SUPPORT_A,,How often social/emotional support,Num,622,1,,x,x,
+803,2.0,SOS.0020.00.4,CMPSUPPORT_A,,"Social/emotional support, past 12 months",Num,623,1,,x,x,
+804,1.0,Recode,EMDINDSTN1_A,EMDINDUST_A,Detailed 2-digit recode for sample adult's industry,Num,673 - 674,2,,x,,
+805,2.0,Recode,EMDINDSTN2_A,EMDINDUST_A,Simple 2-digit recode for sample adult's industry,Num,675 - 676,2,,x,,
+806,3.0,Recode,EMDOCCUPN1_A,EMDKIND1_A,Detailed 2-digit recode for sample adult's occupation,Num,677 - 678,2,,x,,
+807,4.0,Recode,EMDOCCUPN2_A,EMDKIND1_A,Simple 2-digit recode for sample adult's occupation,Num,679 - 680,2,,x,,
+808,5.0,EMD.0050.00.2,EMDSUPER_A,,Supervise other employees,Num,681,1,,x,,
+809,6.0,EMD.0060.00.2,EMDWRKCAT1_A,,Type of main job,Num,682,1,,x,,
+810,1.0,JOB.0010.00.3,JOBTAX_A,,Does employer deduct taxes?,Num,683,1,,x,,
+811,2.0,JOB.0020.00.3,JOBCHGEARN_A,,How much do your earnings change monthly,Num,684,1,,x,,
+812,3.0,JOB.0030.00.3,JOBSHIFT_A,,Usual hours of main job,Num,685,1,,x,,
+813,4.0,JOB.0040.00.3,JOBCHGSCH_A,,How easy to change work schedule,Num,686,1,,x,,
+814,5.0,JOB.0050.00.3,JOBVARYSCH_A,,How much does schedule vary,Num,687,1,,x,,
+815,6,JOB.0060.00.3,JOBADVSCH_A,,Advance notice of work schedule,Num,688,1,,x,,
+816,7,JOB.0070.00.3,JOBLKYLOSS_A,,Likely job loss,Num,689,1,,x,,
+817,8,JOB.0080.00.3,JOBWRKSICK_A,,Days worked while sick,Num,690 - 691,2,,x,,
+818,9,JOB.0090.00.3,JOBMISS_A,,Days of work missed while sick,Num,692 - 693,2,,x,,
+819,1.0,SDW.0010.00.3,CURJOBSD1_A,,Current job - Social distancing at work,Num,694,1,,x,,
+820,2.0,SDW.0020.00.3,WRKCLSSD1_A,,"Current job - Work close to others with socialdistancing in effect",Num,695,1,,x,,
+821,3.0,SDW.0030.00.3,WRKCLSNSD1_A,,"Current job - Work close to others when socialdistancing not in effect",Num,696,1,,x,,
+822,4.0,SDW.0040.00.3,WRKCLSOFT1_A,,Current job - How often work close to others,Num,697,1,,x,,
+823,5.0,SDW.0050.00.3,SDMSRS1_A,,"Current job - Social distancing measures sincecoronavirus pandemic",Num,698,1,,x,,
+824,6.0,SDW.0060.00.3,SDMSRSOFT1_A,,"Current job - Work close to others when socialdistancing measures in effect",Num,699,1,,x,,
+825,7.0,SDW.0070.00.3,RECJOBSD1_A,,Recent job - Social distancing at work,Num,700,1,,x,,
+826,8.0,Recode,JOBANYSD1_A,"CURJOBSD1_A;SDMSRS1_A;RECJOBSD1_A",Current or recent job - Social distancing at any time,Num,701,1,,x,,
+827,9.0,SDW.0080.00.3,RJCLSSD1_A,,"Recent job - Work close to others with social distancingin effect",Num,702,1,,x,,
+828,10.0,Recode,CLSWRKSD1_A,"WRKCLSSD1_A;SDMSRSOFT1_A;RJCLSSD1_A","Current or recent job - Work close to others with socialdistancing in effect",Num,703,1,,x,,
+829,11.0,SDW.0090.00.3,RJCLSNOSD1_A,,"Recent job - Work close to others when social distancingnot in effect",Num,704,1,,x,,
+830,12.0,SDW.0100.00.3,RJCLSOFT1_A,,Recent job - How often work close to others,Num,705,1,,x,,
+831,13.0,Recode,CLSWRKNOS1_A,"WRKCLSNSD1_A;WRKCLSOFT1_A;RJCLSNOSD1_A;RJCLSOFT1_A","Current or recent job - Work close to others when nosocial distancing measures",Num,706,1,,x,,
+832,4.0,Recode,EDUC_A,EDUC,Educational level of sample adult,Num,43 - 44,2,,,x,x
+833,10.0,Recode,PCNTTC,,Top-coded count of all non-deleted household members,Num,51,1,,,x,x
+834,1.0,Recode,PCNTFAM_A,"PCNTADLT_A;PCNTKIDS_A","Number of persons in Sample Adult family, top-coded 6+",Num,54,1,,,x,x
+835,6.0,Recode,MAXEDUC_A,"EDUC; AGE18PLUS,FAMILYA_FLG;HHSTAT_A;","Highest level of education of all the adults in SA'sfamily",Num,59 - 60,2,,,x,x
+836,5.0,AST.0050.00.3,ASHOSP12M_A,,Hospitalized for asthma past 12 months,Num,77,1,,,x,
+837,6.0,Recode,ASDYS12MTC_A,ASDAYS12M_A,Days can't work because of asthma,Num,78 - 79,2,,,x,
+838,7.0,AST.0070.00.3,ASINHALE3M_A,,Inhaler for asthma past 3 months,Num,80,1,,,x,
+839,8.0,AST.0080.00.3,ASPREVR_A,,Preventive asthma medication,Num,81,1,,,x,
+840,9.0,AST.0090.00.3,ASJOB_A,,Job cause/worsen asthma,Num,82,1,,,x,
+841,5,Recode,DIFYRSTC_A,DIBAGE_A; AGE_FINAL,Years since first diagnosed w/diabetes,Num,180 - 181,2,,,x,x
+842,12,DIB.0110.00.3,DIBREL_A,,Family with diabetes,Num,188,1,,,x,
+843,13,DIB.0120.00.3,DIABLAST_A,,Last time blood sugar test,Num,189,1,,,x,x
+844,1.0,OPD.0010.00.3,OPD12M_A,,Opioid use - past 12 months,Num,405,1,,,x,x
+845,2.0,OPD.0020.00.3,OPD3M_A,,Opioid use - past 3 months,Num,406,1,,,x,x
+846,3.0,OPD.0030.00.3,OPDACUTE_A,,Opioid use for acute pain,Num,407,1,,,x,x
+847,4.0,OPD.0040.00.3,OPDCHRONIC_A,,Opioid use for chronic pain,Num,408,1,,,x,x
+848,5.0,OPD.0050.00.3,OPDFREQ_A,,Frequency of opioid use,Num,409,1,,,x,x
+849,11.0,IMS.0100.00.3,ZOSTAVAX_A,,Ever had Zostavax,Num,424,1,,,x,x
+850,14.0,IMS.0130.00.3,SHINGRIX_A,,Ever had Shingrix vaccination,Num,430,1,,,x,x
+851,5.0,PAI.0060.00.3,PAIOTCMEDS_A,,Over-the-counter medications for pain,Num,462,1,,,x,
+852,6.0,PAI.0070.00.3,PAIPRSMEDS_A,,Pain reliever prescribed by a doctor for pain,Num,463,1,,,x,
+853,7.0,PAI.0080.00.3,PAIPHYSTPY_A,,Physical therapy for pain,Num,464,1,,,x,x
+854,8.0,PAI.0090.00.3,PAICHIRO_A,,Chiropractic care for pain,Num,465,1,,,x,x
+855,9.0,PAI.0100.00.3,PAITALKTPY_A,,Talk therapy for pain,Num,466,1,,,x,x
+856,10.0,PAI.0110.00.3,PAIYOGA_A,,Yoga for pain,Num,467,1,,,x,x
+857,11.0,PAI.0120.00.3,PAIEXRCISE_A,,Exercise for pain,Num,468,1,,,x,
+858,12.0,PAI.0130.00.3,PAIMASSAGE_A,,Massage for pain,Num,469,1,,,x,x
+859,13.0,PAI.0140.00.3,PAIMEDITAT_A,,Meditation for pain,Num,470,1,,,x,x
+860,14.0,PAI.0150.00.3,PAIMOTHER_A,,Other methods for pain,Num,471,1,,,x,x
+861,11,CIG.0120.00.3,FORNUMCIG_A,,"Usual number of cigarettes per day when smoked fairlyregularly",Num,528 - 529,2,,,x,
+862,12,CIG.0130.00.3,FORVARCIG_A,,"Average number of cigarettes during longest smokingperiod",Num,530 - 531,2,,,x,
+863,14,CIG.0140.00.2,SMKTLK_A,,"Advised by doctor about quitting cigarettes, past 12months",Num,533,1,,,x,
+864,3.0,Recode,DRK12MN1_A,"DRK12MN_A;DRK12MTP_A",Days drank alcohol past 12m-number,Num,549 - 551,3,,,x,
+865,5,Recode,DRK12MTP1_A,"DRK12MTP_A;DRK12MN_A",Days drank alcohol past 12m-time period,Num,553,1,,,x,
+866,9,Recode,DRKAVG12M1_A,DRKAVG12M_A,Average number of alcohol drinks on days drank,Num,561 - 562,2,,,x,
+867,11,Recode,DKDRK12AY1_A,"DRK12ANYR_A;DRKAVG12M_A",Ever had 12+ alcohol drinks in any one year,Num,564,1,,,x,
+868,17,ALC.0080.00.2,DRKADVISE_A,,"Advised by doctor to cut alcohol drinking, past 12m",Num,572,1,,,x,
+869,1.0,ENV.0010.00.3,HOMEWLK_A,,Freq walks near own home,Num,626,1,,,x,
+870,2.0,ENV.0020.00.3,ROADSWLK_A,,Roads to walk where you live,Num,627,1,,,x,
+871,3.0,ENV.0030.00.3,SHOPSWLK_A,,Shops to walk to where live,Num,628,1,,,x,
+872,4.0,ENV.0040.00.3,TRANSITWLK_A,,Transit where you live,Num,629,1,,,x,
+873,5.0,ENV.0050.00.3,FUNWLK_A,,Fun place to walk where you live,Num,630,1,,,x,
+874,6.0,ENV.0060.00.3,RELAXWLK_A,,Places to relax you can walk to where you live,Num,631,1,,,x,
+875,7.0,ENV.0070.00.3,SIDEWLK_A,,Sidewalks where you live,Num,632,1,,,x,
+876,8.0,ENV.0080.00.3,TRAFFICWLK_A,,Traffic makes it unsafe to walk,Num,633,1,,,x,
+877,9.0,ENV.0090.00.3,CRIMEWLK_A,,Crime makes it unsafe to walk,Num,634,1,,,x,
+878,10.0,ENV.0100.00.3,ANIMALWLK_A,,Animals make it unsafe to walk,Num,635,1,,,x,
+879,11.0,ENV.0110.00.3,WEATHERWLK_A,,How often does weather make it less likely to walk,Num,636,1,,,x,
+880,12,ENV.0120.00.3,PEOPLEWLK_A,,How often are people walking in front of home,Num,637,1,,,x,
+881,1.0,SUN.0020.00.3,SUNSKIN_A,,What would happen to your skin after 1 hour in the sun?,Num,638 - 639,2,,,x,
+882,2.0,SUN.0030.00.3,SUNSHADE_A,,When you go out on a sunny day do you stay in the shade?,Num,640,1,,,x,
+883,3.0,SUN.0040.00.3,SUNHAT_A,,When you go out on a sunny day do wear sun hat?,Num,641,1,,,x,
+884,4.0,SUN.0050.00.3,SUNSHIRT_A,,How often wear long-sleeved shirt?,Num,642,1,,,x,
+885,5.0,SUN.0060.00.3,SUNSCREEN_A,,How often use sunscreen?,Num,643,1,,,x,
+886,6.0,SUN.0070.00.3,SUNTAN_A,,How often try to tan?,Num,644,1,,,x,
+887,7.0,SUN.0080.00.3,ANYSBURN_A,,Had any sunburns in past 12 months,Num,645,1,,,x,
+888,8.0,Recode,NUMBRNTC_A,"ANYSBURN_ANUMSBURNS_A",Number of sunburns top-coded,Num,646 - 648,3,,,x,
+889,2.0,DPV.0020.00.3,ADVEAT_A,,Doctor advised to reduce fat or calories,Num,650,1,,,x,
+890,3.0,DPV.0030.00.3,ADVWGTPRG_A,,Doctor advised to participate in weight loss plan,Num,651,1,,,x,
+891,4.0,DPV.0040.00.3,NOWACTIVE_A,,Are you now increasing your physical activity,Num,652,1,,,x,
+892,5.0,DPV.0050.00.3,NOWEAT_A,,Now reducing fat/calories,Num,653,1,,,x,
+893,6.0,DPV.0060.00.3,NOWWGTPRG_A,,Now in weight loss program,Num,654,1,,,x,
+894,11.0,Recode,SPOUSEDUC_A,SPOUSWHO_A; EDUC,Education level of sample adult's spouse,Num,675 - 676,2,,,x,x
+895,16.0,Recode,PRTNREDUC_A,PARTNERWHO_A; EDUC,Education level of sample adult's partner,Num,682 - 683,2,,,x,x
+896,1.0,Recode,EMPWRKLSWK_A,"EMPLASTWK_A;EMPNOWRK_A;EMPRSNOWK_A;FEMWORK_A and/orFEMWORK_C.",Worked last week,Num,700,1,,,x,x
+897,2.0,Recode,EMPWKHRS2_A,"EMPWRKHRS_A andEMPRSNOWK_A",Hours worked last week (topcoded for Public Use),Num,701 - 702,2,,,x,x
+898,3,Recode,EMPWRKFT_A,"EMPLASTWK_A;EMPNOWRK_A;EMPWKFT_A;EMPWRKHRS_A;EMPRSNOWK_A;FEMWKFT_A and/orFEMWKFT_C",Usually work 35+ hours per week,Num,703,1,,,x,x
+899,4,EMP.0050.00.1,EMPRSNOWK_A,,Main reason for not working last week,Num,704 - 705,2,,,x,x
+900,5,Recode,EMPLSTWORK_A,"EMPLSTWRK_A andEMPRSNOWK_A",Last time worked for pay,Num,706,1,,,x,x
+901,6,Recode,EMDINDSTR1_A,EMDKINDIND_A,Detailed 2-digit recode for sample adult's industry,Num,707 - 708,2,,,x,
+902,7,Recode,EMDINDSTR2_A,EMDKINDIND_A,Simple 2-digit recode for sample adult's industry,Num,709 - 710,2,,,x,
+903,8,Recode,EMDOCCUPR1_A,EMDKINDWRK_A,Detailed 2-digit recode for sample adult's occupation,Num,711 - 712,2,,,x,
+904,9,Recode,EMDOCCUPR2_A,EMDKINDWRK_A,Simple 2-digit recode for sample adult's occupation,Num,713 - 714,2,,,x,
+905,10,EMP.0110.00.2,EMDSPRVIS_A,,Sample adult supervised other employees while on the job,Num,715,1,,,x,
+906,11,EMP.0120.00.2,EMDWRKCAT_A,,Type of main job,Num,716,1,,,x,
+907,12,EMP.0130.00.1,EMPPDSKLV_A,,Received paid sick leave at last week's job or business,Num,717,1,,,x,x
+908,13,EMP.0140.00.1,EMPOFFHI_A,,Health insurance offered at job held last week,Num,718,1,,,x,x
+909,14,Recode,EMPDYSMSS2_A,EMPDYSMSS_A,"Days missed work in past 12 months due toillness/injury/disability (top-coded)",Num,719 - 721,3,,,x,x
+910,1.0,SDW.0010.00.3,CURJOBSD_A,,Current job - Social distancing at work,Num,722,1,,,x,
+911,2.0,SDW.0020.00.3,WRKCLSSD_A,,"Current job - Work close to others with socialdistancing in effect",Num,723,1,,,x,
+912,3.0,SDW.0030.00.3,WRKCLSNOSD_A,,"Current job - Work close to others when socialdistancing not in effect",Num,724,1,,,x,
+913,4.0,SDW.0040.00.3,WRKCLSOFT_A,,Current job - How often work close to others,Num,725,1,,,x,
+914,5.0,SDW.0050.00.3,SDMSRS_A,,"Current job - Social distancing measures sincecoronavirus pandemic",Num,726,1,,,x,
+915,6.0,SDW.0060.00.3,SDMSRSOFT_A,,"Current job - Work close to others when socialdistancing measures in effect",Num,727,1,,,x,
+916,7.0,SDW.0070.00.3,RECJOBSD_A,,Recent job - Social distancing at work,Num,728,1,,,x,
+917,8.0,SDW.0080.00.3,RJWRKCLSSD_A,,"Recent job - Work close to others with social distancingin effect",Num,729,1,,,x,
+918,9.0,SDW.0090.00.3,RJWCLSNOSD_A,,"Recent job - Work close to others when social distancingnot in effect",Num,730,1,,,x,
+919,10.0,SDW.0100.00.3,RJWKCLSOFT_A,,Recent job - How often work close to others,Num,731,1,,,x,
+920,11.0,Recode,JOBANYSD_A,"CURJOBSD_A;SDMSRS_A; RECJOBSD_A",Current or recent job - Social distancing at any time,Num,732,1,,,x,
+921,12.0,Recode,CLSWRKSD_A,"WRKCLSSD_A;SDMSRSOFT_A;RJWRKCLSSD_A","Current or recent job - Work close to others with socialdistancing in effect",Num,733,1,,,x,
+922,13,Recode,CLSWRKNOSD_A,"WRKCLSNOSD_A;WRKCLSOFT_A;RJWCLSNOSD_A;RJWKCLSOFT_A","Current or recent job - Work close to others when nosocial distancing measures",Num,734,1,,,x,
+923,10.0,Recode,FAMINCTC_A,INCTOTAL_A,Sample adult family income (top-coded),Num,746 - 751,6,,,x,x
+924,12.0,Recode,INCGRP_A,"INCTOTAL_AINC100FILL_AINC250FILL_AINC138FILL_AINC75K_A INC100K_AINC138K_A INC150K_AINC250K_A INC400K_AINC100PCT_AINC138PCT_AINC200PCT_AINC250PCT_AINC400PCT_A",Sample adult family income (grouped),Num,757,1,,,x,x
+925,4.0,,WTIA_A,,Weight - annual pre-post stratification calibration,Num,14 - 21,8,,,,x
+926,11.0,PRV.0110.00.2,COLOROTH_A,,OTHER kind of test for colorectal cancer,Num,404,1,,,,x
+927,12.0,PRV.0120.00.2,CTCOLEV_A,,Ever had colonography/virtual colonoscopy,Num,405,1,,,,x
+928,13.0,PRV.0130.00.2,CTCOLWHEN_A,,Most recent colonography/virtual colonoscopy,Num,406,1,,,,x
+929,14.0,PRV.0140.00.2,FITHEV_A,,Ever had home blood stool test,Num,407,1,,,,x
+930,15.0,PRV.0150.00.2,FITHWHEN_A,,Most recent home blood stool test,Num,408,1,,,,x
+931,16.0,PRV.0160.00.3,COLOGUARD_A,,Ever had Cologuard,Num,409,1,,,,x
+932,17.0,PRV.0170.00.3,FITCOLG_A,,Was blood stool/FIT part of Cologuard test?,Num,410,1,,,,x
+933,18.0,PRV.0190.00.3,COLPROBLEM_A,,"Did doctor recommend you be tested to look for problemsin colon/rectum",Num,411,1,,,,x
+934,19.0,,COLKIND1_A,,Stool blood test/fecal occult blood/FIT test,Num,412,1,,,,x
+935,20.0,,COLKIND2_A,,Cologuard or FIT DNA test,Num,413,1,,,,x
+936,21.0,,COLKIND3_A,,Sigmoidoscopy,Num,414,1,,,,x
+937,22.0,,COLKIND4_A,,Colonoscopy,Num,415,1,,,,x
+938,23.0,,COLKIND5_A,,CT colonography/virtual colonoscopy,Num,416,1,,,,x
+939,24.0,,COLKIND6_A,,Other test for colon cancer,Num,417,1,,,,x
+940,29.0,,PSA5YRTC_A,PSA5YR_A,Number of PSA tests in last 5 years,Num,422 - 423,2,,,,x
+941,30.0,PRV.0260.00.3,PSAADVANT_A,,Did a doctor talk to you about advantages of PSA,Num,424,1,,,,x
+942,31.0,PRV.0270.00.3,PSADISADV_A,,"Did a doctor ever talk to you about the disadvantages ofthe PSA test?",Num,425,1,,,,x
+943,32.0,PRV.0280.00.2,CERVICEV_A,,Ever had cervical cancer screening test,Num,426,1,,,,x
+944,34.0,PRV.0300.00.3,CERREASON_A,,Reason for cervical cancer screening,Num,428,1,,,,x
+945,38.0,PRV.0340.00.3,CERVICNOT_A,,Why did not get a PAP/HPV test in past 5 years,Num,432 - 433,2,,,,x
+946,39.0,PRV.0350.00.2,HYSTEV_A,,Had hysterectomy,Num,434,1,,,,x
+947,43.0,PRV.0390.00.3,MAMAGE1ST_A,,Age of first mammogram,Num,438,1,,,,x
+948,44.0,PRV.0400.00.3,MAMWHY1ST_A,,Reason had first mammogram at age lt 50,Num,439,1,,,,x
+949,45.0,PRV.0410.00.3,BREASTEXAM_A,,Ever had breast exam from health professional,Num,440,1,,,,x
+950,46.0,PRV.0420.00.3,BEXAMWHEN_A,,When was your last breast exam?,Num,441,1,,,,x
+951,47.0,PRV.0430.00.3,BEXAMREAS_A,,Why did you have breast exam?,Num,442,1,,,,x
+952,22.0,Recode,SHTHPVAGEP_A,SHTHPVAGE_A,Age at first HPV shot,Num,474 - 475,2,,,,x
+953,8.0,PAI.0090.00.4,PAIPROGRAM_A,,Self-management program for pain,Num,516,1,,,,x
+954,9.0,PAI.0100.00.4,PAIGROUP_A,,Support groups for pain,Num,517,1,,,,x
+955,14.0,PAI.0150.00.4,PAINMEFF_A,,Managing pain,Num,522,1,,,,x
+956,1.0,ART.0010.00.3,JNTSYMP_A,,"Arthritis symptoms, past 30 days",Num,529,1,,,,x
+957,2.0,ART.0020.00.3,JNTPN_A,,"Arthritis pain, past 30 days",Num,530 - 531,2,,,,x
+958,3.0,ART.0030.00.3,ARTHLMT_A,,Arthritis activity limitations,Num,532,1,,,,x
+959,4.0,ART.0040.00.3,ARTHWRK_A,,Arthritis work limitations,Num,533,1,,,,x
+960,5.0,ART.0050.00.3,ARTHWT_A,,Lose weight to help with arthritis,Num,534,1,,,,x
+961,6.0,ART.0060.00.3,ARTHPH_A,,Physical activity to help with arthritis,Num,535,1,,,,x

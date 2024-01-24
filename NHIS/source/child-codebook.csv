@@ -1,0 +1,491 @@
+,Variable,Question #,Variable Name,Source Variables,Description,Type,Location,Length,22,21,20,19
+0,1,,RECTYPE,,Record type,Num,1 - 2,2,x,x,x,x
+1,2,,SRVY_YR,,Year of the National Health Interview Survey,Num,3 - 6,4,x,x,x,x
+2,3,,HHX,,Randomly assigned household number unique to a household,Char,7 - 13,7,x,x,x,x
+3,4,,WTFA_C,,Weight - Final Annual,Num,14 - 23,10,x,x,x,x
+4,1,Recode,URBRRL,,2013 NCHS Urban-Rural Classification Scheme for Counties,Num,24,1,x,x,x,x
+5,2,,REGION,,Household region,Num,25,1,x,x,x,x
+6,3,,PSTRAT,,Pseudo-stratum for public-use file variance estimation,Num,26 - 28,3,x,x,x,x
+7,4,,PPSU,,Pseudo-PSU for public-use file variance estimation,Num,29 - 31,3,x,x,x,x
+8,1,GEN.0660.00.1,HHRESPSC_FLG,,Sample Child respondent is the household respondent,Num,32,1,x,x,x,x
+9,1,,INTV_QRT,,Interview quarter,Num,33,1,x,x,x,x
+10,2,,INTV_MON,,Interview month,Num,34 - 35,2,x,x,x,
+11,3,GEN.0550.00.1,HHSTAT_C,,Indicates the person is the Sample Child,Num,36,1,x,x,x,x
+12,4,Recode,CSTATNEW,,Recoded CSTAT,Num,37,1,x,x,x,x
+13,5,Recode,RELTIVP_C,RELTIV_C,Respondent's relationship to Sample Child,Num,38,1,x,x,x,x
+14,1,,SEX_C,,Sex of Sample Child,Num,39,1,x,x,x,x
+15,2,Recode,AGEP_C,,Age of SC,Num,40 - 41,2,x,x,x,x
+16,3,,HISP_C,HISP_FINAL,Recode: Hispanic ethnicity of SC,Num,42,1,x,x,x,x
+17,4,Recode,HISPALLP_C,"NATORG; RACE;RACE_SP; RACE_VRBAT:RACEFULL: HISP_FINAL",Single and multiple race groups with Hispanic origin,Num,43 - 44,2,x,x,x,x
+18,5,Recode,RACEALLP_C,RACEFULL,Single and multiple race groups,Num,45,1,x,x,x,x
+19,6,Recode,HISDETP_C,"HISP_FINAL;HISPDET_C",Hispanic origin detail,Num,46,1,x,x,x,x
+20,7,HHC.0330.00.1,AFNOW,,Full-time active duty screener,Num,47,1,x,x,x,x
+21,8,Recode,PCNTLT18TC,,Top-coded count of persons under 18 in the household,Num,48,1,x,x,x,x
+22,9,Recode,PCNT18UPTC,,Top-coded count of persons 18 or older in the household,Num,49,1,x,x,x,x
+23,1,Recode,PCNTADLT_C,PCNTADLTI_C,"Number of adults in Sample Child family, top-coded 3+",Num,50,1,x,x,x,x
+24,2,Recode,PCNTKIDS_C,PCNTKIDSI_C,"Number of children in Sample Child family, top-coded 3+",Num,51,1,x,x,x,x
+25,3,Recode,OVER65FLG_C,"AGE_FINAL; AGEGUESS;AGE18; FAMILYC_FLG",Indicator for at least 1 person aged 65+ in SC family,Num,52,1,x,x,x,x
+26,4,Recode,MLTFAMFLG_C,ONEFAM_FLG; TOTPERS,Indicator for multifamily household,Num,53,1,x,x,x,x
+27,5,Recode,MAXEDUCP_C,"EDUC; AGE18PLUS;FAMILYC_FLG;HHSTAT_C","Highest level of education of the adults in the SC'sfamily",Num,54 - 55,2,x,x,,
+28,1,HIS.0010.00.1,PHSTAT_C,,General health status,Num,56,1,x,x,x,x
+29,1,LS1.0010.00.3,LSATIS11_C,,Life satisfaction-number,Num,57 - 58,2,x,x,,
+30,1,AST.0020.00.1,ASEV_C,,Ever had asthma,Num,59,1,x,x,x,x
+31,2,AST.0030.00.1,ASTILL_C,,Still have asthma,Num,60,1,x,x,x,x
+32,3,AST.0040.00.1,ASAT12M_C,,Asthma episode past 12m,Num,61,1,x,x,x,x
+33,4,AST.0050.00.1,ASER12M_C,,"Asthma ER visit, past 12m",Num,62,1,x,x,x,x
+34,1,DIB.0010.00.1,PREDIB_C,,Ever had prediabetes,Num,63,1,x,x,x,x
+35,2,DIB.0020.00.1,DIBEV_C,,Ever had diabetes,Num,64,1,x,x,x,x
+36,1,DLD.0010.00.1,ADHDEV_C,,Ever had ADD/ADHD,Num,65,1,x,x,x,x
+37,2,DLD.0020.00.1,ADHDNW_C,,Currently has ADD/ADHD,Num,66,1,x,x,x,x
+38,3,DLD.0030.00.1,IDEV1_C,,Ever had intellectual disability,Num,67,1,x,,,
+39,4,DLD.0040.00.1,IDNW1_C,,Currently has intellectual disability,Num,68,1,x,,,
+40,5,DLD.0050.00.1,ASDEV_C,,Ever had autism,Num,69,1,x,x,x,x
+41,6,DLD.0060.00.1,ASDNW_C,,Currently has autism,Num,70,1,x,x,x,x
+42,7,DLD.0070.00.1,DDEV_C,,Ever had developmental delay,Num,71,1,x,x,x,x
+43,8,DLD.0080.00.1,DDNW_C,,Currently has developmental delay,Num,72,1,x,x,x,x
+44,9,DLD.0090.00.1,LDEV_C,,Ever had learning disability,Num,73,1,x,x,x,x
+45,10,DLD.0100.00.1,LDNW_C,,Currently has learning disability,Num,74,1,x,x,x,x
+46,1,Recode,HEIGHTTC_C,HEIGHT_C,"Total height in inches, public use",Num,75 - 76,2,x,,x,
+47,2,Recode,WEIGHTLBTC_C,WEIGHTLB_C; WTLB_C,"Weight without shoes (pounds), public use",Num,77 - 79,3,x,,x,
+48,3,Recode,BMICAT_C,"HEIGHTIN_C;HEIGHTM_C;WEIGHTKG_C;WEIGHTLB_C","Body Mass Index (BMI), public use",Num,80,1,x,,x,
+49,1,VIS.0020.00.1,WEARGLSS_C,,Wear glasses/contact lenses,Num,81,1,x,x,x,x
+50,2,VIS.0030.00.1,VISIONDF_C,,Difficulty seeing,Num,82,1,x,x,x,x
+51,1,HEA.0010.00.1,HEARAID_C,,Use hearing aid,Num,83,1,x,x,x,x
+52,2,HEA.0020.00.1,HEARINGDF_C,,Difficulty hearing sounds,Num,84,1,x,x,x,x
+53,1,MOB.0010.00.1,EQUIP_C,,Use of equipment for mobility,Num,85,1,x,x,x,x
+54,2,MOB.0020.00.1,NOEQWLKDF_C,,Difficulty walking without using equipment,Num,86,1,x,x,x,x
+55,3,MOB.0030.00.1,EQWLKDF_C,,Difficulty walking when using equipment,Num,87,1,x,x,x,x
+56,4,MOB.0040.00.1,WLKDF_C,,"Difficulty walking, for those who do not use equipment",Num,88,1,x,x,x,x
+57,5,MOB.0050.00.1,NOEQWLK100_C,,Difficulty walking 100 yards without using equipment,Num,89,1,x,x,x,x
+58,6,MOB.0060.00.1,NOEQWLK13M_C,,Difficulty walking 1/3 mile without using equipment,Num,90,1,x,x,x,x
+59,7,MOB.0070.00.1,EQWLK100_C,,Difficulty walking 100 yards when using equipment,Num,91,1,x,x,x,x
+60,8,MOB.0080.00.1,EQWLK13M_C,,Difficulty walking 1/3 mile when using equipment,Num,92,1,x,x,x,x
+61,9,MOB.0090.00.1,WLK100_C,,"Difficulty walking 100 yards, for those who do not useequipment",Num,93,1,x,x,x,x
+62,10,MOB.0100.00.1,WLK13M_C,,"Difficulty walking 1/3 mile, for those who do not useequipment",Num,94,1,x,x,x,x
+63,1,UPP.0010.00.1,PICKUPDF_C,,Motor skills difficulty,Num,95,1,x,x,x,x
+64,2,UPP.0020.00.1,SELFCAREDF_C,,Motor skills difficulty,Num,96,1,x,x,x,x
+65,1,COM.0010.00.1,UNDRSTYOU_C,,Child's difficulty understanding respondent,Num,97,1,x,x,x,x
+66,2,COM.0020.00.1,UNDRSTCHD_C,,Respondent's difficulty understanding child,Num,98,1,x,x,x,x
+67,3,COM.0030.00.1,UNDRSTIHH_C,,Difficulty being understood by people inside household,Num,99,1,x,x,x,x
+68,4,COM.0040.00.1,UNDRSTOHH_C,,Difficulty being understood by people outside household,Num,100,1,x,x,x,x
+69,1,COG.0010.00.1,LEARNDF_C,,Difficulty learning things,Num,101,1,x,x,x,x
+70,2,COG.0020.00.1,REMEMBERDF_C,,Difficulty remembering things,Num,102,1,x,x,x,x
+71,1,ANX.0010.00.1,ANXFREQ_C,,"How often seems anxious, nervous, or worried",Num,103,1,x,x,x,x
+72,1,DEP.0010.00.1,DEPFREQ_C,,How often seems sad or depressed,Num,104,1,x,x,x,x
+73,1,BEH.0010.00.1,BEHDFPLYG_C,,Difficulty playing,Num,105,1,x,x,x,x
+74,2,BEH.0020.00.1,BEHKBHYG_C,,"Kick, bite or hit",Num,106,1,x,x,x,x
+75,3,BEH.0030.00.1,BEHDFCNTR_C,,Difficulty controlling behavior,Num,107,1,x,x,x,x
+76,4,BEH.0040.00.1,BEHDFFCS_C,,Difficulty concentrating,Num,108,1,x,x,x,x
+77,5,BEH.0050.00.1,BEHDFCHG_C,,Difficulty with changes in routine,Num,109,1,x,x,x,x
+78,6,BEH.0060.00.1,BEHDFMKFR_C,,Difficulty making friends,Num,110,1,x,x,x,x
+79,7,Recode,DISAB2_C,"VISIONDF_C;HEARINGDF_C;NOEQWLKDF_C;WLKDF_C; PICKUPDF_C;UNDRSTYOU_C;UNDRSTCHD_C;LEARNDF_C;BEHDFPLYG_C;BEHKBHYG_C","The Washington Group Short Set Composite DisabilityIndicator, children 2-4",Num,111,1,x,x,x,x
+80,8,Recode,DISAB5_C,"VISIONDF_C;HEARINGDF_C;NOEQWLK100_C;NOEQWLK13M_C;WLK100_C; WLK13M_C;SELFCAREDF_C;UNDRSTINHH_C;UNDRSTOHH_C;LEARNDF_C;REMEMBERDF_C;BEHDFFCS_C;BEHDFCHG_C;BEHDFCNTR_C;BEHDFMKFR_C;DEPFREQ_C; ANXFREQ_C","The Washington Group Short Set Composite DisabilityIndicator, children 5-17",Num,112,1,x,x,x,x
+81,1,BSC.0020.00.1,BSCNWPPL_C,,Hard time with new people,Num,113,1,x,x,x,x
+82,2,BSC.0030.00.1,BSCNWPLCS_C,,Hard time in new places,Num,114,1,x,x,x,x
+83,3,BSC.0040.00.1,BSCCHG_C,,Hard time with change,Num,115,1,x,x,x,x
+84,4,BSC.0050.00.1,BSCHLOPPL_C,,Held by other people,Num,116,1,x,x,x,x
+85,5,BSC.0060.00.1,BSCCRYALT_C,,Cries a lot,Num,117,1,x,x,x,x
+86,6,BSC.0070.00.1,BSCCLMDWN_C,,Hard time calming down,Num,118,1,x,x,x,x
+87,7,BSC.0080.00.1,BSCFUSSY_C,,Fussy or irritable,Num,119,1,x,x,x,x
+88,8,BSC.0090.00.1,BSCSTHE_C,,Hard to comfort,Num,120,1,x,x,x,x
+89,9,BSC.0100.00.1,BSCSCHD_C,,Hard to keep on schedule,Num,121,1,x,x,x,x
+90,10,BSC.0110.00.1,BSCPTSLP_C,,Hard to put to sleep,Num,122,1,x,x,x,x
+91,11,BSC.0120.00.1,BSCSTYSLP_C,,Trouble staying asleep,Num,123,1,x,x,x,x
+92,12,BSC.0130.00.1,BSCPRLKSL_C,,Hard to get sleep due to SC,Num,124,1,x,x,x,x
+93,1,Recode,SCHDYMSSTC_C,SCHDYMSS_C,"Days of school missed due to illness/injury past 12months, top-coded",Num,125 - 126,2,x,x,x,x
+94,2,SCH.0020.00.1,SCHSPEDEV_C,,Ever received special education,Num,127,1,x,x,x,x
+95,3,SCH.0030.00.1,SCHSPED_C,,Currently receives special education,Num,128,1,x,x,x,x
+96,4,SCH.0040.00.1,SCHSPEDEM_C,,Currently receives services for mental health,Num,129,1,x,x,x,x
+97,1,Recode,NOTCOV_C,"MEDICARE_C;MEDICAID_C;PRIVATE_C; CHIP_C;OTHPUB_C; OTHGOV_C;MILITARY_C; IHS_C",Coverage status as used in Health United States,Num,130,1,x,x,x,x
+98,2,Recode,COVER_C,"MEDICARE_C;MEDICAID_C;PRIVATE_C; CHIP_C;OTHPUB_C; OTHGOV_C;MILITARY_C",Health insurance hierarchy,Num,131,1,x,x,x,x
+99,3,INS.0040.00.1,SINCOVDE_C,,Single service plan - dental,Num,132,1,x,x,x,x
+100,4,INS.0050.00.1,SINCOVVS_C,,Single service plan - vision,Num,133,1,x,x,x,x
+101,5,INS.0060.00.1,SINCOVRX_C,,Single service plan - prescription,Num,134,1,x,x,x,x
+102,6,Recode,MEDICAID_C,"HIKIND03_C;MCAIDPRB_C",Medicaid recode,Num,135,1,x,x,x,x
+103,7,INS.0140.00.1,MAXCHNG_C,,Medicaid through Marketplace,Num,136,1,x,x,x,x
+104,8,INS.0150.00.1,MAPREM_C,,Medicaid premium,Num,137,1,x,x,x,x
+105,9,INS.0160.00.1,MADEDUC_C,,Medicaid deductible,Num,138,1,x,x,x,x
+106,10,INS.0170.00.1,MAHDHP_C,,Medicaid HDHP,Num,139,1,x,x,x,x
+107,11,Recode,MAFLG_C,HIPNAM1_C; HIPNAM2_C,Medicaid reassignment flag,Num,140,1,x,x,x,x
+108,12,Recode,PRIVATE_C,"HIKIND01_C;HIKIND03_C",Private health insurance recode,Num,141,1,x,x,x,x
+109,13,Recode,EXCHANGE_C,"HIPNAM1_C;HIPNAM2_C; MACHMN_C;CHNAME_C; OPNAME_C;OGNAME_C","Plan through Health Insurance Exchange, NCHS algorithm",Num,142,1,x,x,x,x
+110,14,INS.0340.01.1,POLHLD1_C,,Policyholder for private plan 1,Num,143,1,x,x,x,x
+111,15,INS.0350.01.1,PRPLCOV1_C,,Plan coverage for others - plan 1,Num,144,1,x,x,x,x
+112,16,Recode,PRPLCOV1_A_C,"PRPLCOV1_A;PRPLCOV2_A",Response to PRPLCOV1_A or PRPLCOV2_A from adult - plan 1,Num,145,1,x,x,x,x
+113,17,Recode,PLNWRKR1_C,"PLNWRK1_C;PLNWKSP1_C",How plan was originally obtained - plan 1,Num,146 - 147,2,x,x,x,x
+114,18,INS.0380.01.1,PLNEXCHG1_C,,Health plan obtained through Marketplace - plan 1,Num,148,1,x,x,x,x
+115,19,INS.0390.11.1,PLN1PAY1_C,,Paid for by self or family - plan 1,Num,149,1,x,x,x,x
+116,20,INS.0390.12.1,PLN1PAY2_C,,Paid for by employer or union - plan 1,Num,150,1,x,x,x,x
+117,21,INS.0390.13.1,PLN1PAY3_C,,Paid for by someone outside the household - plan 1,Num,151,1,x,x,x,x
+118,22,INS.0390.15.1,PLN1PAY5_C,,Paid for by Medicaid - plan 1,Num,152,1,x,x,x,x
+119,23,Recode,PLN1PAY6R_C,"PLN1PAY4_C;PLN1PAY6_C",Paid for by other government program - plan 1,Num,153,1,x,x,x,x
+120,24,Recode,HICOSTR1_C,"HICOSTN1_C;HICOSTT1_C",Out-of-pocket premium cost - plan 1,Num,154 - 158,5,x,x,x,x
+121,25,INS.0410.01.1,PRDEDUC1_C,,Deductible - plan 1,Num,159,1,x,x,x,x
+122,26,INS.0420.01.1,PRHDHP1_C,,High deductible health plan - plan 1,Num,160,1,x,x,x,x
+123,27,INS.0430.01.1,HSAHRA1_C,,"Health Savings Accounts / Health Reimbursement Accounts- plan 1",Num,161,1,x,x,x,x
+124,28,INS.0440.01.1,PRRXCOV1_C,,Plan pays for prescription drug - plan 1,Num,162,1,x,x,x,x
+125,29,INS.0450.01.1,PRDNCOV1_C,,Plan pays for dental care - plan 1,Num,163,1,x,x,x,x
+126,30,INS.0460.01.1,PRVSCOV1_C,,Plan pays for vision care - plan 1,Num,164,1,x,x,x,x
+127,31,Recode,EXCHPR1_C,HIPNAM1_C,"Exchange company coding, NCHS - plan 1",Num,165,1,x,x,x,x
+128,32,Recode,PRFLG_C,,Private reassignment flag,Num,166,1,x,x,x,x
+129,33,Recode,PXCHNG1_C,"MAXCHNG_C;CHXCHNG_C;OPXCHNG_C; OGXCHNG_C","Marketplace or state exchange, reassigned from public toprivate",Num,167,1,x,x,x,x
+130,34,Recode,PRPREM1_C,"MAPREM_C; CHPREM_C;OPPREM_C; OGPREM_C",Premium on plan reassigned from public to private,Num,168,1,x,x,x,x
+131,35,Recode,PLEXCHPR1_C,"MACHMN_C; CHNAME_C;OPNAME_C; OGNAME_C","Exchange company coding, NCHS, reassigned from public toprivate",Num,169,1,x,x,x,x
+132,36,INS.0340.02.1,POLHLD2_C,,Policyholder for private plan 2,Num,170,1,x,x,x,x
+133,37,INS.0350.02.1,PRPLCOV2_C,,Plan coverage for others - plan 2,Num,171,1,x,x,x,x
+134,38,Recode,PRPLCOV2_A_C,"PRPLCOV1_A;PRPLCOV2_A",Response to PRPLCOV1_A or PRPLCOV2_A from adult - plan 2,Num,172,1,x,x,x,x
+135,39,Recode,PLNWRKR2_C,"PLNWRK2_C;PLNWKSP2_C",How plan was originally obtained - plan 2,Num,173 - 174,2,x,x,x,x
+136,40,INS.0380.02.1,PLNEXCHG2_C,,Health plan obtained through Marketplace - plan 2,Num,175,1,x,x,x,x
+137,41,INS.0390.21.1,PLN2PAY1_C,,Paid for by self or family - plan 2,Num,176,1,x,x,x,x
+138,42,INS.0390.22.1,PLN2PAY2_C,,Paid for by employer or union - plan 2,Num,177,1,x,x,x,x
+139,43,INS.0390.23.1,PLN2PAY3_C,,Paid for by someone outside the household - plan 2,Num,178,1,x,x,x,x
+140,44,INS.0390.25.1,PLN2PAY5_C,,Paid for by Medicaid - plan 2,Num,179,1,x,x,x,x
+141,45,Recode,PLN2PAY6R_C,"PLN2PAY4_C;PLN2PAY6_C",Paid for by other government program - plan 2,Num,180,1,x,x,x,x
+142,46,Recode,HICOSTR2_C,"HICOSTN2_C;HICOSTT2_C",Out-of-pocket premium cost - plan 2,Num,181 - 185,5,x,x,x,x
+143,47,INS.0410.02.1,PRDEDUC2_C,,Deductible - plan 2,Num,186,1,x,x,x,x
+144,48,INS.0420.02.1,PRHDHP2_C,,High deductible health plan - plan 2,Num,187,1,x,x,x,x
+145,49,INS.0430.02.1,HSAHRA2_C,,"Health Savings Accounts / Health Reimbursement Accounts- plan 2",Num,188,1,x,x,x,x
+146,50,INS.0440.02.1,PRRXCOV2_C,,Plan pays for prescription drug - plan 2,Num,189,1,x,x,x,x
+147,51,INS.0450.02.1,PRDNCOV2_C,,Plan pays for dental care - plan 2,Num,190,1,x,x,x,x
+148,52,INS.0460.02.1,PRVSCOV2_C,,Plan pays for vision care - plan 2,Num,191,1,x,x,x,x
+149,53,Recode,EXCHPR2_C,HIPNAM2_C,"Exchange company coding, NCHS - plan 2",Num,192,1,x,x,x,x
+150,54,Recode,CHIP_C,HIKIND05_C,Children's Health Insurance Program (CHIP) recode,Num,193,1,x,x,x,x
+151,55,INS.0480.00.1,CHXCHNG_C,,CHIP through Marketplace,Num,194,1,x,x,x,x
+152,56,INS.0490.00.1,CHPREM_C,,Pay CHIP premium,Num,195,1,x,x,x,x
+153,57,INS.0500.00.1,CHDEDUC_C,,CHIP deductible,Num,196,1,x,x,x,x
+154,58,INS.0510.00.1,CHHDHP_C,,CHIP HDHP,Num,197,1,x,x,x,x
+155,59,Recode,CHFLG_C,,CHIP reassignment flag,Num,198,1,x,x,x,x
+156,60,Recode,OTHPUB_C,HIKIND08_C,State-sponsored health plan recode,Num,199,1,x,x,x,x
+157,61,INS.0530.00.1,OPXCHNG_C,,State-sponsored plan through Marketplace,Num,200,1,x,x,x,x
+158,62,INS.0540.00.1,OPPREM_C,,Pay premium for state-sponsored plan,Num,201,1,x,x,x,x
+159,63,INS.0550.00.1,OPDEDUC_C,,State-sponsored plan deductible,Num,202,1,x,x,x,x
+160,64,INS.0560.00.1,OPHDHP_C,,State-sponsored plan HDHP,Num,203,1,x,x,x,x
+161,65,Recode,PLEXCHOP_C,OPNAME_C,"Exchange company coding, NCHS (state-sponsored plan)",Num,204,1,x,x,x,x
+162,66,Recode,OPFLG_C,,State-sponsored reassignment flag,Num,205,1,x,x,x,x
+163,67,Recode,OTHGOVR_C,HIKIND09R_C,Other government program public use file recode,Num,206,1,x,x,x,x
+164,68,Recode,OGXCHNGR_C,OGXCHNG_C,Other government program through Marketplace,Num,207,1,x,x,x,x
+165,69,Recode,OGPREMR_C,OGPREM_C,Pay premium for other government program,Num,208,1,x,x,x,x
+166,70,Recode,OGDEDUCR_C,OGDEDUC_C,Other government program deductible,Num,209,1,x,x,x,x
+167,71,Recode,OGHDHPR_C,,Other government program HDHP,Num,210,1,x,x,x,x
+168,72,Recode,PLEXCHOGR_C,OGNAME_C,"Exchange company coding, NCHS (other government program)",Num,211,1,x,x,x,x
+169,73,Recode,OGFLGR_C,,Other government reassignment flag,Num,212,1,x,x,x,
+170,74,Recode,MILITARY_C,HIKIND06_C,Military health care coverage recode,Num,213,1,x,x,x,x
+171,75,INS.0620.02.1,MILSPC2_C,,Types of military health care - TRICARE,Num,214,1,x,x,x,x
+172,76,INS.0620.03.1,MILSPC3_C,,Types of military health care - CHAMP-VA,Num,215,1,x,x,x,x
+173,77,Recode,IHS_C,HIKIND07_C,Indian Health Service recode,Num,216,1,x,x,x,x
+174,78,INS.0630.00.1,HILAST_C,,How long since last health coverage,Num,217,1,x,x,x,x
+175,79,INS.0640.00.1,HILASTMY_C,,Number of months without coverage,Num,218 - 219,2,x,x,x,x
+176,80,INS.0650.00.1,HISTOPJOB_C,,Lost job or changed employers,Num,220,1,x,x,x,x
+177,81,INS.0660.00.1,HISTOPMISS_C,,Missed deadline,Num,221,1,x,x,x,x
+178,82,INS.0670.00.1,HISTOPAGE_C,,Ineligible because of age/left school,Num,222,1,x,x,x,x
+179,83,INS.0680.00.1,HISTOPCOST_C,,Cost increase,Num,223,1,x,x,x,x
+180,84,INS.0690.00.1,HISTOPELIG_C,,"Not eligible for Medicaid, CHIP, or other publiccoverage",Num,224,1,x,x,x,x
+181,85,INS.0700.00.1,RSNHICOST_C,,Not affordable,Num,225,1,x,x,x,x
+182,86,INS.0710.00.1,RSNHIWANT_C,,Do not need or want coverage,Num,226,1,x,x,x,x
+183,87,INS.0720.00.1,RSNHIELIG_C,,Not eligible for coverage,Num,227,1,x,x,x,x
+184,88,INS.0730.00.1,RSNHICONF_C,,Signing up too difficult or confusing,Num,228,1,x,x,x,x
+185,89,INS.0740.00.1,RSNHIMEET_C,,Cannot find a plan that meets the needs,Num,229,1,x,x,x,x
+186,90,INS.0750.00.1,RSNHIWAIT_C,,Coverage has not started yet,Num,230,1,x,x,x,x
+187,91,INS.0760.00.1,RSNHIOTH_C,,Another reason,Num,231,1,x,x,x,x
+188,92,Recode,RSNHIJOB_C,RSNHIOTHSP_C,Lost job,Num,232,1,x,x,x,x
+189,93,Recode,RSNHIMISS_C,RSNHIOTHSP_C,Missed deadline,Num,233,1,x,x,x,x
+190,94,INS.0780.00.1,HINOTYR_C,,No health coverage during past 12 months,Num,234,1,x,x,x,x
+191,95,INS.0790.00.1,HINOTMYR_C,,Months without coverage in past 12 months,Num,235 - 236,2,x,x,x,x
+192,96,INS.0010.00.1,HICOV_C,,Have health insurance,Num,237,1,x,x,x,x
+193,97,Recode,HIKIND01R_C,"HIKIND01_C;HIKIND03_C","Kind(s) of health insurance - private health insurancepublic use file",Num,238,1,x,x,,
+194,98,INS.0020.04.1,HIKIND04_C,,Kind(s) of health insurance - Medicaid,Num,239,1,x,x,x,x
+195,99,INS.0020.05.1,HIKIND05_C,,Kind(s) of health insurance - CHIP,Num,240,1,x,x,x,x
+196,100,INS.0020.06.1,HIKIND06_C,,"Kind(s) of health insurance - military related healthcare",Num,241,1,x,x,x,x
+197,101,INS.0020.07.1,HIKIND07_C,,Kind(s) of health insurance - Indian Health Service,Num,242,1,x,x,x,x
+198,102,INS.0020.08.1,HIKIND08_C,,"Kind(s) of health insurance - State-sponsored healthplan",Num,243,1,x,x,x,x
+199,103,Recode,HIKIND09R_C,"HIKIND02_C;HIKIND09_C","Kind(s) of health insurance - Other government programpublic use file",Num,244,1,x,x,x,x
+200,104,INS.0020.10.1,HIKIND10_C,,Kind(s) of health insurance - No coverage of any type,Num,245,1,x,x,x,x
+201,105,INS.0030.00.1,MCAIDPRB_C,,Medicaid coverage probe,Num,246,1,x,x,x,x
+202,1,PAY.0020.00.1,PAYBLL12M_C,,"Problems paying medical bills, past 12m",Num,247,1,x,x,x,x
+203,2,PAY.0030.00.1,PAYNOBLLNW_C,,Unable to pay medical bills,Num,248,1,x,x,x,x
+204,3,PAY.0040.00.1,PAYWORRY_C,,"Get sick or have accident, worry about paying medicalbills",Num,249,1,x,x,x,x
+205,1,CVL.0020.00.4,CVDDIAG_C,,Ever had COVID-19,Num,250,1,x,x,x,
+206,2,CVL.0030.00.4,POSTEST_C,,Ever had positive COVID-19 test,Num,251,1,x,,,
+207,3,CVL.0040.00.4,CVDSEV_C,,Symptoms of COVID-19,Num,252,1,x,x,x,
+208,4,CVL.0050.00.4,LONGCVD_C,,Had COVID-19 symptoms for 3 or more months,Num,253,1,x,,,
+209,5,CVL.0060.00.4,SYMPNOW_C,,Currently has COVID-19 symptoms,Num,254,1,x,,,
+210,1,DNC.0020.00.2,DENPREV_C,,Time since last dental exam/cleaning,Num,255,1,x,,x,x
+211,2,DNC.0030.00.2,DENDL12M_C,,"Delayed dental care due to cost, past 12m",Num,256,1,x,,x,x
+212,3,DNC.0040.00.2,DENNG12M_C,,"Needed dental care but did not get it due to cost, past12m",Num,257,1,x,,x,x
+213,1,UTZ.0020.00.1,LASTDR_C,,Time since last saw doctor,Num,258,1,x,x,x,x
+214,2,UTZ.0030.00.4,TIMEALONE_C,,Time alone at most recent visit,Num,259,1,x,x,,
+215,3,UTZ.0040.00.1,WELLNESS_C,,Was last visit a wellness visit,Num,260,1,x,x,x,x
+216,4,UTZ.0050.00.1,WELLVIS_C,,Time since last wellness visit,Num,261,1,x,x,x,x
+217,5,UTZ.0060.00.4,PTIMEALONE_C,,Time alone at most recent wellness visit,Num,262,1,x,x,,
+218,6,UTZ.0080.00.1,USUALPL_C,,Have a usual place for care,Num,263,1,x,x,x,x
+219,7,UTZ.0090.00.1,USPLKIND_C,,Type of place for usual care,Num,264,1,x,x,x,x
+220,8,UTZ.0100.00.4,PERSDOC_C,,Has personal doctor,Num,265,1,x,x,,
+221,9,Recode,URGNT12MTC_C,URGENT12M_C,"Number of times visited urgent care, past 12m, top-coded",Num,266,1,x,x,x,x
+222,10,Recode,EMERG12MTC_C,EMERGE12M_C,"Number of times visited hospital emergency room, past12m, top-coded",Num,267,1,x,x,x,x
+223,11,UTZ.0130.00.1,HOSPONGT_C,,"Hospitalized overnight, past 12m",Num,268,1,x,x,x,x
+224,12,UTZ.0140.00.1,MEDDL12M_C,,"Delayed medical care due to cost, past 12m",Num,269,1,x,x,x,x
+225,13,UTZ.0150.00.1,MEDNG12M_C,,"Needed medical care but did not get it due to cost, past12m",Num,270,1,x,x,x,x
+226,1,TLH.0010.00.4,VIRAPP12M_C,,"Virtual medical appointment, past 12m",Num,271,1,x,x,x,
+227,1,PMD.0010.00.1,RX12M_C,,"Took prescription medication, past 12m",Num,272,1,x,x,x,x
+228,2,PMD.0020.00.1,RXDL12M_C,,"Delayed filling prescription to save money, past 12m",Num,273,1,x,x,x,x
+229,3,PMD.0030.00.1,RXDG12M_C,,"Needed prescription medication but did not get it due tocost, past 12m",Num,274,1,x,x,x,x
+230,1,IMM.0010.00.1,SHTFLU12M_C,,"Flu vaccine, past 12 months",Num,275,1,x,x,x,x
+231,2,IMM.0020.00.1,SHTFLUNUM_C,,"Number of flu vaccines, past 12 months",Num,276,1,x,x,x,x
+232,3,IMM.0030.01.1,FLUVAC1M_C,,Month of most recent flu vaccine,Num,277 - 278,2,x,x,x,x
+233,4,IMM.0030.02.1,FLUVAC1Y_C,,Year of most recent flu vaccine,Num,279 - 282,4,x,x,x,x
+234,5,IMM.0040.01.1,FLUVAC2M_C,,Month of next most recent flu vaccine,Num,283 - 284,2,x,x,x,x
+235,6,IMM.0040.02.1,FLUVAC2Y_C,,Year of next most recent flu vaccine,Num,285 - 288,4,x,x,x,x
+236,1,CVV.0010.00.3,SHTCVD191_C,,COVID-19 vaccination,Num,289,1,x,,,
+237,2,CVV.0020.00.3,SHTCVD19NM_C,,Number of COVID-19 vaccinations,Num,290,1,x,x,,
+238,3,CVV.0030.01.3,CVDVAC1M_C,,Month of most recent COVID-19 vaccination,Num,291 - 292,2,x,,,
+239,4,CVV.0030.02.3,CVDVAC1Y_C,,Year of most recent COVID-19 vaccination,Num,293 - 296,4,x,,,
+240,5,CVV.0040.01.3,CVDVAC2M_C,,Month of next most recent COVID-19 vaccination,Num,297 - 298,2,x,,,
+241,6,CVV.0040.02.3,CVDVAC2Y_C,,Year of next most recent COVID-19 vaccination,Num,299 - 302,4,x,,,
+242,7,CVV.0050.00.3,SHOTTYPE_C,,Brand of first COVID-19 shot,Num,303,1,x,,,
+243,1,HPV.0010.00.3,SHTHPV_C,,Ever vaccinated for HPV,Num,304,1,x,,,
+244,2,HPV.0020.00.3,SHTHPVAGE_C,,Age received first HPV vaccine,Num,305 - 306,2,x,,,
+245,1,PTC.0010.00.2,EYEEX12M_C,,"Had eye exam, past 12m",Num,307,1,x,,x,x
+246,2,PTC.0020.00.2,THERA12M_C,,"Received physical/speech/rehabilitative/occupationaltherapy, past 12m",Num,308,1,x,,x,x
+247,3,PTC.0030.00.2,HOMEHC12M_C,,"Received care at home, past 12m",Num,309,1,x,,x,x
+248,1,MHC.0010.00.2,MHRX_C,,"Took medication foremotions/concentration/behavior/mental health, past 12m",Num,310,1,x,x,x,x
+249,2,MHC.0020.00.2,MHTHRPY_C,,"Received counseling/therapy from mental healthprofessional, past 12m",Num,311,1,x,x,x,x
+250,3,MHC.0030.00.2,MHTHDLY_C,,"Delayed counseling/therapy due to cost, past 12m",Num,312,1,x,,x,x
+251,4,MHC.0040.00.2,MHTHND_C,,"Needed counseling/therapy but did not get it due tocost, past 12m",Num,313,1,x,,x,x
+252,1,SOS.0010.00.4,SUPPORT_C,,How often social/emotional support,Num,314,1,x,x,,
+253,2,SOS.0020.00.4,COMSUPPORT_C,,Presence of community support,Num,315,1,x,x,,
+254,1,SDQ.0020.00.2,SDQ1_C,,Considerate of other people's feelings,Num,316,1,x,,,x
+255,2,SDQ.0030.00.2,SDQ2_C,,"Restless, cannot stay still",Num,317,1,x,,,x
+256,3,SDQ.0040.00.2,SDQ3_C,,Complains of headaches,Num,318,1,x,,,x
+257,4,SDQ.0050.00.2,SDQ4_C,,Shares readily,Num,319,1,x,,,x
+258,5,SDQ.0060.00.2,SDQ5_C,,Often loses temper,Num,320,1,x,,,x
+259,6,SDQ.0070.00.2,SDQ6_C,,"Solitary, prefers to be alone",Num,321,1,x,,,x
+260,7,SDQ.0080.00.2,SDQ7_C,,Well behaved,Num,322,1,x,,,x
+261,8,SDQ.0090.00.2,SDQ8_C,,Many worries,Num,323,1,x,,,x
+262,9,SDQ.0100.00.2,SDQ9_C,,Helpful to others,Num,324,1,x,,,x
+263,10,SDQ.0110.00.2,SDQ10_C,,Constantly fidgeting/squirming,Num,325,1,x,,,x
+264,11,SDQ.0120.00.2,SDQ11_C,,At least one good friend,Num,326,1,x,,,x
+265,12,SDQ.0130.00.2,SDQ12_C,,Often fights with others,Num,327,1,x,,,x
+266,13,SDQ.0140.00.2,SDQ13_C,,Often unhappy/depressed/tearful,Num,328,1,x,,,x
+267,14,SDQ.0150.00.2,SDQ14_C,,Liked by other children/youth,Num,329,1,x,,,x
+268,15,SDQ.0160.00.2,SDQ15_C,,Easily distracted,Num,330,1,x,,,x
+269,16,SDQ.0170.00.2,SDQ16_C,,Nervous in new situation,Num,331,1,x,,,x
+270,17,SDQ.0180.00.2,SDQ17_C,,Kind to younger children,Num,332,1,x,,,x
+271,18,SDQ.0190.00.2,SDQ18_C,,Lies or cheats,Num,333,1,x,,,x
+272,19,SDQ.0200.00.2,SDQ19_C,,Picked on or bullied by others,Num,334,1,x,,,x
+273,20,SDQ.0210.00.2,SDQ20_C,,Offers to help others,Num,335,1,x,,,x
+274,21,SDQ.0220.00.2,SDQ21_C,,Thinks things out before acting,Num,336,1,x,,,x
+275,22,SDQ.0230.00.2,SDQ22_C,,Steals from home/school/elsewhere,Num,337,1,x,,,x
+276,23,SDQ.0240.00.2,SDQ23_C,,Gets along better with adults than children/youth,Num,338,1,x,,,x
+277,24,SDQ.0250.00.2,SDQ24_C,,"Many fears, easily scared",Num,339,1,x,,,x
+278,25,SDQ.0260.00.2,SDQ25_C,,Good attention span,Num,340,1,x,,,x
+279,26,SDQ.0270.00.2,SDQIMP1_C,,"Difficulties with emotions, behaviors",Num,341,1,x,,,x
+280,27,SDQ.0280.00.2,SDQIMP2_C,,Length of time with difficulties,Num,342,1,x,,,x
+281,28,SDQ.0290.00.2,SDQIMP3_C,,Difficulties upset/distress SC,Num,343,1,x,,,x
+282,29,SDQ.0300.00.2,SDQIMP4_C,,Difficulties interfere with home life,Num,344,1,x,,,x
+283,30,SDQ.0310.00.2,SDQIMP5_C,,Difficulties intefere with friendships,Num,345,1,x,,,x
+284,31,SDQ.0320.00.2,SDQIMP6_C,,Difficulties intefere with classroom learning,Num,346,1,x,,,x
+285,32,SDQ.0330.00.2,SDQIMP7_C,,Difficulties intefere with leisure activities,Num,347,1,x,,,x
+286,33,SDQ.0340.00.2,SDQIMP8_C,,Difficulties put burden on family,Num,348,1,x,,,x
+287,34,Recode,SDQEMOT_C,"SDQ3_C; SDQ8_C;SDQ13_C; SDQ16_C;SDQ24_C",Emotional Subscale Score,Num,349 - 350,2,x,,,x
+288,35,Recode,SDQCOND_C,"SDQ5_C; SDQ7_C;SDQ12_C; SDQ18_C;SDQ22_C",Conduct Subscale Score,Num,351 - 352,2,x,,,x
+289,36,Recode,SDQHYPE_C,"SDQ2_C; SDQ10_C;SDQ15_C; SDQ21_C;SDQ25_C",Hyperactivity Subscale Score,Num,353 - 354,2,x,,,x
+290,37,Recode,SDQPEER_C,"SDQ6_C; SDQ11_C;SDQ14_C; SDQ19_C;SDQ23_C",Peer problem Subscale Score,Num,355 - 356,2,x,,,x
+291,38,Recode,SDQPROS_C,"SDQ1_C; SDQ4_C;SDQ9_C; SDQ17_C;SDQ20_C",Prosocial Subscale Score,Num,357 - 358,2,x,,,x
+292,39,Recode,SDQTOT_C,,SDQ total score,Num,359 - 360,2,x,,,x
+293,40,Recode,SDQIMPTOT_C,"SDQIMP3_C;SDQIMP4_C;SDQIMP5_C;SDQIMP6_C; SDQIMP7_C",SDQ Impact Score,Num,361 - 362,2,x,,,x
+294,1,SLE.0020.00.2,VIOLENEV_C,,Victim of/witnessed violence,Num,363,1,x,x,,x
+295,2,SLE.0030.00.2,JAILEV1_C,,Ever separated from parent who was incarcerated,Num,364,1,x,x,,
+296,3,SLE.0040.00.2,MENTDEPEV_C,,Ever lived with anyone mentally ill/severely depressed,Num,365,1,x,x,,x
+297,4,SLE.0050.00.2,ALCDRUGEV_C,,Ever lived with anyone with alcohol/drug problem,Num,366,1,x,x,,x
+298,5,SLE.0060.00.3,PUTDOWN_C,,Lifetime of being put down by adults in home,Num,367,1,x,x,,
+299,6,SLE.0070.00.3,BNEEDS_C,,Lifetime of lacking basic needs,Num,368,1,x,x,,
+300,7,SLE.0080.00.4,UNFAIRRE_C,,Treated/judged based on race/ethnicity,Num,369,1,x,x,,
+301,8,SLE.0090.00.4,UNFAIRSO_C,,"Treated/judged based on sexual orientation or genderidentity",Num,370,1,x,x,,
+302,1,BLY.0010.00.4,BULLYVIC_C,,"Frequency of bully victimization, 12m",Num,371,1,x,x,,
+303,2,BLY.0020.00.4,CYBERVIC_C,,Cyberbullied in the past 12 months,Num,372,1,x,x,,
+304,3,BLY.0030.00.4,BULLYPERP_C,,"Frequency of bully perpetration, 12m",Num,373,1,x,x,,
+305,1,TBI.0020.00.4,TBILOSTCON_C,,Ever lost consciousness,Num,374,1,x,x,x,
+306,2,TBI.0030.00.4,TBIDAZED_C,,Ever dazed or memory gap,Num,375,1,x,x,x,
+307,3,TBI.0040.00.4,TBIHEADSYM_C,,"Ever headache, vomit, blurred vision, or mood changeafter blow to head",Num,376,1,x,x,x,
+308,4,TBI.0050.00.4,TBICHKCONC_C,,Ever checked for concussion,Num,377,1,x,x,x,
+309,5,TBI.0060.00.4,TBIDRCONC_C,,Ever told had a concussion,Num,378,1,x,x,x,
+310,1,PHY.0010.00.2,SPORT_C,,"Participate on sports team, past 12m",Num,379,1,x,,x,
+311,2,PHY.0020.00.2,PEGYM_C,,Attend physical education class,Num,380,1,x,,x,
+312,3,PHY.0030.00.2,PADAYS_C,,How often does sample child exercise,Num,381,1,x,,x,
+313,4,PHY.0040.00.2,STRENGTH_C,,How often sample child does strength training,Num,382,1,x,,x,
+314,5,PHY.0050.00.2,WALK_C,,How often does sample child walk,Num,383,1,x,,x,
+315,6,PHY.0060.00.2,BIKE_C,,How often does sample child bike,Num,384,1,x,,x,
+316,1,NHC.0010.00.2,SIDEWALK_C,,Areas for walking/bicycling,Num,385,1,x,,x,
+317,2,NHC.0020.00.2,PARKS_C,,Parks/playgrounds to travel to,Num,386,1,x,,x,
+318,3,NHC.0030.00.2,TRAFFIC_C,,Traffic causes safety issues,Num,387,1,x,,x,
+319,4,NHC.0040.00.2,CRIME_C,,Crime causes safety issues,Num,388,1,x,,x,
+320,1,SLP.0010.00.2,RESTED_C,,Frequency of well-rested,Num,389,1,x,,x,
+321,2,SLP.0020.00.2,OUTOFBED_C,,Frequency of difficulty getting out of bed,Num,390,1,x,,x,
+322,3,SLP.0030.00.2,TIRED_C,,Frequency of tired during daytime,Num,391,1,x,,x,
+323,4,SLP.0040.00.2,NAPS_C,,"Frequency of napping, falling asleep during day",Num,392,1,x,,x,
+324,5,SLP.0050.00.2,BEDTIME_C,,Frequency of regular bedtime during school/week nights,Num,393,1,x,,x,
+325,6,SLP.0060.00.2,WAKETIME_C,,Frequency of regular waketime during school days,Num,394,1,x,,x,
+326,1,SCR.0010.00.2,SCREENTIME_C,,Does child get 2+ hours screen time daily,Num,395,1,x,,x,
+327,1,CIH.0010.00.3,CHIRO_C,,Seen or talked to a chiropractor,Num,396,1,x,,,
+328,2,CIH.0020.00.3,CHIROPAIN_C,,Chiropractor visit for pain,Num,397,1,x,,,
+329,3,CIH.0030.00.3,CHIROHLTH_C,,Chiropractor visit to restore overall health,Num,398,1,x,,,
+330,4,CIH.0040.00.3,ACU_C,,Saw a practitioner of acupuncture,Num,399,1,x,,,
+331,5,CIH.0050.00.3,ACUPAIN_C,,Acupuncture visit for pain,Num,400,1,x,,,
+332,6,CIH.0060.00.3,ACUHLTH_C,,Acupuncture visit to restore overall health,Num,401,1,x,,,
+333,7,CIH.0070.00.3,MASS_C,,Saw a practitioner of massage,Num,402,1,x,,,
+334,8,CIH.0080.00.3,MASSPAIN_C,,Massage visit for pain,Num,403,1,x,,,
+335,9,CIH.0090.00.3,MASSHLTH_C,,Massage visit to restore overall health,Num,404,1,x,,,
+336,10,CIH.0100.00.3,NATUR_C,,Saw a practitioner of naturopathy,Num,405,1,x,,,
+337,11,CIH.0110.00.3,NATURPAIN_C,,Naturopath visit for pain,Num,406,1,x,,,
+338,12,CIH.0120.00.3,NATURHLTH_C,,Naturopath visit to restore overall health,Num,407,1,x,,,
+339,13,CIH.0130.00.3,ARTTHPY_C,,Saw an art therapist,Num,408,1,x,,,
+340,14,CIH.0140.00.3,MUSICTHPY_C,,Saw a music therapist,Num,409,1,x,,,
+341,15,CIH.0150.00.3,MEDITATE_C,,Practice meditation,Num,410,1,x,,,
+342,16,CIH.0160.00.3,MEDIPAIN_C,,Meditation for pain,Num,411,1,x,,,
+343,17,CIH.0170.00.3,MEDIHLTH_C,,Meditation to restore overall health,Num,412,1,x,,,
+344,18,CIH.0180.00.3,GIPR_C,,Use guided imagery or progressive relaxation,Num,413,1,x,,,
+345,19,CIH.0190.00.3,GIPRPAIN_C,,Use guided imagery or progressive relaxation for pain,Num,414,1,x,,,
+346,20,CIH.0200.00.3,GIPRHLTH_C,,"Use guided imagery or progressive relaxation to restoreoverall health",Num,415,1,x,,,
+347,21,CIH.0210.00.3,YOGA_C,,Practice yoga,Num,416,1,x,,,
+348,22,CIH.0220.00.3,YOGABRTH_C,,Breathing exercises as part of yoga,Num,417,1,x,,,
+349,23,CIH.0230.00.3,YOGAMED_C,,Meditation as part of yoga,Num,418,1,x,,,
+350,24,CIH.0240.00.3,YOGAPAIN_C,,Yoga to treat or manage pain,Num,419,1,x,,,
+351,25,CIH.0250.00.3,YOGAHLTH_C,,Yoga to restore overall health,Num,420,1,x,,,
+352,1,VSL.0010.00.3,VSLVYR_C,,Voice problem in the past 12m,Num,421,1,x,,,
+353,2,VSL.0020.00.3,VSLVDYS_C,,Duration of voice problem,Num,422,1,x,,,
+354,3,VSL.0030.00.3,VSLVDIF_C,,Amount of difficulty with voice problem,Num,423,1,x,,,
+355,4,VSL.0040.00.3,VSLSWYR_C,,Swallowing problem in the past 12m,Num,424,1,x,,,
+356,5,VSL.0050.00.3,VSLSWDYS_C,,Duration of swallowing problem,Num,425,1,x,,,
+357,6,VSL.0060.00.3,VSLSWDIF_C,,Amount of difficulty with swallowing problem,Num,426,1,x,,,
+358,7,VSL.0070.00.3,VSLSPYR_C,,Speech problem in the past 12m,Num,427,1,x,,,
+359,8,VSL.0080.00.3,VSLSPDYS_C,,Duration of speech problem,Num,428,1,x,,,
+360,9,VSL.0090.00.3,VSLSPDIF_C,,Amount of difficulty with speech problem,Num,429,1,x,,,
+361,10,VSL.0100.00.3,VSLSPST_C,,Stuttering problem in the past 12m,Num,430,1,x,,,
+362,11,VSL.0110.00.3,VSLLGYR_C,,Language problem in the past 12m,Num,431,1,x,,,
+363,12,VSL.0120.00.3,VSLLGDYS_C,,Duration of language problem,Num,432,1,x,,,
+364,13,VSL.0130.00.3,VSLLGDIF_C,,Amount of difficulty with language problem,Num,433,1,x,,,
+365,14,VSL.0140.00.3,VSLBRAIN_C,,VSL problems following a brain injury,Num,434,1,x,,,
+366,15,VSL.0150.00.3,VSLPA_C,,Saw a doctor for treatment in the past 12 months,Num,435,1,x,,,
+367,16,VSL.0160.00.3,VSLPALF_C,,"Seeing a doctor for treatment in the past 12 monthsaffected life",Num,436,1,x,,,
+368,17,VSL.0170.00.3,VSLBTWR_C,,VSL problem better or worse,Num,437,1,x,,,
+369,1,Recode,RELCHPARENTP1_C,RELCHPARENT1_C,Relationship of first residential parent to sample child,Num,438,1,x,x,,
+370,2,Recode,RELCHPARENTP2_C,RELCHPARENT2_C,"Relationship of second residential parent to samplechild",Num,439,1,x,x,,
+371,3,Recode,MARITAL1_C,MARITAL_C,"Marital status of first residential parent of samplechild",Num,440,1,x,x,x,x
+372,4,Recode,MARITAL2_C,MARITAL_C,"Marital status of second residential parent of samplechild",Num,441,1,x,x,x,x
+373,5,Recode,PCNTPARNTS_C,"PARENTS_FINAL01-PARENTS_FINAL04",Count of all residential parents of the sample child,Num,442,1,x,x,x,x
+374,6,Recode,MARSTAT1_C,"MARITAL1_C;SPOUSLIV1_C;EVERMARR1_C;WIDIVSEP1_C","Marital status of the sample child's first residentialparent",Num,443,1,x,x,x,x
+375,7,Recode,MARSTAT2_C,"MARITAL2_C;SPOUSLIV2_C;EVERMARR2_C;WIDIVSEP2_C","Marital status of the sample child's second residentialparent",Num,444,1,x,x,x,x
+376,8,Recode,LEGMSTAT1_C,"MARSTAT1_C;EVRMARRIED1_C;LEGALSTAT1_C","Legal marital status of the sample child's firstresidential parent",Num,445,1,x,x,x,x
+377,9,Recode,LEGMSTAT2_C,"MARSTAT2_C;EVRMARRIED2_C;LEGALSTAT2_C","Legal marital status of the sample child's secondresidential parent",Num,446,1,x,x,x,x
+378,10,Recode,PARAGETC1_C,AGE_FINAL,"Age of sample child's first residential parent, top-andbottom-coded",Num,447 - 448,2,x,x,x,x
+379,11,Recode,PARSEX1_C,SEX_FINAL,Sex of sample child's first residential parent,Num,449,1,x,x,x,x
+380,12,Recode,PARWORK1_C,FEMWORK_C,"First residential parent of sample child works for payat job/business",Num,450,1,x,x,x,x
+381,13,Recode,PARWKFT1_C,FEMWKFT_C,"Sample child's first residential parent works 35+ hoursper week",Num,451,1,x,x,x,x
+382,14,Recode,PARAGETC2_C,AGE_FINAL,"Age of sample child's second residential parent, top-andbottom-coded",Num,452 - 453,2,x,x,x,x
+383,15,Recode,PARSEX2_C,SEX_FINAL,Sex of sample child's second residential parent,Num,454,1,x,x,x,x
+384,16,Recode,PARWORK2_C,FEMWORK_C,"Second residential parent of sample child works for payat job/business",Num,455,1,x,x,x,x
+385,17,Recode,PARWKFT2_C,FEMWKFT_C,"Sample child's second residential parent works 35+ hoursper week",Num,456,1,x,x,x,x
+386,18,Recode,SCPARHISP_C,"PARENTS_FINAL;HISPALLP","Sample child has the same Hispanic ethnicity as ALLresidential parents",Num,457,1,x,x,x,x
+387,19,Recode,HISPPARSC_C,"PARENTS_FINAL;HISPALLP","All residential parents of the sample child are of thesame Hispanic ethnicity",Num,458,1,x,x,x,x
+388,20,Recode,SCPARRAC_C,"PARENTS_FINAL;RACEALLP","Sample child has the same race as ALL residentialparents",Num,459,1,x,x,x,x
+389,21,Recode,RACPARSC_C,"PARENTS_FINAL;RACEALLP","All residential parents of the sample child are of thesame race",Num,460,1,x,x,x,x
+390,22,Recode,MAXPAREDUP_C,"EDUC;PARENTS_FINAL01-PARENTS_FINAL04",Highest level of education of all SC's parents,Num,461 - 462,2,x,x,,
+391,23,Recode,PARSAMEOPP_C,PARSEX1_C; PARSEX2_C,"In two-parent SC families, are the parents of the samesex or opposite sex?",Num,463,1,x,x,x,x
+392,24,Recode,SCFAMSTR_C,"PCNTPARNTS; FOSTPAR;MARSTAT_C;MARITAL_C;EVRMARRIED_C;SPOUSLIV_C;PARENTS_FINAL01-PARENTS_FINAL04;RELCHPARENTP1_C",Family structure of sample child,Num,464,1,x,x,x,x
+393,25,Recode,SCPARENTSC_C,"SAMEFAM_FLG;PARENTS_FINAL01-PARENTS_FINAL04",Sample child relationship to sample adult,Num,465,1,x,x,x,x
+394,1,NAT.0010.00.1,NATUSBORN_C,,Born in U.S. or U.S. territory,Num,466,1,x,x,x,x
+395,2,Recode,YRSINUS_C,"NATUSBORN_C;NATUSLG_C",Years that sample child has been in the United States,Num,467,1,x,x,x,x
+396,3,,CITZNSTP_C,"HHSTAT_C;NATUSBORN_C;CITIZEN_C; NATCTZN_C",Citizenship status,Num,468,1,x,x,x,x
+397,1,Recode,PCNTADTWKP_C,"FEMWORK_C;FEMWORK_A;FAMILYC_FLG","Number of adults in sample child's family who areworking",Num,469,1,x,x,x,x
+398,2,Recode,PCNTADTWFP_C,"FEMWKFT_C;FEMWKFT_A;FAMILYC_FLG","Number of adults in sample child's family who areworking full-time",Num,470,1,x,x,x,x
+399,1,INC.0020.00.1,INCWRKO_C,,Income from wages,Num,471,1,x,x,x,x
+400,2,INC.0030.00.1,INCINTER_C,,Income from accounts,Num,472,1,x,x,x,x
+401,3,INC.0031.00.1,INCSSRR_C,,Income from SS/Railroad Retirement,Num,473,1,x,x,x,x
+402,4,INC.0040.00.1,INCSSISSDI_C,,Family income from SSDI,Num,474,1,x,x,x,x
+403,5,INC.0050.00.1,SSISSDIBTH_C,,Which family income SSI/SSDI,Num,475,1,x,x,x,x
+404,6,INC.0060.00.1,SSISSDIDSB_C,,SSI/SSDI due to disability,Num,476,1,x,x,x,x
+405,7,INC.0090.00.1,INCWELF_C,,Income from public assistance,Num,477,1,x,x,x,x
+406,8,INC.0100.00.1,INCRETIRE_C,,Income from retirement,Num,478,1,x,x,x,x
+407,9,INC.0110.00.1,INCOTHR_C,,Income from other sources,Num,479,1,x,x,x,x
+408,10,Recode,IMPNUM_C,,Imputation number,Num,480 - 481,2,x,x,,
+409,11,Recode,POVRATTC_C,"INCTOTAL_C; povertythreshold",Sample child family poverty ratio (top-coded),Num,482 - 486,5,x,x,x,x
+410,12,Recode,RATCAT_C,"INCTOTAL_C PCNT_CINC100FILL_CINC250FILL_CINC138FILL_CINC75K_C INC100K_CINC138K_C INC150K_CINC250K_C INC400K_CINC100PCT_CINC138PCT_CINC200PCT_CINC250PCT_CINC400PCT_C","Ratio of family income to poverty threshold for SC'sfamily",Num,487 - 488,2,x,x,x,x
+411,13,Recode,IMPINCFLG_C,,Imputed SC family income imputation flag,Num,489,1,x,x,x,x
+412,14,Recode,INCTCFLG_C,,Sample child family income top-code flag,Num,490,1,x,,x,x
+413,1,FOO.0010.00.1,FSNAP12M_C,,"Receive food stamps, past 12m",Num,491,1,x,x,x,x
+414,2,FOO.0020.00.3,FSNAP30D_C,,"Received food stamps, past 30d",Num,492,1,x,x,x,x
+415,3,FOO.0030.00.1,FWIC12M_C,,"Received WIC benefits, past 12m",Num,493,1,x,x,x,x
+416,4,FOO.0040.00.1,FLUNCH12M_C,,Free or reduced meals at school,Num,494,1,x,x,x,x
+417,1,FDS.0020.00.3,FDSRUNOUT_C,,Worry food would run out,Num,495,1,x,x,x,x
+418,2,FDS.0030.00.3,FDSLAST_C,,Food didn't last,Num,496,1,x,x,x,x
+419,3,FDS.0040.00.3,FDSBALANCE_C,,Couldn't afford to eat balanced meals,Num,497,1,x,x,x,x
+420,4,FDS.0050.00.3,FDSSKIP_C,,Cut the size of meals or skip meals,Num,498,1,x,x,x,x
+421,5,FDS.0060.00.3,FDSSKIPDYS_C,,"How many days did you/adults in the family cut the sizeof meals or skip meals",Num,499 - 500,2,x,x,x,x
+422,6,FDS.0070.00.3,FDSLESS_C,,Eat less than should,Num,501,1,x,x,x,x
+423,7,FDS.0080.00.3,FDSHUNGRY_C,,Ever hungry because not enough money for food,Num,502,1,x,x,x,x
+424,8,FDS.0090.00.3,FDSWEIGHT_C,,Lose weight because not enough money for food,Num,503,1,x,x,x,x
+425,9,FDS.0100.00.3,FDSNOTEAT_C,,Not eat for a whole day,Num,504,1,x,x,x,x
+426,10,FDS.0110.00.3,FDSNEDAYS_C,,How many days not eat,Num,505 - 506,2,x,x,x,x
+427,11,Recode,FDSCAT3_C,"FDSRUNOUT_C;FDSLAST_C;FDSBALANCE_C;FDSSKIP_C;FDSSKIPDYS_C;FDSLESS_C;FDSHUNGRY_C;FDSWEIGHT_C;FDSNOTEAT_C;FDSNEDAYS_C",Child 3 category food security recode,Num,507,1,x,x,x,x
+428,12,Recode,FDSCAT4_C,"FDSRUNOUT_C;FDSLAST_C;FDSBALANCE_C;FDSSKIP_C;FDSSKIPDYS_C;FDSLESS_C;FDSHUNGRY_C;FDSWEIGHT_C;FDSNOTEAT_C;FDSNEDAYS_C",Child 4 category food security recode,Num,508,1,x,x,x,x
+429,1,HOU.0010.00.1,HOUYRSLIV_C,,Length of time in house/apartment,Num,509,1,x,x,x,x
+430,2,HOU.0020.00.1,HOUTENURE_C,,Residence owned/rented,Num,510,1,x,x,x,x
+431,3,HOU.0030.00.1,HOUGVASST_C,Paying lower rent,Paying lower rent,Num,511,1,x,x,x,x
+432,3.0,DLD.0030.00.1,IDEV_C,,Ever had intellectual disability,Num,67,1,,x,x,x
+433,4.0,DLD.0040.00.1,IDNW_C,,Currently has intellectual disability,Num,68,1,,x,x,x
+434,1.0,ALG.0020.00.2,CURRESP_C,,Current respiratory allergy,Num,75,1,,x,,
+435,2.0,ALG.0030.00.2,DXRESP_C,,Respiratory allergy diagnosis,Num,76,1,,x,,
+436,3.0,ALG.0040.00.2,CURFOOD_C,,Current food allergy,Num,77,1,,x,,
+437,4.0,ALG.0050.00.2,DXFOOD_C,,Food allergy diagnosis,Num,78,1,,x,,
+438,5.0,ALG.0060.00.2,CURSKIN_C,,Current skin allergy,Num,79,1,,x,,
+439,6.0,ALG.0070.00.2,DXSKIN_C,,Skin allergy diagnosis,Num,80,1,,x,,
+440,2.0,CVD.0030.00.4,COVIDTEST_C,,Ever been tested for COVID-19,Num,251,1,,x,x,
+441,3.0,CVD.0040.00.4,CVDRSLT_C,,Tested positive for COVID-19,Num,252,1,,x,x,
+442,1.0,ACC.0010.00.4,DLYCARE_C,,Delayed medical care due to COVID-19,Num,267,1,,x,x,
+443,2.0,ACC.0020.00.4,DNGCARE_C,,Did not get medical care due to COVID-19,Num,268,1,,x,x,
+444,4.0,ACC.0040.00.4,VIRAPPCVD_C,,Virtual medical appointment related to COVID-19,Num,270,1,,x,x,
+445,1.0,CVV.0010.00.3,SHTCVD19_C,,COVID-19 vaccination,Num,288,1,,x,,
+446,3.0,Recode,CVDVAC1MR_C,"CVDVAC1M_C;CVDVAC1Y_C;CVDVAC2M_C;CVDVAC2Y_C",Month of most recent COVID-19 vaccination,Num,290 - 291,2,,x,,
+447,4.0,Recode,CVDVAC1YR_C,"CVDVAC1M_C;CVDVAC1Y_C;CVDVAC2M_C;CVDVAC2Y_C",Year of most recent COVID-19 vaccination,Num,292 - 295,4,,x,,
+448,5.0,Recode,CVDVAC2MR_C,"CVDVAC1M_C;CVDVAC1Y_C;CVDVAC2M_C;CVDVAC2Y_C",Month of next most recent COVID-19 vaccination,Num,296 - 297,2,,x,,
+449,6.0,Recode,CVDVAC2YR_C,"CVDVAC1M_C;CVDVAC1Y_C;CVDVAC2M_C;CVDVAC2Y_C",Year of next most recent COVID-19 vaccination,Num,298 - 301,4,,x,,
+450,7.0,CVV.0050.00.3,SHTCVD19AV_C,,Doctor told need another COVID-19 vaccination,Num,302,1,,x,,
+451,1.0,INJ.0020.00.2,ANYINJURY_C,,Any injury in the past 3 months,Num,318,1,,x,x,
+452,2.0,INJ.0030.00.2,INJLIMIT_C,,Limited by injury in the past 3 months,Num,319,1,,x,x,
+453,3.0,INJ.0040.00.2,NUMINJ_C,,Number of injuries in the past 3 months,Num,320 - 321,2,,x,x,
+454,4.0,INJ.0050.00.2,INJHOME_C,,Did injury occur at home,Num,322,1,,x,x,
+455,5.0,INJ.0060.00.2,INJSCHOOL_C,,Did injury occur at school or daycare,Num,323,1,,x,x,
+456,6.0,INJ.0070.00.2,INJSPORTS_C,,Did injury occur while playing sports or exercising,Num,324,1,,x,x,
+457,7.0,INJ.0080.00.2,INJFALL_C,,Did injury occur because of a fall,Num,325,1,,x,x,
+458,8.0,INJ.0090.00.2,INJFALLHOM_C,,Did fall occur at home,Num,326,1,,x,x,
+459,9.0,INJ.0100.00.2,INJFALLSCH_C,,Did fall occur at daycare or school,Num,327,1,,x,x,
+460,10.0,INJ.0110.00.2,INJMOTOR_C,,Injury caused by a motor vehicle crash or collision,Num,328,1,,x,x,
+461,11.0,Recode,INJMVTYPE1_C,INJMVTYPE_C,Motor vehicle accident - driver,Num,329,1,,x,x,
+462,12.0,Recode,INJMVTYPE2_C,INJMVTYPE_C,Motor vehicle accident - passenger,Num,330,1,,x,x,
+463,13.0,Recode,INJMVTYPE3_C,INJMVTYPE_C,Motor vehicle accident - bicyclist,Num,331,1,,x,x,
+464,14.0,Recode,INJMVTYPE4_C,INJMVTYPE_C,Motor vehicle accident - pedestrian,Num,332,1,,x,x,
+465,15.0,Recode,INJMVTYPE5_C,INJMVTYPE_C,Motor vehicle accident - something else,Num,333,1,,x,x,
+466,16.0,INJ.0130.00.2,INJSAWDOC_C,,Saw a doctor about injury,Num,334,1,,x,x,
+467,17.0,INJ.0140.00.2,INJER_C,,Visited ER for injury,Num,335,1,,x,x,
+468,18.0,INJ.0150.00.2,INJHOSP_C,,Hospitalized for injury,Num,336,1,,x,x,
+469,19.0,INJ.0160.00.2,INJBONES_C,,Did injury cause broken bones,Num,337,1,,x,x,
+470,20.0,INJ.0170.00.2,INJSTITCH_C,,Did injury require stitches or staples,Num,338,1,,x,x,
+471,21.0,Recode,INJSCHDYTC_C,INJSCHDAYS_C,"Number of school days missed due to injury in the past 3months",Num,339 - 340,2,,x,x,
+472,22.0,INJ.0190.00.2,INJFUTSCH_C,,Expected school days missed due to injury,Num,341,1,,x,x,
+473,8.0,Recode,PCNTTC,,Top-coded count of all non-deleted household members,Num,47,1,,,x,x
+474,1.0,Recode,PCNTFAM_C,"PCNTADLT_C;PCNTKIDS_C","Number of persons in Sample Child family, top-coded 6+",Num,50,1,,,x,x
+475,6.0,Recode,MAXEDUC_C,"EDUC; AGE18PLUS,FAMILYC_FLG;HHSTAT_C;PARENTSFINAL_01;PARENTSFINAL_02","Highest level of education of all the adults in SC'sfamily",Num,55 - 56,2,,,x,x
+476,5.0,AST.0060.00.3,ASHOSP12M_C,,Hospitalized for asthma past 12 months,Num,62,1,,,x,
+477,6.0,Recode,ASDYS12MTC_C,ASDAYS12M_C,Days can't go to school/daycare because of asthma,Num,63 - 65,2,,,x,
+478,7.0,AST.0080.00.3,ASINHALE3M_C,,Inhaler for asthma past 3 months,Num,66,1,,,x,
+479,8.0,AST.0090.00.3,ASPREVR_C,,Preventive asthma medication,Num,67,1,,,x,
+480,97.0,INS.0020.01.1,HIKIND01_C,,Kind(s) of health insurance - private health insurance,Num,243,1,,,x,x
+481,98.0,INS.0020.03.1,HIKIND03_C,,"Kind(s) of health insurance - Medicare supplement(Medigap)",Num,244,1,,,x,x
+482,2.0,Recode,RELCHPARP1_C,"RELCHPAR1_C;WHOFOST1","Relationship type of first residential parent to samplechild",Num,348,1,,,x,x
+483,3.0,Recode,RELCHPARP2_C,"RELCHPAR2_C;WHOFOST2","Relationship type of second residential parent to samplechild",Num,349,1,,,x,x
+484,25.0,Recode,MAXPAREDUC_C,"EDUC;PARENTS_FINAL01-PARENTS_FINAL04",Highest level of education of all SC's parents,Num,373 - 374,2,,,x,x
+485,10.0,Recode,FAMINCTC_C,INCTOTAL_C,Sample child family income (top-coded),Num,389 - 394,6,,,x,x
+486,12.0,Recode,INCGRP_C,"INCTOTAL_CINC100FILL_CINC250FILL_CINC138FILL_CINC75K_C INC100K_CINC138K_C INC150K_CINC250K_C INC400K_CINC100PCT_CINC138PCT_CINC200PCT_CINC250PCT_CINC400PCT_C",Sample child family income (grouped),Num,400,1,,,x,x
+487,4.0,,WTIA_C,,Weight - annual pre-post stratification calibration,Num,14 - 21,8,,,,x
+488,73.0,Recode,OGFLG_C,,Other government reassignment flag,Num,210,1,,,,x
+489,2.0,SLE.0030.00.2,JAILEV_C,,Ever lived with parent who was incarcerated,Num,334,1,,,,x
