@@ -1,4 +1,4 @@
-Index,Variable #,Question #,Variable Name,Source Variables,Description,Type,Location,Length
+,Variable #,Question #,Variable Name,Source Variables,Description,Type,Location,Length
 1,1,,RECTYPE,,Record type,Num,1 - 2,2
 2,2,,SRVY_YR,,Year of the National Health Interview Survey,Num,3 - 6,4
 3,3,,HHX,,Randomly assigned household number unique to a household,Char,7 - 13,7
