@@ -7,3 +7,6 @@ This repository is also an exploration playground for myself dividing into the d
 
 ## Datasets
 * [NHIS](https://www.cdc.gov/nchs/nhis/index.htm) (National Health Interview Survey) - National survey done at USA annually since 1957, done through personal household interviews. Current dataset only covers from 2019 which is when the made major restructuring of the survey
+
+## Analysis 
+* Reddit - Analyzed sentence structure of submissions in /autism subreddit and comparing with other related subreddits to see how they are different. 
